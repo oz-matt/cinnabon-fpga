@@ -1,0 +1,197 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : -0.202
+TNS   : -12.832
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : 12.791
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'n/a'
+Slack : 13.796
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'n/a'
+Slack : 5.633
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 2.539
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 1.032
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u0|pcie_ip|altgx_internal|cinnabon_qsys_pcie_ip_altgx_internal_alt_c3gxb_dfh8_component|transmit_pcs0|hiptxclkout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u0|pcie_ip|altgx_internal|cinnabon_qsys_pcie_ip_altgx_internal_alt_c3gxb_dfh8_component|transmit_pma0|clockout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.575
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|pclkch0'
+Slack : 3.977
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'refclk'
+Slack : 4.813
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.662
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 16.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK3_50'
+Slack : 16.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.484
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 13.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'n/a'
+Slack : 14.296
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'n/a'
+Slack : 5.132
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.078
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.939
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|altgx_internal|cinnabon_qsys_pcie_ip_altgx_internal_alt_c3gxb_dfh8_component|transmit_pcs0|hiptxclkout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|altgx_internal|cinnabon_qsys_pcie_ip_altgx_internal_alt_c3gxb_dfh8_component|transmit_pma0|clockout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.523
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|pclkch0'
+Slack : 3.971
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'refclk'
+Slack : 4.811
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.648
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 16.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK3_50'
+Slack : 16.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.876
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 15.834
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'n/a'
+Slack : 16.810
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'n/a'
+Slack : 2.832
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 5.001
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 0.492
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|altgx_internal|cinnabon_qsys_pcie_ip_altgx_internal_alt_c3gxb_dfh8_component|transmit_pcs0|hiptxclkout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|altgx_internal|cinnabon_qsys_pcie_ip_altgx_internal_alt_c3gxb_dfh8_component|transmit_pma0|clockout'
+Slack : 2.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|coreclkout'
+Slack : 3.682
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u0|pcie_ip|pcie_internal_hip|cyclone_iii.cycloneiv_hssi_pcie_hip|pclkch0'
+Slack : 3.994
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'refclk'
+Slack : 4.570
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.249
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 16.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK3_50'
+Slack : 16.000
+TNS   : 0.000
+
+------------------------------------------------------------

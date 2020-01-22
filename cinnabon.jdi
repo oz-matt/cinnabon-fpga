@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="e1da735b2b4e4bc75d74"/>
+  </project>
+  <file_info>
+    <file device="EP4CGX150DF31C7" path="cinnabon.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="cinnabon_qsys:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME cinnabon_qsys HAS_SOPCINFO 1 GENERATION_ID 1579570276"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>
