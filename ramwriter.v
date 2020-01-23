@@ -13,6 +13,7 @@ reg  [15:0] r_data_word3 = 2;
 reg  [15:0] r_data_word4 = 3;
 
 reg[13:0] r_address = 0;
+
 reg[7:0] r_byteen = 8'hFF;
 reg r_wbit = 0;
 
@@ -45,42 +46,27 @@ begin
 	 
 	 START_WRITE:
 	 begin
-	   if(clk_ctr == 0)
-		  r_wbit <= 1;
-		if(clk_ctr >= 4)
-		begin
-		  clk_ctr <= 0;
-		  current_state <= END_WRITE;
-		end
-		else
-		  clk_ctr <= clk_ctr + 1;
-	 end
-	 
-	 END_WRITE:
-	 begin
-	   if(clk_ctr == 0)
-		  r_wbit <= 0;
-		if(clk_ctr >= 4)
-		begin
-		  clk_ctr <= 0;
-		  current_state <= NEXT_ADDY_AND_DATA;
-		end
-		else
-		  clk_ctr <= clk_ctr + 1;
-	 end
-	 
-	 NEXT_ADDY_AND_DATA:
-	 begin
+	   r_wbit <= 1;
+      r_address <= r_address + 1; 
+		
 	   r_data_word1 <= r_data_word1 + 4;
 	   r_data_word2 <= r_data_word2 + 4;
 	   r_data_word3 <= r_data_word3 + 4;
 	   r_data_word4 <= r_data_word4 + 4;
 		
-		current_state <= INIT_STATE;
-		
-		
-      r_address <= r_address + 1; 
+		current_state <= END_WRITE;
 	 end
+	 
+	 END_WRITE:
+	 begin
+	 	r_wbit <= 0;
+		if(r_address[13] == 1)
+		  current_state <= STOP_ALL;
+		else
+		  current_state <= START_WRITE;
+	 end
+	 
+	 
 	 
 	 STOP_ALL:
 	 begin
