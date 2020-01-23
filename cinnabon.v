@@ -481,11 +481,11 @@ wire[7:0] rw_byteen;
 wire rw_wbit;
 
 ramwriter rw0(
-  .i_clk			(CLOCK_50);
-  .o_data		(rw_data);
-  .o_address	(rw_address);
-  .o_byteen		(rw_byteen);
-  .o_wbit		(rw_wbit);
+  .i_clk			(CLOCK_50),
+  .o_data		(rw_data),
+  .o_address	(rw_address),
+  .o_byteen		(rw_byteen),
+  .o_wbit		(rw_wbit)
 );
 
     cinnabon_qsys u0 (

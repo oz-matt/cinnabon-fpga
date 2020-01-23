@@ -1,5 +1,5 @@
 Assembler report for cinnabon
-Mon Jan 20 21:09:28 2020
+Wed Jan 22 19:33:45 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jan 20 21:09:28 2020 ;
+; Assembler Status      ; Successful - Wed Jan 22 19:33:45 2020 ;
 ; Revision Name         ; cinnabon                              ;
 ; Top-level Entity Name ; cinnabon                              ;
 ; Family                ; Cyclone IV GX                         ;
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 ; Option         ; Setting                           ;
 +----------------+-----------------------------------+
 ; JTAG usercode  ; 0xFFFFFFFF                        ;
-; Checksum       ; 0x00C36ADD                        ;
+; Checksum       ; 0x00C5413A                        ;
 +----------------+-----------------------------------+
 
 
@@ -79,7 +79,7 @@ refer to the applicable agreement for further details.
 ; Option             ; Setting                       ;
 +--------------------+-------------------------------+
 ; JTAG usercode      ; 0x00000000                    ;
-; Checksum           ; 0x6B611E43                    ;
+; Checksum           ; 0x6B62C2FF                    ;
 ; Compression Ratio  ; 3                             ;
 +--------------------+-------------------------------+
 
@@ -90,14 +90,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Jan 20 21:09:20 2020
+    Info: Processing started: Wed Jan 22 19:33:37 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off cinnabon -c cinnabon
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 668 megabytes
-    Info: Processing ended: Mon Jan 20 21:09:28 2020
+    Info: Peak virtual memory: 671 megabytes
+    Info: Processing ended: Wed Jan 22 19:33:45 2020
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 

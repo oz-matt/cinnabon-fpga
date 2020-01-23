@@ -83,3 +83,11 @@ rst_ctrl_sm.strobe_txpll_locked 0 0
 rst_ctrl_sm.idle 0 1 
 rst_ctrl_sm.stable_tx_pll 1 1 
 rst_ctrl_sm.wait_state 1 0 
+
+State Machine - |cinnabon|ramwriter:rw0|current_state
+Name current_state.NEXT_ADDY_AND_DATA current_state.END_WRITE current_state.START_WRITE current_state.INIT_STATE current_state.STOP_ALL 
+current_state.INIT_STATE 0 0 0 0 0 
+current_state.START_WRITE 0 0 1 1 0 
+current_state.END_WRITE 0 1 0 1 0 
+current_state.NEXT_ADDY_AND_DATA 1 0 0 1 0 
+current_state.STOP_ALL 0 0 0 1 1 
