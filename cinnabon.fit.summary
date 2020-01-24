@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Jan 22 23:55:47 2020
+Fitter Status : Successful - Fri Jan 24 17:31:31 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : cinnabon
 Top-level Entity Name : cinnabon
 Family : Cyclone IV GX
 Device : EP4CGX150DF31C7
 Timing Models : Final
-Total logic elements : 6,898 / 149,760 ( 5 % )
-    Total combinational functions : 5,654 / 149,760 ( 4 % )
-    Dedicated logic registers : 4,397 / 149,760 ( 3 % )
-Total registers : 4397
+Total logic elements : 6,902 / 149,760 ( 5 % )
+    Total combinational functions : 5,612 / 149,760 ( 4 % )
+    Dedicated logic registers : 4,420 / 149,760 ( 3 % )
+Total registers : 4420
 Total pins : 467 / 508 ( 92 % )
 Total virtual pins : 1
 Total memory bits : 1,105,912 / 6,635,520 ( 17 % )
