@@ -75,6 +75,27 @@
          type = "long";
       }
    }
+   element pio_0
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element pio_0.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "32";
+         type = "String";
+      }
+   }
    element sgdma
    {
       datum _sortIndex
@@ -110,7 +131,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName">cinnabon.qpf</parameter>
+ <parameter name="projectName" value="cinnabon.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -171,6 +192,11 @@
  <interface
    name="pcie_ip_tx_out"
    internal="pcie_ip.tx_out"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_0_external_connection"
+   internal="pio_0.external_connection"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_50.clk_in_reset" type="reset" dir="end" />
@@ -333,6 +359,20 @@
   <parameter name="use_crc_forwarding" value="false" />
   <parameter name="vendor_id" value="4466" />
  </module>
+ <module name="pio_0" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="125000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="true" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="16" />
+ </module>
  <module name="sgdma" kind="altera_avalon_sgdma" version="18.1" enabled="1">
   <parameter name="addressWidth" value="32" />
   <parameter name="alwaysDoMaxBurst" value="true" />
@@ -357,6 +397,11 @@
    end="onchip_memory.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00020000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="avalon" version="18.1" start="pcie_ip.bar1_0" end="pio_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection kind="avalon" version="18.1" start="pcie_ip.bar2" end="pcie_ip.cra">
@@ -439,6 +484,11 @@
    kind="clock"
    version="18.1"
    start="pcie_ip.pcie_core_clk"
+   end="pio_0.clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="pcie_ip.pcie_core_clk"
    end="onchip_memory.clk1" />
  <connection
    kind="clock"
@@ -453,10 +503,22 @@
   <parameter name="irqNumber" value="2" />
  </connection>
  <connection
+   kind="interrupt"
+   version="18.1"
+   start="pcie_ip.rxm_irq"
+   end="pio_0.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
    kind="reset"
    version="18.1"
    start="clk_50.clk_reset"
    end="sgdma.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_50.clk_reset"
+   end="pio_0.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -472,6 +534,11 @@
    version="18.1"
    start="pcie_ip.pcie_core_reset"
    end="sgdma.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="pcie_ip.pcie_core_reset"
+   end="pio_0.reset" />
  <connection
    kind="reset"
    version="18.1"

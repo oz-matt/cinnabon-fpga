@@ -1321,7 +1321,7 @@ module cinnabon_qsys_mm_interconnect_1 (
 		.in_command_size_data (3'b000)                                         // (terminated)
 	);
 
-	cinnabon_qsys_mm_interconnect_1_avalon_st_adapter #(
+	cinnabon_qsys_mm_interconnect_0_avalon_st_adapter_001 #(
 		.inBitsPerSymbol (34),
 		.inUsePackets    (0),
 		.inDataWidth     (34),
@@ -1350,7 +1350,7 @@ module cinnabon_qsys_mm_interconnect_1 (
 		.out_0_error    (avalon_st_adapter_out_0_error)                              //         .error
 	);
 
-	cinnabon_qsys_mm_interconnect_1_avalon_st_adapter #(
+	cinnabon_qsys_mm_interconnect_0_avalon_st_adapter_001 #(
 		.inBitsPerSymbol (34),
 		.inUsePackets    (0),
 		.inDataWidth     (34),

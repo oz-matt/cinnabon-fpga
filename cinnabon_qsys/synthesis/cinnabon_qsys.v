@@ -38,10 +38,11 @@ module cinnabon_qsys (
 		input  wire        pcie_ip_rx_in_rx_datain_0,                  //              pcie_ip_rx_in.rx_datain_0
 		input  wire [39:0] pcie_ip_test_in_test_in,                    //            pcie_ip_test_in.test_in
 		output wire        pcie_ip_tx_out_tx_dataout_0,                //             pcie_ip_tx_out.tx_dataout_0
+		input  wire [15:0] pio_0_external_connection_export,           //  pio_0_external_connection.export
 		input  wire        reset_reset_n                               //                      reset.reset_n
 	);
 
-	wire         pcie_ip_pcie_core_clk_clk;                     // pcie_ip:pcie_core_clk_clk -> [irq_mapper:clk, mm_interconnect_0:pcie_ip_pcie_core_clk_clk, mm_interconnect_1:pcie_ip_pcie_core_clk_clk, onchip_memory:clk, pcie_ip:fixedclk_clk, rst_controller:clk, rst_controller_002:clk, sgdma:clk]
+	wire         pcie_ip_pcie_core_clk_clk;                     // pcie_ip:pcie_core_clk_clk -> [irq_mapper:clk, mm_interconnect_0:pcie_ip_pcie_core_clk_clk, mm_interconnect_1:pcie_ip_pcie_core_clk_clk, onchip_memory:clk, pcie_ip:fixedclk_clk, pio_0:clk, rst_controller:clk, rst_controller_002:clk, sgdma:clk]
 	wire         pcie_ip_bar1_0_waitrequest;                    // mm_interconnect_0:pcie_ip_bar1_0_waitrequest -> pcie_ip:bar1_0_waitrequest
 	wire  [63:0] pcie_ip_bar1_0_readdata;                       // mm_interconnect_0:pcie_ip_bar1_0_readdata -> pcie_ip:bar1_0_readdata
 	wire  [31:0] pcie_ip_bar1_0_address;                        // pcie_ip:bar1_0_address -> mm_interconnect_0:pcie_ip_bar1_0_address
@@ -77,6 +78,11 @@ module cinnabon_qsys (
 	wire         mm_interconnect_0_onchip_memory_s1_write;      // mm_interconnect_0:onchip_memory_s1_write -> onchip_memory:write
 	wire  [63:0] mm_interconnect_0_onchip_memory_s1_writedata;  // mm_interconnect_0:onchip_memory_s1_writedata -> onchip_memory:writedata
 	wire         mm_interconnect_0_onchip_memory_s1_clken;      // mm_interconnect_0:onchip_memory_s1_clken -> onchip_memory:clken
+	wire         mm_interconnect_0_pio_0_s1_chipselect;         // mm_interconnect_0:pio_0_s1_chipselect -> pio_0:chipselect
+	wire  [31:0] mm_interconnect_0_pio_0_s1_readdata;           // pio_0:readdata -> mm_interconnect_0:pio_0_s1_readdata
+	wire   [1:0] mm_interconnect_0_pio_0_s1_address;            // mm_interconnect_0:pio_0_s1_address -> pio_0:address
+	wire         mm_interconnect_0_pio_0_s1_write;              // mm_interconnect_0:pio_0_s1_write -> pio_0:write_n
+	wire  [31:0] mm_interconnect_0_pio_0_s1_writedata;          // mm_interconnect_0:pio_0_s1_writedata -> pio_0:writedata
 	wire         mm_interconnect_0_pcie_ip_txs_chipselect;      // mm_interconnect_0:pcie_ip_txs_chipselect -> pcie_ip:txs_chipselect
 	wire  [63:0] mm_interconnect_0_pcie_ip_txs_readdata;        // pcie_ip:txs_readdata -> mm_interconnect_0:pcie_ip_txs_readdata
 	wire         mm_interconnect_0_pcie_ip_txs_waitrequest;     // pcie_ip:txs_waitrequest -> mm_interconnect_0:pcie_ip_txs_waitrequest
@@ -111,8 +117,9 @@ module cinnabon_qsys (
 	wire         mm_interconnect_1_sgdma_csr_write;             // mm_interconnect_1:sgdma_csr_write -> sgdma:csr_write
 	wire  [31:0] mm_interconnect_1_sgdma_csr_writedata;         // mm_interconnect_1:sgdma_csr_writedata -> sgdma:csr_writedata
 	wire         irq_mapper_receiver0_irq;                      // sgdma:csr_irq -> irq_mapper:receiver0_irq
+	wire         irq_mapper_receiver1_irq;                      // pio_0:irq -> irq_mapper:receiver1_irq
 	wire  [15:0] pcie_ip_rxm_irq_irq;                           // irq_mapper:sender_irq -> pcie_ip:rxm_irq_irq
-	wire         rst_controller_reset_out_reset;                // rst_controller:reset_out -> [mm_interconnect_0:sgdma_reset_reset_bridge_in_reset_reset, mm_interconnect_1:sgdma_reset_reset_bridge_in_reset_reset, onchip_memory:reset, rst_translator:in_reset, sgdma:system_reset_n]
+	wire         rst_controller_reset_out_reset;                // rst_controller:reset_out -> [mm_interconnect_0:sgdma_reset_reset_bridge_in_reset_reset, mm_interconnect_1:sgdma_reset_reset_bridge_in_reset_reset, onchip_memory:reset, pio_0:reset_n, rst_translator:in_reset, sgdma:system_reset_n]
 	wire         rst_controller_reset_out_reset_req;            // rst_controller:reset_req -> [onchip_memory:reset_req, rst_translator:reset_req_in]
 	wire         pcie_ip_pcie_core_reset_reset;                 // pcie_ip:pcie_core_reset_reset_n -> [rst_controller:reset_in1, rst_controller_002:reset_in0]
 	wire         rst_controller_001_reset_out_reset;            // rst_controller_001:reset_out -> onchip_memory:reset2
@@ -371,6 +378,18 @@ module cinnabon_qsys (
 		.fixedclk_clk                       (pcie_ip_pcie_core_clk_clk)                    //           fixedclk.clk
 	);
 
+	cinnabon_qsys_pio_0 pio_0 (
+		.clk        (pcie_ip_pcie_core_clk_clk),             //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),       //               reset.reset_n
+		.address    (mm_interconnect_0_pio_0_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_pio_0_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_pio_0_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_pio_0_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_pio_0_s1_readdata),   //                    .readdata
+		.in_port    (pio_0_external_connection_export),      // external_connection.export
+		.irq        (irq_mapper_receiver1_irq)               //                 irq.irq
+	);
+
 	cinnabon_qsys_sgdma sgdma (
 		.clk                           (pcie_ip_pcie_core_clk_clk),              //              clk.clk
 		.system_reset_n                (~rst_controller_reset_out_reset),        //            reset.reset_n
@@ -450,7 +469,12 @@ module cinnabon_qsys (
 		.pcie_ip_txs_byteenable                                      (mm_interconnect_0_pcie_ip_txs_byteenable),      //                                                      .byteenable
 		.pcie_ip_txs_readdatavalid                                   (mm_interconnect_0_pcie_ip_txs_readdatavalid),   //                                                      .readdatavalid
 		.pcie_ip_txs_waitrequest                                     (mm_interconnect_0_pcie_ip_txs_waitrequest),     //                                                      .waitrequest
-		.pcie_ip_txs_chipselect                                      (mm_interconnect_0_pcie_ip_txs_chipselect)       //                                                      .chipselect
+		.pcie_ip_txs_chipselect                                      (mm_interconnect_0_pcie_ip_txs_chipselect),      //                                                      .chipselect
+		.pio_0_s1_address                                            (mm_interconnect_0_pio_0_s1_address),            //                                              pio_0_s1.address
+		.pio_0_s1_write                                              (mm_interconnect_0_pio_0_s1_write),              //                                                      .write
+		.pio_0_s1_readdata                                           (mm_interconnect_0_pio_0_s1_readdata),           //                                                      .readdata
+		.pio_0_s1_writedata                                          (mm_interconnect_0_pio_0_s1_writedata),          //                                                      .writedata
+		.pio_0_s1_chipselect                                         (mm_interconnect_0_pio_0_s1_chipselect)          //                                                      .chipselect
 	);
 
 	cinnabon_qsys_mm_interconnect_1 mm_interconnect_1 (
@@ -486,6 +510,7 @@ module cinnabon_qsys (
 		.clk           (pcie_ip_pcie_core_clk_clk),          //       clk.clk
 		.reset         (rst_controller_002_reset_out_reset), // clk_reset.reset
 		.receiver0_irq (irq_mapper_receiver0_irq),           // receiver0.irq
+		.receiver1_irq (irq_mapper_receiver1_irq),           // receiver1.irq
 		.sender_irq    (pcie_ip_rxm_irq_irq)                 //    sender.irq
 	);
 

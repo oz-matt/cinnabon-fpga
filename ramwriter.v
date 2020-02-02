@@ -12,7 +12,7 @@ reg  [15:0] r_data_word2 = 1;
 reg  [15:0] r_data_word3 = 2;
 reg  [15:0] r_data_word4 = 3;
 
-reg[13:0] r_address = 0;
+reg[13:0] r_address = 1;
 
 reg[7:0] r_byteen = 8'hFF;
 reg r_wbit = 0;
@@ -47,7 +47,7 @@ begin
 	 START_WRITE:
 	 begin
 	   r_wbit <= 1;
-      r_address <= r_address + 1; 
+      //r_address <= r_address + 1; 
 		
 	   r_data_word1 <= r_data_word1 + 4;
 	   r_data_word2 <= r_data_word2 + 4;
@@ -55,15 +55,25 @@ begin
 	   r_data_word4 <= r_data_word4 + 4;
 		
 		current_state <= END_WRITE;
+		
+		if (r_address == 14'h3FFF)
+		  r_address <= 1;
+		else
+		  r_address <= r_address + 1;
+		
 	 end
 	 
 	 END_WRITE:
 	 begin
 	 	r_wbit <= 0;
-		if(r_address[13] == 1)
-		  current_state <= STOP_ALL;
-		else
-		  current_state <= WAIT_STATE;
+		//if(r_address[13] == 1)
+		//  current_state <= STOP_ALL;
+		//else
+		current_state <= WAIT_STATE;
+		  
+		r_address[0] <= r_address;
+		  
+		  
 	 end
 	 
 	 WAIT_STATE:

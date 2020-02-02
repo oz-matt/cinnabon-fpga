@@ -480,6 +480,13 @@ wire[13:0] rw_address;
 wire[7:0] rw_byteen;
 wire rw_wbit;
 
+reg[15:0] pp = 777;
+
+wire[15:0] ppw;
+
+assign ppw = pp;
+assign LEDG[3:0] = pp[3:0];
+
 ramwriter rw0(
   .i_clk			(CLOCK_50),
   .o_data		(rw_data),
@@ -503,7 +510,8 @@ ramwriter rw0(
         .onchip_memory_s2_write                         (rw_wbit),                         //                                  .write
         .onchip_memory_s2_readdata                      (),                      //                                  .readdata
         .onchip_memory_s2_writedata                     (rw_data),    
-		  .onchip_memory_s2_byteenable                    (rw_byteen)
+		  .onchip_memory_s2_byteenable                    (rw_byteen),
+		  .pio_0_external_connection_export           (ppw)       
     );
 
 assign PCIE_WAKE_N = 1'b1;	 // 07/30/2013, pull-high to avoid system reboot after power off
@@ -517,7 +525,7 @@ heart_beat	heart_beat_clk50(
 
 assign LEDR[0] = hb_50;
 
-assign LEDG[7:0] = M10K_data_buffer[7:0];
+//assign LEDG[7:0] = M10K_data_buffer[7:0];
 
 
 endmodule
