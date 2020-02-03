@@ -480,12 +480,12 @@ wire[13:0] rw_address;
 wire[7:0] rw_byteen;
 wire rw_wbit;
 
-reg[15:0] pp = 777;
+//reg[15:0] pp = 777;
 
 wire[15:0] ppw;
 
-assign ppw = pp;
-assign LEDG[3:0] = pp[3:0];
+assign ppw = {2'b0, rw_address[13:0]};
+//assign LEDG[3:0] = pp[3:0];
 
 ramwriter rw0(
   .i_clk			(CLOCK_50),

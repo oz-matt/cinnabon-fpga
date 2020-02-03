@@ -7,10 +7,10 @@ module ramwriter(
   output o_wbit
 );
 
-reg  [15:0] r_data_word1 = 0;
-reg  [15:0] r_data_word2 = 1;
-reg  [15:0] r_data_word3 = 2;
-reg  [15:0] r_data_word4 = 3;
+reg[15:0] r_data_word1 = 0;
+reg[15:0] r_data_word2 = 1;
+reg[15:0] r_data_word3 = 2;
+reg[15:0] r_data_word4 = 3;
 
 reg[13:0] r_address = 1;
 
@@ -71,15 +71,16 @@ begin
 		//else
 		current_state <= WAIT_STATE;
 		  
-		r_address[0] <= r_address;
-		  
 		  
 	 end
 	 
 	 WAIT_STATE:
 	 begin
 	   if(clk_ctr >= 499998) //Start with 100samples/sec for testing
+		begin
 		  current_state <= START_WRITE;
+		  clk_ctr <= 0;
+		end
 		else
 		  clk_ctr <= clk_ctr + 1;
 	 end

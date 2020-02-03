@@ -1,5 +1,5 @@
 Flow report for cinnabon
-Sun Feb 02 17:01:32 2020
+Mon Feb 03 15:23:59 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 02 17:01:23 2020       ;
+; Flow Status                        ; Successful - Mon Feb 03 15:23:50 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; cinnabon                                    ;
 ; Top-level Entity Name              ; cinnabon                                    ;
 ; Family                             ; Cyclone IV GX                               ;
 ; Device                             ; EP4CGX150DF31C7                             ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 7,390 / 149,760 ( 5 % )                     ;
-;     Total combinational functions  ; 6,038 / 149,760 ( 4 % )                     ;
-;     Dedicated logic registers      ; 4,650 / 149,760 ( 3 % )                     ;
-; Total registers                    ; 4650                                        ;
+; Total logic elements               ; 7,366 / 149,760 ( 5 % )                     ;
+;     Total combinational functions  ; 6,009 / 149,760 ( 4 % )                     ;
+;     Dedicated logic registers      ; 4,649 / 149,760 ( 3 % )                     ;
+; Total registers                    ; 4649                                        ;
 ; Total pins                         ; 467 / 508 ( 92 % )                          ;
 ; Total virtual pins                 ; 1                                           ;
 ; Total memory bits                  ; 1,105,912 / 6,635,520 ( 17 % )              ;
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/02/2020 16:58:39 ;
+; Start date & time ; 02/03/2020 15:21:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cinnabon            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+-----------------------------------------------------------------+---------------+---------------+------------+
 ; Assignment Name                                   ; Value                                                           ; Default Value ; Entity Name   ; Section Id ;
 +---------------------------------------------------+-----------------------------------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 1095490343351.158068071911860                                   ; --            ; --            ; --         ;
+; COMPILER_SIGNATURE_ID                             ; 1095490343351.158076126705916                                   ; --            ; --            ; --         ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE                  ; Speed                                                           ; Balanced      ; --            ; --         ;
 ; FITTER_EFFORT                                     ; Standard Fit                                                    ; Auto Fit      ; --            ; --         ;
 ; MISC_FILE                                         ; cinnabon_qsys/synthesis/../cinnabon_qsys.cmp                    ; --            ; --            ; --         ;
@@ -109,11 +109,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:01     ; 1.0                     ; 1124 MB             ; 00:01:09                           ;
-; Fitter               ; 00:01:28     ; 1.1                     ; 1895 MB             ; 00:02:26                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 674 MB              ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.4                     ; 936 MB              ; 00:00:09                           ;
-; Total                ; 00:02:45     ; --                      ; --                  ; 00:03:52                           ;
+; Analysis & Synthesis ; 00:00:58     ; 1.0                     ; 1141 MB             ; 00:01:10                           ;
+; Fitter               ; 00:01:29     ; 1.1                     ; 1875 MB             ; 00:02:28                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 673 MB              ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.4                     ; 937 MB              ; 00:00:09                           ;
+; Total                ; 00:02:43     ; --                      ; --                  ; 00:03:55                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
