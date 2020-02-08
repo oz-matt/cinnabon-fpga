@@ -56,10 +56,8 @@ begin
 		
 		current_state <= END_WRITE;
 		
-		if (r_address == 14'h3FFF)
-		  r_address <= 1;
-		else
-		  r_address <= r_address + 1;
+		
+		r_address <= r_address + 1;
 		
 	 end
 	 
@@ -95,7 +93,7 @@ begin
 end
 
 
-assign o_data = {r_data_word4, r_data_word3, r_data_word2, r_data_word1};
+assign o_data = {2'b0, r_address,2'b0,  r_address,2'b0,  r_address,2'b0,  r_address};
 
 assign o_address = r_address;
 assign o_byteen = r_byteen;

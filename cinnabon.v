@@ -110,23 +110,28 @@ module cinnabon(
 							HEX7,
 
 							/////////HSMC/////////
-							HSMC_CLKIN0,
-							HSMC_CLKIN_N1,
-							HSMC_CLKIN_N2,
-							HSMC_CLKIN_P1,
-							HSMC_CLKIN_P2,
-							HSMC_CLKOUT0,
-							HSMC_CLKOUT_N1,
-							HSMC_CLKOUT_N2,
-							HSMC_CLKOUT_P1,
-							HSMC_CLKOUT_P2,
-							HSMC_D,
-							HSMC_I2C_SCLK,
-							HSMC_I2C_SDAT,
-							HSMC_RX_D_N,
-							HSMC_RX_D_P,
-							HSMC_TX_D_N,
-							HSMC_TX_D_P,
+                                       HSMC_CLKIN0,
+                                        HSMC_CLKOUT0,
+
+	          		HSMC_ADA_SCL,
+	          		HSMC_ADA_SDA,
+	          		HSMC_ADC_CLK_A,
+	          		HSMC_ADC_CLK_B,
+		HSMC_ADC_DA,
+	HSMC_ADC_DB,
+          		HSMC_ADC_OEB_A,
+	          		HSMC_ADC_OEB_B,
+	          		HSMC_ADC_OTR_A,
+		          		HSMC_ADC_OTR_B,
+	          		HSMC_DAC_CLK_A,
+		          		HSMC_DAC_CLK_B,
+	HSMC_DAC_DA,
+		HSMC_DAC_DB,
+	          		HSMC_DAC_MODE,
+		          		HSMC_DAC_WRT_A,
+	          		HSMC_DAC_WRT_B,
+      		HSMC_OSC_SMA_ADC4,
+ 		          		HSMC_SMA_DAC4,
 
 							/////////I2C/////////
 							I2C_SCLK,
@@ -289,22 +294,27 @@ output                        [6:0]                HEX7;
 
 ///////// HSMC /////////
 input                                              HSMC_CLKIN0;
-input                                              HSMC_CLKIN_N1;
-input                                              HSMC_CLKIN_N2;
-input                                              HSMC_CLKIN_P1;
-input                                              HSMC_CLKIN_P2;
 output                                             HSMC_CLKOUT0;
-inout                                              HSMC_CLKOUT_N1;
-inout                                              HSMC_CLKOUT_N2;
-inout                                              HSMC_CLKOUT_P1;
-inout                                              HSMC_CLKOUT_P2;
-inout                         [3:0]                HSMC_D;
-output                                             HSMC_I2C_SCLK;
-inout                                              HSMC_I2C_SDAT;
-inout                         [16:0]               HSMC_RX_D_N;
-inout                         [16:0]               HSMC_RX_D_P;
-inout                         [16:0]               HSMC_TX_D_N;
-inout                         [16:0]               HSMC_TX_D_P;
+
+	output		          		HSMC_ADA_SCL;
+	inout 		          		HSMC_ADA_SDA;
+	output		          		HSMC_ADC_CLK_A;
+	output		          		HSMC_ADC_CLK_B;
+	input 		    [13:0]		HSMC_ADC_DA;
+	input 		    [13:0]		HSMC_ADC_DB;
+	output		          		HSMC_ADC_OEB_A;
+	output		          		HSMC_ADC_OEB_B;
+	input 		          		HSMC_ADC_OTR_A;
+	input 		          		HSMC_ADC_OTR_B;
+	output		          		HSMC_DAC_CLK_A;
+	output		          		HSMC_DAC_CLK_B;
+	output		    [13:0]		HSMC_DAC_DA;
+	output		    [13:0]		HSMC_DAC_DB;
+	output		          		HSMC_DAC_MODE;
+	output		          		HSMC_DAC_WRT_A;
+	output		          		HSMC_DAC_WRT_B;
+	input 		          		HSMC_OSC_SMA_ADC4;
+	input 		          		HSMC_SMA_DAC4;
 
 ///////// I2C /////////
 output                                             I2C_SCLK;
@@ -524,6 +534,8 @@ heart_beat	heart_beat_clk50(
 );
 
 assign LEDR[0] = hb_50;
+
+assign HSMC_I2C_SDAT = 1;
 
 //assign LEDG[7:0] = M10K_data_buffer[7:0];
 

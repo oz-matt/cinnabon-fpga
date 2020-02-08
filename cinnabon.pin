@@ -129,10 +129,10 @@ VCCIO5                       : AA23      : power  :                   : 2.5V    
 VCCIO5                       : AA24      : power  :                   : 2.5V    : 5         :                
 LEDG[0]                      : AA25      : output : 2.5 V             :         : 5         : Y              
 KEY[0]                       : AA26      : input  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_P[13]              : AA27      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_CLKOUT_P2               : AA28      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_N[14]              : AA29      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_P[11]              : AA30      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[7]               : AA27      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_CLK_B               : AA28      : output : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[4]               : AA29      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[11]              : AA30      : input  : 2.5 V             :         : 5         : Y              
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 PCIE_TX_P[0](n)              : AB3       : output : 1.5-V PCML        :         : QL0       : N              
@@ -158,10 +158,10 @@ FS_ADDR[1]                   : AB22      : output : 3.3-V LVTTL       :         
 VCCD_PLL                     : AB23      : power  :                   : 1.2V    :           :                
 VCCA                         : AB24      : power  :                   : 2.5V    :           :                
 LEDG[1]                      : AB25      : output : 2.5 V             :         : 5         : Y              
-HSMC_D[2]                    : AB26      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_CLKOUT_P1               : AB27      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_CLKOUT_N1               : AB28      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_P[14]              : AB29      : bidir  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5         :                
+HSMC_DAC_CLK_A               : AB27      : output : 2.5 V             :         : 5         : Y              
+HSMC_DAC_CLK_B               : AB28      : output : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[5]               : AB29      : input  : 2.5 V             :         : 5         : Y              
 SW[4]                        : AB30      : input  : 2.5 V             :         : 5         : Y              
 PCIE_RX_P[0](n)              : AC1       : input  : 1.5-V PCML        :         : QL0       : N              
 PCIE_RX_P[0]                 : AC2       : input  : 1.5-V PCML        :         : QL0       : Y              
@@ -187,10 +187,10 @@ VCCIO4                       : AC21      : power  :                   : 3.3V    
 VCCIO4                       : AC22      : power  :                   : 3.3V    : 4         :                
 GND                          : AC23      : gnd    :                   :         :           :                
 GND                          : AC24      : gnd    :                   :         :           :                
-HSMC_D[0]                    : AC25      : bidir  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5         :                
 GND                          : AC26      : gnd    :                   :         :           :                
-HSMC_TX_D_P[12]              : AC27      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_N[12]              : AC28      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[9]               : AC27      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[8]               : AC28      : input  : 2.5 V             :         : 5         : Y              
 GND                          : AC29      : gnd    :                   :         :           :                
 G_SENSOR_INT1                : AC30      : input  : 2.5 V             :         : 5         : Y              
 GND                          : AD1       : gnd    :                   :         :           :                
@@ -217,12 +217,12 @@ VCCIO4                       : AD21      : power  :                   : 3.3V    
 FS_ADDR[13]                  : AD22      : output : 3.3-V LVTTL       :         : 4         : Y              
 FS_ADDR[15]                  : AD23      : output : 3.3-V LVTTL       :         : 4         : Y              
 SD_DAT[2]                    : AD24      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-HSMC_I2C_SDAT                : AD25      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_I2C_SCLK                : AD26      : output : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_P[15]              : AD27      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_N[15]              : AD28      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_P[13]              : AD29      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_N[13]              : AD30      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADA_SDA                 : AD25      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADA_SCL                 : AD26      : output : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[3]               : AD27      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[2]               : AD28      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[7]               : AD29      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[6]               : AD30      : input  : 2.5 V             :         : 5         : Y              
 RREF                         : AE1       :        :                   :         :           :                
 GND                          : AE2       : gnd    :                   :         :           :                
 LCD_DATA[5]                  : AE3       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
@@ -249,10 +249,10 @@ FS_DQ[1]                     : AE23      : bidir  : 3.3-V LVTTL       :         
 FS_ADDR[14]                  : AE24      : output : 3.3-V LVTTL       :         : 4         : Y              
 KEY[1]                       : AE25      : input  : 2.5 V             :         : 5         : Y              
 KEY[3]                       : AE26      : input  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_P[16]              : AE27      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_N[16]              : AE28      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_P[14]              : AE29      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_N[14]              : AE30      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[1]               : AE27      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[0]               : AE28      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[5]               : AE29      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[4]               : AE30      : input  : 2.5 V             :         : 5         : Y              
 GND                          : AF1       : gnd    :                   :         :           :                
 GND                          : AF2       : gnd    :                   :         :           :                
 LCD_DATA[1]                  : AF3       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
@@ -311,7 +311,7 @@ EEP_I2C_SDAT                 : AG25      : bidir  : 3.3-V LVTTL       :         
 GPIO[34]                     : AG26      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 EEP_I2C_SCLK                 : AG27      : output : 3.3-V LVTTL       :         : 4         : Y              
 GPIO[33]                     : AG28      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-HSMC_TX_D_N[16]              : AG29      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[0]               : AG29      : input  : 2.5 V             :         : 5         : Y              
 HEX2[3]                      : AG30      : output : 2.5 V             :         : 5         : Y              
 NC                           : AH1       :        :                   :         :           :                
 LCD_DATA[4]                  : AH2       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
@@ -341,8 +341,8 @@ SD_CLK                       : AH25      : output : 3.3-V LVTTL       :         
 SSRAM_ADV_N                  : AH26      : output : 3.3-V LVTTL       :         : 4         : Y              
 SD_DAT[0]                    : AH27      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 IRDA_RXD                     : AH28      : input  : 3.3-V LVTTL       :         : 4         : Y              
-HSMC_TX_D_P[16]              : AH29      : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_N[15]              : AH30      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[1]               : AH29      : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[2]               : AH30      : input  : 2.5 V             :         : 5         : Y              
 nSTATUS                      : AJ1       :        :                   :         : 3         :                
 GND                          : AJ2       : gnd    :                   :         :           :                
 LCD_RW                       : AJ3       : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -372,7 +372,7 @@ GND                          : AJ26      : gnd    :                   :         
 SD_WP_N                      : AJ27      : input  : 3.3-V LVTTL       :         : 4         : Y              
 SD_DAT[1]                    : AJ28      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AJ29      : gnd    :                   :         :           :                
-HSMC_TX_D_P[15]              : AJ30      : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[3]               : AJ30      : input  : 2.5 V             :         : 5         : Y              
 NC                           : AK2       :        :                   :         :           :                
 DRAM_WE_N                    : AK3       : output : 3.3-V LVTTL       :         : 3         : Y              
 DRAM_RAS_N                   : AK4       : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -489,8 +489,8 @@ GPIO[18]                     : D25       : bidir  : 3.3-V LVTTL       :         
 UART_CTS                     : D26       : input  : 3.3-V LVTTL       :         : 7         : Y              
 VGA_CLK                      : D27       : output : 3.3-V LVTTL       :         : 7         : Y              
 GPIO[17]                     : D28       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-HSMC_TX_D_P[2]               : D29       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[2]               : D30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[4]               : D29       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[5]               : D30       : output : 2.5 V             :         : 6         : Y              
 TMS                          : E1        : input  :                   :         : 9         :                
 TDI                          : E2        : input  :                   :         : 9         :                
 HEX3[4]                      : E3        : output : 2.5 V             :         : 8         : Y              
@@ -517,10 +517,10 @@ GND                          : E23       : gnd    :                   :         
 VGA_B[0]                     : E24       : output : 3.3-V LVTTL       :         : 7         : Y              
 TD_RESET_N                   : E25       : output : 3.3-V LVTTL       :         : 7         : Y              
 GND                          : E26       : gnd    :                   :         :           :                
-HSMC_D[1]                    : E27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_D[3]                    : E28       : bidir  : 2.5 V             :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E28       :        :                   :         : 6         :                
 GND                          : E29       : gnd    :                   :         :           :                
-HSMC_TX_D_N[3]               : E30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[7]               : E30       : output : 2.5 V             :         : 6         : Y              
 TDO                          : F1        : output :                   :         : 9         :                
 TCK                          : F2        : input  :                   :         : 9         :                
 GND                          : F3        : gnd    :                   :         :           :                
@@ -548,9 +548,9 @@ VGA_B[4]                     : F24       : output : 3.3-V LVTTL       :         
 VGA_BLANK_N                  : F25       : output : 3.3-V LVTTL       :         : 7         : Y              
 LEDG[3]                      : F26       : output : 2.5 V             :         : 6         : Y              
 LEDG[2]                      : F27       : output : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_P[1]               : F28       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[1]               : F29       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_P[3]               : F30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[2]               : F28       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[3]               : F29       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[6]               : F30       : output : 2.5 V             :         : 6         : Y              
 GND                          : G1        : gnd    :                   :         :           :                
 GND                          : G2        : gnd    :                   :         :           :                
 GND                          : G3        : gnd    :                   :         :           :                
@@ -576,11 +576,11 @@ GPIO[24]                     : G22       : bidir  : 3.3-V LVTTL       :         
 GPIO[26]                     : G23       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 GPIO[25]                     : G24       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 VGA_B[6]                     : G25       : output : 3.3-V LVTTL       :         : 7         : Y              
-HSMC_RX_D_P[0]               : G26       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[0]               : G27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_P[1]               : G28       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[1]               : G29       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[4]               : G30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[0]               : G26       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[1]               : G27       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[2]               : G28       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[3]               : G29       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[9]               : G30       : output : 2.5 V             :         : 6         : Y              
 GND                          : H1        : gnd    :                   :         :           :                
 GND                          : H2        : gnd    :                   :         :           :                
 GXB_NC                       : H3        :        :                   :         : QL1       :                
@@ -607,10 +607,10 @@ GND                          : H23       : gnd    :                   :         
 UART_TXD                     : H24       : output : 3.3-V LVTTL       :         : 7         : Y              
 SW[17]                       : H25       : input  : 2.5 V             :         : 6         : Y              
 GND                          : H26       : gnd    :                   :         :           :                
-HSMC_RX_D_N[2]               : H27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[0]               : H28       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[5]               : H27       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[1]               : H28       : output : 2.5 V             :         : 6         : Y              
 GND                          : H29       : gnd    :                   :         :           :                
-HSMC_TX_D_P[4]               : H30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[8]               : H30       : output : 2.5 V             :         : 6         : Y              
 GXB_GND*                     : J1        :        :                   :         : QL1       :                
 GXB_GND*                     : J2        :        :                   :         : QL1       :                
 GND                          : J3        : gnd    :                   :         :           :                
@@ -637,10 +637,10 @@ VCCD_PLL                     : J23       : power  :                   : 1.2V    
 GND                          : J24       : gnd    :                   :         :           :                
 LEDG[8]                      : J25       : output : 2.5 V             :         : 6         : Y              
 SW[14]                       : J26       : input  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_P[2]               : J27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_P[0]               : J28       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_P[5]               : J29       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[5]               : J30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[4]               : J27       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[0]               : J28       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[10]              : J29       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[11]              : J30       : output : 2.5 V             :         : 6         : Y              
 GND                          : K1        : gnd    :                   :         :           :                
 GND                          : K2        : gnd    :                   :         :           :                
 GXB_NC                       : K3        :        :                   :         : QL1       :                
@@ -666,11 +666,11 @@ GPIO[7]                      : K22       : bidir  : 3.3-V LVTTL       :         
 VCCA                         : K23       : power  :                   : 2.5V    :           :                
 LEDR[14]                     : K24       : output : 2.5 V             :         : 6         : Y              
 SW[15]                       : K25       : input  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_P[6]               : K26       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[6]               : K27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_P[3]               : K28       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[3]               : K29       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[7]               : K30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[12]              : K26       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DA[13]              : K27       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[6]               : K28       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[7]               : K29       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_MODE                : K30       : output : 2.5 V             :         : 6         : Y              
 GXB_GND*                     : L1        :        :                   :         : QL1       :                
 GXB_GND*                     : L2        :        :                   :         : QL1       :                
 GND                          : L3        : gnd    :                   :         :           :                
@@ -697,10 +697,10 @@ GND                          : L23       : gnd    :                   :         
 VCCIO6                       : L24       : power  :                   : 2.5V    : 6         :                
 LEDR[15]                     : L25       : output : 2.5 V             :         : 6         : Y              
 GND                          : L26       : gnd    :                   :         :           :                
-HSMC_RX_D_P[4]               : L27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[4]               : L28       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[8]               : L27       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[9]               : L28       : output : 2.5 V             :         : 6         : Y              
 GND                          : L29       : gnd    :                   :         :           :                
-HSMC_TX_D_P[7]               : L30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_WRT_A               : L30       : output : 2.5 V             :         : 6         : Y              
 GND                          : M1        : gnd    :                   :         :           :                
 GND                          : M2        : gnd    :                   :         :           :                
 GXB_NC                       : M3        :        :                   :         : QL1       :                
@@ -727,10 +727,10 @@ VCCIO6                       : M23       : power  :                   : 2.5V    
 VCCIO6                       : M24       : power  :                   : 2.5V    : 6         :                
 LEDR[13]                     : M25       : output : 2.5 V             :         : 6         : Y              
 SW[12]                       : M26       : input  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_P[5]               : M27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[5]               : M28       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_P[12]              : M29       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[12]              : M30       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[10]              : M27       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[11]              : M28       : output : 2.5 V             :         : 6         : Y              
+HSMC_ADC_DA[9]               : M29       : input  : 2.5 V             :         : 6         : Y              
+HSMC_ADC_DA[8]               : M30       : input  : 2.5 V             :         : 6         : Y              
 GXB_GND*                     : N1        :        :                   :         : QL1       :                
 GXB_GND*                     : N2        :        :                   :         : QL1       :                
 GND                          : N3        : gnd    :                   :         :           :                
@@ -757,10 +757,10 @@ VCCIO6                       : N23       : power  :                   : 2.5V    
 LEDR[11]                     : N24       : output : 2.5 V             :         : 6         : Y              
 SW[13]                       : N25       : input  : 2.5 V             :         : 6         : Y              
 SW[11]                       : N26       : input  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_P[9]               : N27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_TX_D_N[9]               : N28       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_P[6]               : N29       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[6]               : N30       : bidir  : 2.5 V             :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N28       :        :                   :         : 6         :                
+HSMC_DAC_DB[12]              : N29       : output : 2.5 V             :         : 6         : Y              
+HSMC_DAC_DB[13]              : N30       : output : 2.5 V             :         : 6         : Y              
 GND                          : P1        : gnd    :                   :         :           :                
 GND                          : P2        : gnd    :                   :         :           :                
 GXB_NC                       : P3        :        :                   :         : QL1       :                
@@ -787,8 +787,8 @@ GND                          : P23       : gnd    :                   :         
 VCCIO6                       : P24       : power  :                   : 2.5V    : 6         :                
 LEDR[8]                      : P25       : output : 2.5 V             :         : 6         : Y              
 GND                          : P26       : gnd    :                   :         :           :                
-HSMC_RX_D_P[7]               : P27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[7]               : P28       : bidir  : 2.5 V             :         : 6         : Y              
+HSMC_DAC_WRT_B               : P27       : output : 2.5 V             :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P28       :        :                   :         : 6         :                
 GND                          : P29       : gnd    :                   :         :           :                
 SW[8]                        : P30       : input  : 2.5 V             :         : 6         : Y              
 GXB_GND*                     : R1        :        :                   :         : QL1       :                
@@ -817,8 +817,8 @@ VCCIO6                       : R23       : power  :                   : 2.5V    
 LEDR[9]                      : R24       : output : 2.5 V             :         : 6         : Y              
 LEDR[6]                      : R25       : output : 2.5 V             :         : 6         : Y              
 SW[10]                       : R26       : input  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_P[8]               : R27       : bidir  : 2.5 V             :         : 6         : Y              
-HSMC_RX_D_N[8]               : R28       : bidir  : 2.5 V             :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R27       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R28       :        :                   :         : 6         :                
 SW[9]                        : R29       : input  : 2.5 V             :         : 6         : Y              
 SW[7]                        : R30       : input  : 2.5 V             :         : 6         : Y              
 GND                          : T1        : gnd    :                   :         :           :                
@@ -845,12 +845,12 @@ LEDR[4]                      : T21       : output : 2.5 V             :         
 GND                          : T22       : gnd    :                   :         :           :                
 LEDR[0]                      : T23       : output : 2.5 V             :         : 5         : Y              
 LEDR[1]                      : T24       : output : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_N[8]               : T25       : bidir  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T25       :        :                   :         : 5         :                
 LEDR[5]                      : T26       : output : 2.5 V             :         : 5         : Y              
 LEDR[7]                      : T27       : output : 2.5 V             :         : 5         : Y              
 SW[6]                        : T28       : input  : 2.5 V             :         : 6         : Y              
-HSMC_CLKIN_P2                : T29       : input  : 2.5 V             :         : 6         : Y              
-HSMC_CLKIN_N2                : T30       : input  : 2.5 V             :         : 6         : Y              
+HSMC_ADC_OTR_B               : T29       : input  : 2.5 V             :         : 6         : Y              
+HSMC_ADC_OTR_A               : T30       : input  : 2.5 V             :         : 6         : Y              
 GXB_GND*                     : U1        :        :                   :         : QL0       :                
 GXB_GND*                     : U2        :        :                   :         : QL0       :                
 GND                          : U3        : gnd    :                   :         :           :                
@@ -875,10 +875,10 @@ SW[5]                        : U21       : input  : 2.5 V             :         
 VCCIO5                       : U22       : power  :                   : 2.5V    : 5         :                
 GND                          : U23       : gnd    :                   :         :           :                
 VCCIO5                       : U24       : power  :                   : 2.5V    : 5         :                
-HSMC_TX_D_P[8]               : U25       : bidir  : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U25       :        :                   :         : 5         :                
 GND                          : U26       : gnd    :                   :         :           :                
-HSMC_RX_D_P[9]               : U27       : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_N[9]               : U28       : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_OEB_A               : U27       : output : 2.5 V             :         : 5         : Y              
+HSMC_ADC_OEB_B               : U28       : output : 2.5 V             :         : 5         : Y              
 GND                          : U29       : gnd    :                   :         :           :                
 SW[1]                        : U30       : input  : 2.5 V             :         : 5         : Y              
 GND                          : V1        : gnd    :                   :         :           :                
@@ -905,12 +905,12 @@ SW[2]                        : V21       : input  : 2.5 V             :         
 VCCIO5                       : V22       : power  :                   : 2.5V    : 5         :                
 VCCIO5                       : V23       : power  :                   : 2.5V    : 5         :                
 GND                          : V24       : gnd    :                   :         :           :                
-HSMC_TX_D_P[10]              : V25       : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_TX_D_N[10]              : V26       : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[13]              : V25       : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[12]              : V26       : input  : 2.5 V             :         : 5         : Y              
 LEDR[2]                      : V27       : output : 2.5 V             :         : 5         : Y              
 SW[0]                        : V28       : input  : 2.5 V             :         : 5         : Y              
-HSMC_CLKIN_P1                : V29       : input  : 2.5 V             :         : 5         : Y              
-HSMC_CLKIN_N1                : V30       : input  : 2.5 V             :         : 5         : Y              
+HSMC_OSC_SMA_ADC4            : V29       : input  : 2.5 V             :         : 5         : Y              
+HSMC_SMA_DAC4                : V30       : input  : 2.5 V             :         : 5         : Y              
 GXB_GND*                     : W1        :        :                   :         : QL0       :                
 GXB_GND*                     : W2        :        :                   :         : QL0       :                
 GND                          : W3        : gnd    :                   :         :           :                
@@ -937,10 +937,10 @@ VCCIO5                       : W23       : power  :                   : 2.5V    
 VCCIO5                       : W24       : power  :                   : 2.5V    : 5         :                
 LEDR[3]                      : W25       : output : 2.5 V             :         : 5         : Y              
 LEDG[4]                      : W26       : output : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_P[10]              : W27       : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_N[10]              : W28       : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_P[11]              : W29       : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_RX_D_N[11]              : W30       : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[13]              : W27       : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[12]              : W28       : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[11]              : W29       : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[10]              : W30       : input  : 2.5 V             :         : 5         : Y              
 GND                          : Y1        : gnd    :                   :         :           :                
 GND                          : Y2        : gnd    :                   :         :           :                
 GXB_NC                       : Y3        :        :                   :         : QL0       :                
@@ -967,7 +967,7 @@ GND                          : Y23       : gnd    :                   :         
 VCCIO5                       : Y24       : power  :                   : 2.5V    : 5         :                
 LEDG[6]                      : Y25       : output : 2.5 V             :         : 5         : Y              
 GND                          : Y26       : gnd    :                   :         :           :                
-HSMC_RX_D_N[13]              : Y27       : bidir  : 2.5 V             :         : 5         : Y              
-HSMC_CLKOUT_N2               : Y28       : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DA[6]               : Y27       : input  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_CLK_A               : Y28       : output : 2.5 V             :         : 5         : Y              
 GND                          : Y29       : gnd    :                   :         :           :                
-HSMC_TX_D_N[11]              : Y30       : bidir  : 2.5 V             :         : 5         : Y              
+HSMC_ADC_DB[10]              : Y30       : input  : 2.5 V             :         : 5         : Y              
