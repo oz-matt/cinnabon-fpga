@@ -1,6 +1,16 @@
 	component cinnabon_qsys is
 		port (
+			altpll_0_c1_clk                            : out std_logic;                                        -- clk
+			altpll_0_locked_conduit_export             : out std_logic;                                        -- export
+			altpll_0_pll_slave_read                    : in  std_logic                     := 'X';             -- read
+			altpll_0_pll_slave_write                   : in  std_logic                     := 'X';             -- write
+			altpll_0_pll_slave_address                 : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			altpll_0_pll_slave_readdata                : out std_logic_vector(31 downto 0);                    -- readdata
+			altpll_0_pll_slave_writedata               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
 			clk_clk                                    : in  std_logic                     := 'X';             -- clk
+			nco_ii_0_out_data                          : out std_logic_vector(35 downto 0);                    -- data
+			nco_ii_0_out_valid                         : out std_logic;                                        -- valid
+			nco_ii_0_rst_reset_n                       : in  std_logic                     := 'X';             -- reset_n
 			onchip_memory_s2_address                   : in  std_logic_vector(13 downto 0) := (others => 'X'); -- address
 			onchip_memory_s2_chipselect                : in  std_logic                     := 'X';             -- chipselect
 			onchip_memory_s2_clken                     : in  std_logic                     := 'X';             -- clken

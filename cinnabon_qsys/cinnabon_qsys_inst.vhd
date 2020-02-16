@@ -1,6 +1,22 @@
 	component cinnabon_qsys is
 		port (
+			altpll_0_locked_conduit_export             : out std_logic;                                        -- export
+			altpll_0_pll_slave_read                    : in  std_logic                     := 'X';             -- read
+			altpll_0_pll_slave_write                   : in  std_logic                     := 'X';             -- write
+			altpll_0_pll_slave_address                 : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			altpll_0_pll_slave_readdata                : out std_logic_vector(31 downto 0);                    -- readdata
+			altpll_0_pll_slave_writedata               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
 			clk_clk                                    : in  std_logic                     := 'X';             -- clk
+			nco_ii_0_out_data                          : out std_logic_vector(35 downto 0);                    -- data
+			nco_ii_0_out_valid                         : out std_logic;                                        -- valid
+			nco_ii_0_rst_reset_n                       : in  std_logic                     := 'X';             -- reset_n
+			onchip_memory_s2_address                   : in  std_logic_vector(13 downto 0) := (others => 'X'); -- address
+			onchip_memory_s2_chipselect                : in  std_logic                     := 'X';             -- chipselect
+			onchip_memory_s2_clken                     : in  std_logic                     := 'X';             -- clken
+			onchip_memory_s2_write                     : in  std_logic                     := 'X';             -- write
+			onchip_memory_s2_readdata                  : out std_logic_vector(63 downto 0);                    -- readdata
+			onchip_memory_s2_writedata                 : in  std_logic_vector(63 downto 0) := (others => 'X'); -- writedata
+			onchip_memory_s2_byteenable                : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- byteenable
 			pcie_ip_clocks_sim_clk250_export           : out std_logic;                                        -- clk250_export
 			pcie_ip_clocks_sim_clk500_export           : out std_logic;                                        -- clk500_export
 			pcie_ip_clocks_sim_clk125_export           : out std_logic;                                        -- clk125_export
@@ -27,21 +43,31 @@
 			pcie_ip_rx_in_rx_datain_0                  : in  std_logic                     := 'X';             -- rx_datain_0
 			pcie_ip_test_in_test_in                    : in  std_logic_vector(39 downto 0) := (others => 'X'); -- test_in
 			pcie_ip_tx_out_tx_dataout_0                : out std_logic;                                        -- tx_dataout_0
+			pio_0_external_connection_export           : in  std_logic_vector(15 downto 0) := (others => 'X'); -- export
 			reset_reset_n                              : in  std_logic                     := 'X';             -- reset_n
-			onchip_memory_s2_address                   : in  std_logic_vector(13 downto 0) := (others => 'X'); -- address
-			onchip_memory_s2_chipselect                : in  std_logic                     := 'X';             -- chipselect
-			onchip_memory_s2_clken                     : in  std_logic                     := 'X';             -- clken
-			onchip_memory_s2_write                     : in  std_logic                     := 'X';             -- write
-			onchip_memory_s2_readdata                  : out std_logic_vector(63 downto 0);                    -- readdata
-			onchip_memory_s2_writedata                 : in  std_logic_vector(63 downto 0) := (others => 'X'); -- writedata
-			onchip_memory_s2_byteenable                : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- byteenable
-			pio_0_external_connection_export           : in  std_logic_vector(15 downto 0) := (others => 'X')  -- export
+			altpll_0_c1_clk                            : out std_logic                                         -- clk
 		);
 	end component cinnabon_qsys;
 
 	u0 : component cinnabon_qsys
 		port map (
+			altpll_0_locked_conduit_export             => CONNECTED_TO_altpll_0_locked_conduit_export,             --    altpll_0_locked_conduit.export
+			altpll_0_pll_slave_read                    => CONNECTED_TO_altpll_0_pll_slave_read,                    --         altpll_0_pll_slave.read
+			altpll_0_pll_slave_write                   => CONNECTED_TO_altpll_0_pll_slave_write,                   --                           .write
+			altpll_0_pll_slave_address                 => CONNECTED_TO_altpll_0_pll_slave_address,                 --                           .address
+			altpll_0_pll_slave_readdata                => CONNECTED_TO_altpll_0_pll_slave_readdata,                --                           .readdata
+			altpll_0_pll_slave_writedata               => CONNECTED_TO_altpll_0_pll_slave_writedata,               --                           .writedata
 			clk_clk                                    => CONNECTED_TO_clk_clk,                                    --                        clk.clk
+			nco_ii_0_out_data                          => CONNECTED_TO_nco_ii_0_out_data,                          --               nco_ii_0_out.data
+			nco_ii_0_out_valid                         => CONNECTED_TO_nco_ii_0_out_valid,                         --                           .valid
+			nco_ii_0_rst_reset_n                       => CONNECTED_TO_nco_ii_0_rst_reset_n,                       --               nco_ii_0_rst.reset_n
+			onchip_memory_s2_address                   => CONNECTED_TO_onchip_memory_s2_address,                   --           onchip_memory_s2.address
+			onchip_memory_s2_chipselect                => CONNECTED_TO_onchip_memory_s2_chipselect,                --                           .chipselect
+			onchip_memory_s2_clken                     => CONNECTED_TO_onchip_memory_s2_clken,                     --                           .clken
+			onchip_memory_s2_write                     => CONNECTED_TO_onchip_memory_s2_write,                     --                           .write
+			onchip_memory_s2_readdata                  => CONNECTED_TO_onchip_memory_s2_readdata,                  --                           .readdata
+			onchip_memory_s2_writedata                 => CONNECTED_TO_onchip_memory_s2_writedata,                 --                           .writedata
+			onchip_memory_s2_byteenable                => CONNECTED_TO_onchip_memory_s2_byteenable,                --                           .byteenable
 			pcie_ip_clocks_sim_clk250_export           => CONNECTED_TO_pcie_ip_clocks_sim_clk250_export,           --         pcie_ip_clocks_sim.clk250_export
 			pcie_ip_clocks_sim_clk500_export           => CONNECTED_TO_pcie_ip_clocks_sim_clk500_export,           --                           .clk500_export
 			pcie_ip_clocks_sim_clk125_export           => CONNECTED_TO_pcie_ip_clocks_sim_clk125_export,           --                           .clk125_export
@@ -68,14 +94,8 @@
 			pcie_ip_rx_in_rx_datain_0                  => CONNECTED_TO_pcie_ip_rx_in_rx_datain_0,                  --              pcie_ip_rx_in.rx_datain_0
 			pcie_ip_test_in_test_in                    => CONNECTED_TO_pcie_ip_test_in_test_in,                    --            pcie_ip_test_in.test_in
 			pcie_ip_tx_out_tx_dataout_0                => CONNECTED_TO_pcie_ip_tx_out_tx_dataout_0,                --             pcie_ip_tx_out.tx_dataout_0
+			pio_0_external_connection_export           => CONNECTED_TO_pio_0_external_connection_export,           --  pio_0_external_connection.export
 			reset_reset_n                              => CONNECTED_TO_reset_reset_n,                              --                      reset.reset_n
-			onchip_memory_s2_address                   => CONNECTED_TO_onchip_memory_s2_address,                   --           onchip_memory_s2.address
-			onchip_memory_s2_chipselect                => CONNECTED_TO_onchip_memory_s2_chipselect,                --                           .chipselect
-			onchip_memory_s2_clken                     => CONNECTED_TO_onchip_memory_s2_clken,                     --                           .clken
-			onchip_memory_s2_write                     => CONNECTED_TO_onchip_memory_s2_write,                     --                           .write
-			onchip_memory_s2_readdata                  => CONNECTED_TO_onchip_memory_s2_readdata,                  --                           .readdata
-			onchip_memory_s2_writedata                 => CONNECTED_TO_onchip_memory_s2_writedata,                 --                           .writedata
-			onchip_memory_s2_byteenable                => CONNECTED_TO_onchip_memory_s2_byteenable,                --                           .byteenable
-			pio_0_external_connection_export           => CONNECTED_TO_pio_0_external_connection_export            --  pio_0_external_connection.export
+			altpll_0_c1_clk                            => CONNECTED_TO_altpll_0_c1_clk                             --                altpll_0_c1.clk
 		);
 

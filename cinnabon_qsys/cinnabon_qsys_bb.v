@@ -1,6 +1,22 @@
 
 module cinnabon_qsys (
+	altpll_0_locked_conduit_export,
+	altpll_0_pll_slave_read,
+	altpll_0_pll_slave_write,
+	altpll_0_pll_slave_address,
+	altpll_0_pll_slave_readdata,
+	altpll_0_pll_slave_writedata,
 	clk_clk,
+	nco_ii_0_out_data,
+	nco_ii_0_out_valid,
+	nco_ii_0_rst_reset_n,
+	onchip_memory_s2_address,
+	onchip_memory_s2_chipselect,
+	onchip_memory_s2_clken,
+	onchip_memory_s2_write,
+	onchip_memory_s2_readdata,
+	onchip_memory_s2_writedata,
+	onchip_memory_s2_byteenable,
 	pcie_ip_clocks_sim_clk250_export,
 	pcie_ip_clocks_sim_clk500_export,
 	pcie_ip_clocks_sim_clk125_export,
@@ -27,17 +43,27 @@ module cinnabon_qsys (
 	pcie_ip_rx_in_rx_datain_0,
 	pcie_ip_test_in_test_in,
 	pcie_ip_tx_out_tx_dataout_0,
+	pio_0_external_connection_export,
 	reset_reset_n,
-	onchip_memory_s2_address,
-	onchip_memory_s2_chipselect,
-	onchip_memory_s2_clken,
-	onchip_memory_s2_write,
-	onchip_memory_s2_readdata,
-	onchip_memory_s2_writedata,
-	onchip_memory_s2_byteenable,
-	pio_0_external_connection_export);	
+	altpll_0_c1_clk);	
 
+	output		altpll_0_locked_conduit_export;
+	input		altpll_0_pll_slave_read;
+	input		altpll_0_pll_slave_write;
+	input	[1:0]	altpll_0_pll_slave_address;
+	output	[31:0]	altpll_0_pll_slave_readdata;
+	input	[31:0]	altpll_0_pll_slave_writedata;
 	input		clk_clk;
+	output	[35:0]	nco_ii_0_out_data;
+	output		nco_ii_0_out_valid;
+	input		nco_ii_0_rst_reset_n;
+	input	[13:0]	onchip_memory_s2_address;
+	input		onchip_memory_s2_chipselect;
+	input		onchip_memory_s2_clken;
+	input		onchip_memory_s2_write;
+	output	[63:0]	onchip_memory_s2_readdata;
+	input	[63:0]	onchip_memory_s2_writedata;
+	input	[7:0]	onchip_memory_s2_byteenable;
 	output		pcie_ip_clocks_sim_clk250_export;
 	output		pcie_ip_clocks_sim_clk500_export;
 	output		pcie_ip_clocks_sim_clk125_export;
@@ -64,13 +90,7 @@ module cinnabon_qsys (
 	input		pcie_ip_rx_in_rx_datain_0;
 	input	[39:0]	pcie_ip_test_in_test_in;
 	output		pcie_ip_tx_out_tx_dataout_0;
-	input		reset_reset_n;
-	input	[13:0]	onchip_memory_s2_address;
-	input		onchip_memory_s2_chipselect;
-	input		onchip_memory_s2_clken;
-	input		onchip_memory_s2_write;
-	output	[63:0]	onchip_memory_s2_readdata;
-	input	[63:0]	onchip_memory_s2_writedata;
-	input	[7:0]	onchip_memory_s2_byteenable;
 	input	[15:0]	pio_0_external_connection_export;
+	input		reset_reset_n;
+	output		altpll_0_c1_clk;
 endmodule

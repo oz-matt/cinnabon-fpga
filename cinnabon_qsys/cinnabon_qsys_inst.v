@@ -1,5 +1,21 @@
 	cinnabon_qsys u0 (
+		.altpll_0_locked_conduit_export             (<connected-to-altpll_0_locked_conduit_export>),             //    altpll_0_locked_conduit.export
+		.altpll_0_pll_slave_read                    (<connected-to-altpll_0_pll_slave_read>),                    //         altpll_0_pll_slave.read
+		.altpll_0_pll_slave_write                   (<connected-to-altpll_0_pll_slave_write>),                   //                           .write
+		.altpll_0_pll_slave_address                 (<connected-to-altpll_0_pll_slave_address>),                 //                           .address
+		.altpll_0_pll_slave_readdata                (<connected-to-altpll_0_pll_slave_readdata>),                //                           .readdata
+		.altpll_0_pll_slave_writedata               (<connected-to-altpll_0_pll_slave_writedata>),               //                           .writedata
 		.clk_clk                                    (<connected-to-clk_clk>),                                    //                        clk.clk
+		.nco_ii_0_out_data                          (<connected-to-nco_ii_0_out_data>),                          //               nco_ii_0_out.data
+		.nco_ii_0_out_valid                         (<connected-to-nco_ii_0_out_valid>),                         //                           .valid
+		.nco_ii_0_rst_reset_n                       (<connected-to-nco_ii_0_rst_reset_n>),                       //               nco_ii_0_rst.reset_n
+		.onchip_memory_s2_address                   (<connected-to-onchip_memory_s2_address>),                   //           onchip_memory_s2.address
+		.onchip_memory_s2_chipselect                (<connected-to-onchip_memory_s2_chipselect>),                //                           .chipselect
+		.onchip_memory_s2_clken                     (<connected-to-onchip_memory_s2_clken>),                     //                           .clken
+		.onchip_memory_s2_write                     (<connected-to-onchip_memory_s2_write>),                     //                           .write
+		.onchip_memory_s2_readdata                  (<connected-to-onchip_memory_s2_readdata>),                  //                           .readdata
+		.onchip_memory_s2_writedata                 (<connected-to-onchip_memory_s2_writedata>),                 //                           .writedata
+		.onchip_memory_s2_byteenable                (<connected-to-onchip_memory_s2_byteenable>),                //                           .byteenable
 		.pcie_ip_clocks_sim_clk250_export           (<connected-to-pcie_ip_clocks_sim_clk250_export>),           //         pcie_ip_clocks_sim.clk250_export
 		.pcie_ip_clocks_sim_clk500_export           (<connected-to-pcie_ip_clocks_sim_clk500_export>),           //                           .clk500_export
 		.pcie_ip_clocks_sim_clk125_export           (<connected-to-pcie_ip_clocks_sim_clk125_export>),           //                           .clk125_export
@@ -26,14 +42,8 @@
 		.pcie_ip_rx_in_rx_datain_0                  (<connected-to-pcie_ip_rx_in_rx_datain_0>),                  //              pcie_ip_rx_in.rx_datain_0
 		.pcie_ip_test_in_test_in                    (<connected-to-pcie_ip_test_in_test_in>),                    //            pcie_ip_test_in.test_in
 		.pcie_ip_tx_out_tx_dataout_0                (<connected-to-pcie_ip_tx_out_tx_dataout_0>),                //             pcie_ip_tx_out.tx_dataout_0
+		.pio_0_external_connection_export           (<connected-to-pio_0_external_connection_export>),           //  pio_0_external_connection.export
 		.reset_reset_n                              (<connected-to-reset_reset_n>),                              //                      reset.reset_n
-		.onchip_memory_s2_address                   (<connected-to-onchip_memory_s2_address>),                   //           onchip_memory_s2.address
-		.onchip_memory_s2_chipselect                (<connected-to-onchip_memory_s2_chipselect>),                //                           .chipselect
-		.onchip_memory_s2_clken                     (<connected-to-onchip_memory_s2_clken>),                     //                           .clken
-		.onchip_memory_s2_write                     (<connected-to-onchip_memory_s2_write>),                     //                           .write
-		.onchip_memory_s2_readdata                  (<connected-to-onchip_memory_s2_readdata>),                  //                           .readdata
-		.onchip_memory_s2_writedata                 (<connected-to-onchip_memory_s2_writedata>),                 //                           .writedata
-		.onchip_memory_s2_byteenable                (<connected-to-onchip_memory_s2_byteenable>),                //                           .byteenable
-		.pio_0_external_connection_export           (<connected-to-pio_0_external_connection_export>)            //  pio_0_external_connection.export
+		.altpll_0_c1_clk                            (<connected-to-altpll_0_c1_clk>)                             //                altpll_0_c1.clk
 	);
 

@@ -505,6 +505,12 @@ ramwriter rw0(
   .o_wbit		(rw_wbit)
 );
 
+wire ncodv;
+wire[35:0] ncodata;
+
+wire rst;
+wire locked;
+
     cinnabon_qsys u0 (
         .clk_clk                                    (CLOCK_50),                                    //                        clk.clk
         .reset_reset_n                              (reset_n),                              //                      reset.reset_n
@@ -521,7 +527,15 @@ ramwriter rw0(
         .onchip_memory_s2_readdata                      (),                      //                                  .readdata
         .onchip_memory_s2_writedata                     (rw_data),    
 		  .onchip_memory_s2_byteenable                    (rw_byteen),
-		  .pio_0_external_connection_export           (ppw)       
+		  .pio_0_external_connection_export           (ppw),
+        .nco_ii_0_out_data(ncodata),
+        .nco_ii_0_out_valid(ncodv),                         //                           .valid
+		  .nco_ii_0_rst_reset_n(rst),             //    altpll_0_locked_conduit.export
+		  .altpll_0_locked_conduit_export(locked),                    //         altpll_0_pll_slave.read
+		  .altpll_0_pll_slave_write(),                   //                           .write
+		  .altpll_0_pll_slave_address(),                 //                           .address
+		  .altpll_0_pll_slave_readdata(),                //                           .readdata
+		  .altpll_0_pll_slave_writedata()		  
     );
 
 assign PCIE_WAKE_N = 1'b1;	 // 07/30/2013, pull-high to avoid system reboot after power off
@@ -534,6 +548,7 @@ heart_beat	heart_beat_clk50(
 );
 
 assign LEDR[0] = hb_50;
+assign HEX5[6:0] = ncodata[6:0];
 
 assign HSMC_I2C_SDAT = 1;
 
