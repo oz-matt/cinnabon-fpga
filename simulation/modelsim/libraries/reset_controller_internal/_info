@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dD:/cinnabon/simulation/modelsim
 valtera_pcie_hard_ip_reset_controller
-Z1 !s110 1581819921
+Z1 !s110 1582011882
 !i10b 1
 !s100 =;NYSVcl6kN2]B<^IYMod0
 IU0ceK?Ng6[HV?1lc2z]:83
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1581817642
+Z3 w1581999297
 8D:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v
 FD:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v
 L0 34
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1581819921.000000
+Z5 !s108 1582011882.000000
 !s107 D:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v|
 !s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v|-work|reset_controller_internal|
 !i113 1

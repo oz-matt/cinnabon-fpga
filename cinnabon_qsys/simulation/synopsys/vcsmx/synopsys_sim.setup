@@ -45,7 +45,6 @@ pio_0:                                        ./libraries/pio_0/
 pcie_ip:                                      ./libraries/pcie_ip/                                     
 onchip_memory:                                ./libraries/onchip_memory/                               
 nco_ii_0:                                     ./libraries/nco_ii_0/                                    
-altpll_0:                                     ./libraries/altpll_0/                                    
 altera_ver:                                   ./libraries/altera_ver/                                  
 lpm_ver:                                      ./libraries/lpm_ver/                                     
 sgate_ver:                                    ./libraries/sgate_ver/                                   

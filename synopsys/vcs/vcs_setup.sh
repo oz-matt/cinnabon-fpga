@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.1 196 win32 2020.02.15.21:01:08
+# ACDS 16.1 196 win32 2020.02.18.02:39:31
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -20,6 +20,7 @@
 # ----------------------------------------
 # This script provides commands to simulate the following IP detected in
 # your Quartus project:
+#     cinnabon_qsys
 #     cinnabon_qsys
 # 
 # Altera recommends that you source this Quartus-generated IP simulation
@@ -83,18 +84,7 @@
 # 
 # IP SIMULATION SCRIPT
 # ----------------------------------------
-# If cinnabon_qsys is one of several IP cores in your
-# Quartus project, you can generate a simulation script
-# suitable for inclusion in your top-level simulation
-# script by running the following command line:
-# 
-# ip-setup-simulation --quartus-project=<quartus project>
-# 
-# ip-setup-simulation will discover the Altera IP
-# within the Quartus project, and generate a unified
-# script which supports all the Altera IP within the design.
-# ----------------------------------------
-# ACDS 16.1 196 win32 2020.02.15.21:01:08
+# ACDS 16.1 196 win32 2020.02.18.02:39:31
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="cinnabon_qsys"
@@ -130,6 +120,11 @@ fi
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
+  cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_onchip_memory.hex ./
+  cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0_sin_c.hex ./
+  cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0_cos_c.hex ./
+  cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0_sin_f.hex ./
+  cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0_cos_f.hex ./
   cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_onchip_memory.hex ./
   cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0_sin_c.hex ./
   cp -f $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0_cos_c.hex ./
@@ -213,7 +208,6 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_pcie_ip.v \
   $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_onchip_memory.v \
   $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0.v \
-  $QSYS_SIMDIR/cinnabon_qsys/simulation/submodules/cinnabon_qsys_altpll_0.vo \
   $QSYS_SIMDIR/cinnabon_qsys/simulation/cinnabon_qsys.v \
   -top $TOP_LEVEL_NAME
 # ----------------------------------------

@@ -83,5 +83,4 @@ vlogan +v2k           "D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_
 vlogan +v2k           "D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_pcie_ip.v"                                                  -work pcie_ip                                     
 vlogan +v2k           "D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_onchip_memory.v"                                            -work onchip_memory                               
 vlogan +v2k           "D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0.v"                                                 -work nco_ii_0                                    
-vlogan +v2k           "D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_altpll_0.vo"                                                -work altpll_0                                    
 vlogan +v2k           "D:/cinnabon/cinnabon_qsys/simulation/cinnabon_qsys.v"                                                                                                                       

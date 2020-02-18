@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.1 196 win32 2020.02.15.20:47:25
+# ACDS 16.1 196 win32 2020.02.17.23:15:00
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -101,7 +101,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 16.1 196 win32 2020.02.15.20:47:25
+# ACDS 16.1 196 win32 2020.02.17.23:15:00
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="cinnabon_qsys"
@@ -184,7 +184,6 @@ mkdir -p ./libraries/pio_0/
 mkdir -p ./libraries/pcie_ip/
 mkdir -p ./libraries/onchip_memory/
 mkdir -p ./libraries/nco_ii_0/
-mkdir -p ./libraries/altpll_0/
 mkdir -p ./libraries/altera_ver/
 mkdir -p ./libraries/lpm_ver/
 mkdir -p ./libraries/sgate_ver/
@@ -298,7 +297,6 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/cinnabon_qsys_pcie_ip.v"                                                  -work pcie_ip                                     
   vlogan +v2k $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/cinnabon_qsys_onchip_memory.v"                                            -work onchip_memory                               
   vlogan +v2k $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/cinnabon_qsys_nco_ii_0.v"                                                 -work nco_ii_0                                    
-  vlogan +v2k $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/cinnabon_qsys_altpll_0.vo"                                                -work altpll_0                                    
   vlogan +v2k $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/cinnabon_qsys.v"                                                                                                                       
 fi
 

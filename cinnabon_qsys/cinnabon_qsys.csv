@@ -1,16 +1,15 @@
-# system info cinnabon_qsys on 2020.02.15.20:47:24
+# system info cinnabon_qsys on 2020.02.17.23:15:00
 system_info:
 name,value
 DEVICE,EP4CGX150DF31C7
 DEVICE_FAMILY,Cyclone IV GX
-GENERATION_ID,1581817597
+GENERATION_ID,1581999261
 #
 #
-# Files generated for cinnabon_qsys on 2020.02.15.20:47:24
+# Files generated for cinnabon_qsys on 2020.02.17.23:15:00
 files:
 filepath,kind,attributes,module,is_top
 simulation/cinnabon_qsys.v,VERILOG,,cinnabon_qsys,true
-simulation/submodules/cinnabon_qsys_altpll_0.vo,VERILOG,,cinnabon_qsys_altpll_0,false
 simulation/submodules/mentor/asj_nco_madx_cen.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,cinnabon_qsys_nco_ii_0,false
 simulation/submodules/aldec/asj_nco_madx_cen.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,cinnabon_qsys_nco_ii_0,false
 simulation/submodules/mentor/asj_nco_mady_cen.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,cinnabon_qsys_nco_ii_0,false
@@ -165,7 +164,6 @@ simulation/submodules/cinnabon_qsys_mm_interconnect_0_avalon_st_adapter_001_erro
 # Map from instance-path to kind of module
 instances:
 instancePath,module
-cinnabon_qsys.altpll_0,cinnabon_qsys_altpll_0
 cinnabon_qsys.nco_ii_0,cinnabon_qsys_nco_ii_0
 cinnabon_qsys.onchip_memory,cinnabon_qsys_onchip_memory
 cinnabon_qsys.pcie_ip,cinnabon_qsys_pcie_ip

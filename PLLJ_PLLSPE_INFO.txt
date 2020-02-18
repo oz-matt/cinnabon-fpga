@@ -23,3 +23,8 @@ PLLJITTER	NA
 PLLSPEmax	NA
 PLLSPEmin	NA
 
+PLL_Name	pll:pll_100|altpll:altpll_component|pll
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+

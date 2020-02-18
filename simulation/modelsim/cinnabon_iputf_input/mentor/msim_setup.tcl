@@ -114,5 +114,4 @@ vlog     "D:/cinnabon/cinnabon_qsys/simulation/submodules/mentor/asj_altqmcpipe.
 vlog     "D:/cinnabon/cinnabon_qsys/simulation/submodules/mentor/asj_gam_dp.v"                                                      -work nco_ii_0                                    
 vlog     "D:/cinnabon/cinnabon_qsys/simulation/submodules/mentor/asj_nco_derot.v"                                                   -work nco_ii_0                                    
 vlog     "D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_nco_ii_0.v"                                                 -work nco_ii_0                                    
-vlog     "D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_altpll_0.vo"                                                -work altpll_0                                    
 vlog     "D:/cinnabon/cinnabon_qsys/simulation/cinnabon_qsys.v"                                                                                                                       

@@ -1,0 +1,19 @@
+
+
+D:/cinnabon/pll.v
+
+Feb 17 10PM:04:10>: Error in CNX file format.
+
+Error messages are listed in file
+D:/cinnabon/pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+D:/cinnabon/pll.v
+
+Feb 18 02AM:29:01>: Error in CNX file format.
+
+Error messages are listed in file
+D:/cinnabon/pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)

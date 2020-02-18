@@ -1,13 +1,9 @@
 	component cinnabon_qsys is
 		port (
-			altpll_0_c1_clk                            : out std_logic;                                        -- clk
-			altpll_0_locked_conduit_export             : out std_logic;                                        -- export
-			altpll_0_pll_slave_read                    : in  std_logic                     := 'X';             -- read
-			altpll_0_pll_slave_write                   : in  std_logic                     := 'X';             -- write
-			altpll_0_pll_slave_address                 : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			altpll_0_pll_slave_readdata                : out std_logic_vector(31 downto 0);                    -- readdata
-			altpll_0_pll_slave_writedata               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
 			clk_clk                                    : in  std_logic                     := 'X';             -- clk
+			nco_ii_0_clk_clk                           : in  std_logic                     := 'X';             -- clk
+			nco_ii_0_in_valid                          : in  std_logic                     := 'X';             -- valid
+			nco_ii_0_in_data                           : in  std_logic_vector(31 downto 0) := (others => 'X'); -- data
 			nco_ii_0_out_data                          : out std_logic_vector(35 downto 0);                    -- data
 			nco_ii_0_out_valid                         : out std_logic;                                        -- valid
 			nco_ii_0_rst_reset_n                       : in  std_logic                     := 'X';             -- reset_n
@@ -37,6 +33,8 @@
 			pcie_ip_pipe_ext_rxpolarity0_ext           : out std_logic;                                        -- rxpolarity0_ext
 			pcie_ip_pipe_ext_txcompl0_ext              : out std_logic;                                        -- txcompl0_ext
 			pcie_ip_pipe_ext_txelecidle0_ext           : out std_logic;                                        -- txelecidle0_ext
+			pcie_ip_powerdown_pll_powerdown            : in  std_logic                     := 'X';             -- pll_powerdown
+			pcie_ip_powerdown_gxb_powerdown            : in  std_logic                     := 'X';             -- gxb_powerdown
 			pcie_ip_reconfig_busy_busy_altgxb_reconfig : in  std_logic                     := 'X';             -- busy_altgxb_reconfig
 			pcie_ip_reconfig_fromgxb_0_data            : out std_logic_vector(4 downto 0);                     -- data
 			pcie_ip_reconfig_togxb_data                : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- data

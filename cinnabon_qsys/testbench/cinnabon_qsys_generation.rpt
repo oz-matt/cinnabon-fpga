@@ -1,0 +1,345 @@
+Info: Starting: Create testbench Qsys system
+Info: D:/cinnabon/cinnabon_qsys/testbench/cinnabon_qsys.ipx
+Info: qsys-generate D:\cinnabon\cinnabon_qsys.qsys --testbench=STANDARD --output-directory=D:\cinnabon --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Progress: Loading cinnabon/cinnabon_qsys.qsys
+Progress: Reading input file
+Progress: Adding clk_50 [clock_source 16.1]
+Progress: Parameterizing module clk_50
+Progress: Adding nco_ii_0 [altera_nco_ii 16.1]
+Progress: Parameterizing module nco_ii_0
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module onchip_memory
+Progress: Adding pcie_ip [altera_pcie_hard_ip 16.1]
+Progress: Parameterizing module pcie_ip
+Progress: Adding pio_0 [altera_avalon_pio 16.1]
+Progress: Parameterizing module pio_0
+Progress: Adding sgdma [altera_avalon_sgdma 16.1]
+Progress: Parameterizing module sgdma
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: cinnabon_qsys.pcie_ip:  Rx Master BAR 1_0 mapped to 18 -bit Avalon-MM address
+Info: cinnabon_qsys.pcie_ip:  Rx Master BAR 2 mapped to 15 -bit Avalon-MM address
+Warning: cinnabon_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1)
+Warning: cinnabon_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1), "avalon_clk" (altera_clock_bridge 16.1)
+Info: cinnabon_qsys.pcie_ip.pcie_internal_hip:  Txs Address width is 31
+Info: cinnabon_qsys.pcie_ip.pcie_internal_hip: Application clock frequency is 125 Mhz 
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip.app_msi_ack: Interface has no signals
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip.app_msi_num: Interface has no signals
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip.app_msi_req: Interface has no signals
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip.test_out_export: Interface has no signals
+Info: cinnabon_qsys.pcie_ip.altgx_internal: Family: Cyclone IV GX
+Info: cinnabon_qsys.pcie_ip.altgx_internal: Lanes: 1
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.pcie_core_clk cannot be both connected and exported
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.app_msi_ack must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_analogreset must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.rc_rx_digitalreset must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.app_msi_num must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.app_msi_req must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.msi_interface_export must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_deemph_0 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.tx_margin_0 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pcie_internal_hip: pcie_internal_hip.test_out_export must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.pll_powerdown_pcs must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitch_pcs must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.pipe_interface_internal: pipe_interface_internal.rateswitchbaseclock_pcs must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_2 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_3 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_4 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_5 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_6 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_7 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_8 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.refclk_conduit: refclk_conduit.conduit_out_9 must be exported, or connected to a matching conduit.
+Warning: cinnabon_qsys.pcie_ip.reset_controller_internal: reset_controller_internal.reset_n_out cannot be both connected and exported
+Info: cinnabon_qsys.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: cinnabon_qsys.sgdma: Scatter-Gather DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: cinnabon_qsys.pcie_ip: Interrupt sender pcie_ip.cra_irq is not connected to an interrupt receiver
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching D:/intelfpga/16.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index D:\intelfpga\16.1\quartus\sopc_builder\bin\root_components.ipx
+Info: D:\intelfpga\16.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index D:\intelfpga\16.1\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: D:\intelfpga\16.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
+Info: D:/intelfpga/16.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: D:/cinnabon/cinnabon_qsys/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index D:\cinnabon\cinnabon_qsys\testbench\cinnabon_qsys.ipx
+Progress: Loading cinnabon/cinnabon_qsys.BAK.qsys
+Progress: Loading cinnabon/cinnabon_qsys.qsys
+Info: D:/cinnabon/* matched 61 files in 0.00 seconds
+Info: D:/cinnabon/ip/**/* matched 0 files in 0.00 seconds
+Info: D:/cinnabon/*/* matched 727 files in 0.01 seconds
+Info: D:\cinnabon\cinnabon_qsys\testbench\cinnabon_qsys.ipx described 0 plugins, 3 paths, in 0.02 seconds
+Info: D:/cinnabon/cinnabon_qsys/testbench/* matched 5 files in 0.02 seconds
+Info: D:/cinnabon/cinnabon_qsys/testbench/*/* matched 0 files in 0.00 seconds
+Info: C:/Users/klutc_000/.altera.quartus/ip/16.1/**/* matched 0 files in 0.00 seconds
+Info: D:/intelfpga/16.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: D:/intelfpga/16.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: D:/intelfpga/16.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index D:\intelfpga\16.1\ip\altera\altera_components.ipx
+Info: D:\intelfpga\16.1\ip\altera\altera_components.ipx described 1974 plugins, 0 paths, in 0.20 seconds
+Info: D:/intelfpga/16.1/ip/**/* matched 140 files in 0.20 seconds
+Info: D:/intelfpga/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index D:\intelfpga\16.1\quartus\sopc_builder\builtin.ipx
+Info: D:\intelfpga\16.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: D:/intelfpga/16.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
+Info: Reading index D:\intelfpga\16.1\quartus\common\librarian\factories\index.ipx
+Info: D:\intelfpga\16.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: D:/intelfpga/16.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: D:/intelfpga/16.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: D:\intelfpga\16.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.25 seconds
+Info: D:/intelfpga/16.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.25 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script D:/intelfpga/16.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: cinnabon_qsys
+Info: TB_Gen: System design is: cinnabon_qsys
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_50 CLASS_NAME
+Info: get_instance_assignment clk_50 testbench.partner.map.clk_in
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_instance_property nco_ii_0 CLASS_NAME
+Info: get_instance_assignment nco_ii_0 testbench.partner.map.clk
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_instance_property nco_ii_0 CLASS_NAME
+Info: get_instance_assignment nco_ii_0 testbench.partner.map.in
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_instance_property nco_ii_0 CLASS_NAME
+Info: get_instance_assignment nco_ii_0 testbench.partner.map.out
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_instance_property nco_ii_0 CLASS_NAME
+Info: get_instance_assignment nco_ii_0 testbench.partner.map.rst
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_instance_property onchip_memory CLASS_NAME
+Info: get_instance_assignment onchip_memory testbench.partner.map.s2
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.clocks_sim
+Info: get_instance_assignment pcie_ip testbench.partner.map.clocks_sim
+Info: get_instance_assignment pcie_ip testbench.partner.map.clocks_sim
+Info: get_instance_assignment pcie_ip testbench.partner.pcie_bfm_0.class
+Info: get_instance_assignment pcie_ip testbench.partner.pcie_bfm_0.version
+Info: get_instance_assignments pcie_ip
+Info: get_instance_assignment pcie_ip testbench.partner.pcie_bfm_0.parameter.LINK_WIDTH
+Info: get_instance_assignment pcie_ip testbench.partner.pcie_bfm_0.parameter.TEST_OUT_WIDTH
+Info: send_message Info TB_Gen: Interface 'pcie_ip_clocks_sim' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_clocks_sim' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_clocks_sim.partner_intf: 'clocks_sim'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_clocks_sim.partner_intf: 'clocks_sim'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_class: 'altera_pcie_bfm_qsys'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_class: 'altera_pcie_bfm_qsys'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_version: '11.0'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_version: '11.0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_param.LINK_WIDTH: '1'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_param.LINK_WIDTH: '1'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_param.TEST_OUT_WIDTH: 'None'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_param.TEST_OUT_WIDTH: 'None'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_params: 'LINK_WIDTH TEST_OUT_WIDTH'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' partner_params: 'LINK_WIDTH TEST_OUT_WIDTH'
+Info: get_instance_assignments pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_instance_interfaces pcie_ip
+Info: get_interface_property clk EXPORT_OF
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_interface_property clk EXPORT_OF
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_interface_property pcie_ip_pipe_ext EXPORT_OF
+Info: get_interface_property clk EXPORT_OF
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_interface_property pcie_ip_pipe_ext EXPORT_OF
+Info: get_interface_property pcie_ip_powerdown EXPORT_OF
+Info: get_interface_property clk EXPORT_OF
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_interface_property pcie_ip_pipe_ext EXPORT_OF
+Info: get_interface_property pcie_ip_powerdown EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_busy EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_fromgxb_0 EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_togxb EXPORT_OF
+Info: get_interface_property pcie_ip_refclk EXPORT_OF
+Info: get_interface_property clk EXPORT_OF
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_interface_property pcie_ip_pipe_ext EXPORT_OF
+Info: get_interface_property pcie_ip_powerdown EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_busy EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_fromgxb_0 EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_togxb EXPORT_OF
+Info: get_interface_property pcie_ip_refclk EXPORT_OF
+Info: get_interface_property pcie_ip_rx_in EXPORT_OF
+Info: get_interface_property clk EXPORT_OF
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_interface_property pcie_ip_pipe_ext EXPORT_OF
+Info: get_interface_property pcie_ip_powerdown EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_busy EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_fromgxb_0 EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_togxb EXPORT_OF
+Info: get_interface_property pcie_ip_refclk EXPORT_OF
+Info: get_interface_property pcie_ip_rx_in EXPORT_OF
+Info: get_interface_property pcie_ip_test_in EXPORT_OF
+Info: get_interface_property clk EXPORT_OF
+Info: get_interface_property nco_ii_0_clk EXPORT_OF
+Info: get_interface_property nco_ii_0_in EXPORT_OF
+Info: get_interface_property nco_ii_0_out EXPORT_OF
+Info: get_interface_property nco_ii_0_rst EXPORT_OF
+Info: get_interface_property onchip_memory_s2 EXPORT_OF
+Info: get_interface_property pcie_ip_clocks_sim EXPORT_OF
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_interface_property pcie_ip_pipe_ext EXPORT_OF
+Info: get_interface_property pcie_ip_powerdown EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_busy EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_fromgxb_0 EXPORT_OF
+Info: get_interface_property pcie_ip_reconfig_togxb EXPORT_OF
+Info: get_interface_property pcie_ip_refclk EXPORT_OF
+Info: get_interface_property pcie_ip_rx_in EXPORT_OF
+Info: get_interface_property pcie_ip_test_in EXPORT_OF
+Info: get_interface_property pcie_ip_tx_out EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pcie_ip_pcie_rstn EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.pcie_rstn
+Info: get_instance_assignment pcie_ip testbench.partner.map.pcie_rstn
+Info: get_instance_assignment pcie_ip testbench.partner.map.pcie_rstn
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_rstn' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_pcie_rstn' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_pcie_rstn.partner_intf: 'pcie_rstn'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_pcie_rstn.partner_intf: 'pcie_rstn'
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pcie_ip_pipe_ext EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.pipe_ext
+Info: get_instance_assignment pcie_ip testbench.partner.map.pipe_ext
+Info: get_instance_assignment pcie_ip testbench.partner.map.pipe_ext
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pipe_ext' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_pipe_ext' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_pipe_ext.partner_intf: 'pipe_ext'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_pipe_ext.partner_intf: 'pipe_ext'
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pcie_ip_powerdown EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.powerdown
+Info: get_instance_assignment pcie_ip testbench.partner.map.powerdown
+Info: get_instance_assignment pcie_ip testbench.partner.map.powerdown
+Info: send_message Info TB_Gen: Interface 'pcie_ip_powerdown' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_powerdown' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_powerdown.partner_intf: 'powerdown'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_powerdown.partner_intf: 'powerdown'
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pcie_ip_reconfig_busy EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.reconfig_busy
+Info: get_interface_property pcie_ip_reconfig_fromgxb_0 EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.reconfig_fromgxb_0
+Info: get_interface_property pcie_ip_reconfig_togxb EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.reconfig_togxb
+Info: get_interface_property pcie_ip_refclk EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.refclk
+Info: get_instance_assignment pcie_ip testbench.partner.map.refclk
+Info: get_instance_assignment pcie_ip testbench.partner.map.refclk
+Info: send_message Info TB_Gen: Interface 'pcie_ip_refclk' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_refclk' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_refclk.partner_intf: 'refclk'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_refclk.partner_intf: 'refclk'
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pcie_ip_rx_in EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.rx_in
+Info: get_instance_assignment pcie_ip testbench.partner.map.rx_in
+Info: get_instance_assignment pcie_ip testbench.partner.map.rx_in
+Info: send_message Info TB_Gen: Interface 'pcie_ip_rx_in' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_rx_in' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_rx_in.partner_intf: 'rx_in'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_rx_in.partner_intf: 'rx_in'
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pcie_ip_test_in EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.test_in
+Info: get_instance_assignment pcie_ip testbench.partner.map.test_in
+Info: get_instance_assignment pcie_ip testbench.partner.map.test_in
+Info: send_message Info TB_Gen: Interface 'pcie_ip_test_in' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_test_in' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_test_in.partner_intf: 'test_in'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_test_in.partner_intf: 'test_in'
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pcie_ip_tx_out EXPORT_OF
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_instance_assignment pcie_ip testbench.partner.map.tx_out
+Info: get_instance_assignment pcie_ip testbench.partner.map.tx_out
+Info: get_instance_assignment pcie_ip testbench.partner.map.tx_out
+Info: send_message Info TB_Gen: Interface 'pcie_ip_tx_out' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: TB_Gen: Interface 'pcie_ip_tx_out' partner_name: 'pcie_ip_pcie_bfm_0'
+Info: send_message Info TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_tx_out.partner_intf: 'tx_out'
+Info: TB_Gen: Interface 'pcie_ip_pcie_bfm_0' pcie_ip_tx_out.partner_intf: 'tx_out'
+Info: get_instance_property pcie_ip CLASS_NAME
+Info: get_interface_property pio_0_external_connection EXPORT_OF
+Info: get_instance_property pio_0 CLASS_NAME
+Info: get_instance_assignment pio_0 testbench.partner.map.external_connection
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_50 CLASS_NAME
+Info: get_instance_assignment clk_50 testbench.partner.map.clk_in_reset
+Info: send_message Info TB_Gen: Creating testbench system : cinnabon_qsys_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : cinnabon_qsys_tb with all standard BFMs
+Info: create_system cinnabon_qsys_tb
+Info: add_instance cinnabon_qsys_inst cinnabon_qsys 
+Info: set_use_testbench_naming_pattern true cinnabon_qsys
+Info: get_instance_interfaces cinnabon_qsys_inst
+Info: get_instance_interface_property cinnabon_qsys_inst altpll_0_c0 CLASS_NAME
+Error: can't read "intf_use_partner(altpll_0_c0)": no such element in array
+Error: can't read "intf_use_partner(altpll_0_c0)": no such element in array
+Info: Done
+Error: There were errors creating the testbench system.
+Info: Finished: Create testbench Qsys system

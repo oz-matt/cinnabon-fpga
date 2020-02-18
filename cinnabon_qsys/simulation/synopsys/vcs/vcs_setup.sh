@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.1 196 win32 2020.02.15.20:47:25
+# ACDS 16.1 196 win32 2020.02.17.23:15:00
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 16.1 196 win32 2020.02.15.20:47:25
+# ACDS 16.1 196 win32 2020.02.17.23:15:00
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="cinnabon_qsys"
@@ -213,7 +213,6 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/cinnabon_qsys_pcie_ip.v \
   $QSYS_SIMDIR/submodules/cinnabon_qsys_onchip_memory.v \
   $QSYS_SIMDIR/submodules/cinnabon_qsys_nco_ii_0.v \
-  $QSYS_SIMDIR/submodules/cinnabon_qsys_altpll_0.vo \
   $QSYS_SIMDIR/cinnabon_qsys.v \
   -top $TOP_LEVEL_NAME
 # ----------------------------------------

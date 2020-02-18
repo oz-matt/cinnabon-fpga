@@ -1,12 +1,9 @@
 	component cinnabon_qsys is
 		port (
-			altpll_0_locked_conduit_export             : out std_logic;                                        -- export
-			altpll_0_pll_slave_read                    : in  std_logic                     := 'X';             -- read
-			altpll_0_pll_slave_write                   : in  std_logic                     := 'X';             -- write
-			altpll_0_pll_slave_address                 : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			altpll_0_pll_slave_readdata                : out std_logic_vector(31 downto 0);                    -- readdata
-			altpll_0_pll_slave_writedata               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
 			clk_clk                                    : in  std_logic                     := 'X';             -- clk
+			nco_ii_0_clk_clk                           : in  std_logic                     := 'X';             -- clk
+			nco_ii_0_in_valid                          : in  std_logic                     := 'X';             -- valid
+			nco_ii_0_in_data                           : in  std_logic_vector(31 downto 0) := (others => 'X'); -- data
 			nco_ii_0_out_data                          : out std_logic_vector(35 downto 0);                    -- data
 			nco_ii_0_out_valid                         : out std_logic;                                        -- valid
 			nco_ii_0_rst_reset_n                       : in  std_logic                     := 'X';             -- reset_n
@@ -36,6 +33,8 @@
 			pcie_ip_pipe_ext_rxpolarity0_ext           : out std_logic;                                        -- rxpolarity0_ext
 			pcie_ip_pipe_ext_txcompl0_ext              : out std_logic;                                        -- txcompl0_ext
 			pcie_ip_pipe_ext_txelecidle0_ext           : out std_logic;                                        -- txelecidle0_ext
+			pcie_ip_powerdown_pll_powerdown            : in  std_logic                     := 'X';             -- pll_powerdown
+			pcie_ip_powerdown_gxb_powerdown            : in  std_logic                     := 'X';             -- gxb_powerdown
 			pcie_ip_reconfig_busy_busy_altgxb_reconfig : in  std_logic                     := 'X';             -- busy_altgxb_reconfig
 			pcie_ip_reconfig_fromgxb_0_data            : out std_logic_vector(4 downto 0);                     -- data
 			pcie_ip_reconfig_togxb_data                : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- data
@@ -44,20 +43,16 @@
 			pcie_ip_test_in_test_in                    : in  std_logic_vector(39 downto 0) := (others => 'X'); -- test_in
 			pcie_ip_tx_out_tx_dataout_0                : out std_logic;                                        -- tx_dataout_0
 			pio_0_external_connection_export           : in  std_logic_vector(15 downto 0) := (others => 'X'); -- export
-			reset_reset_n                              : in  std_logic                     := 'X';             -- reset_n
-			altpll_0_c1_clk                            : out std_logic                                         -- clk
+			reset_reset_n                              : in  std_logic                     := 'X'              -- reset_n
 		);
 	end component cinnabon_qsys;
 
 	u0 : component cinnabon_qsys
 		port map (
-			altpll_0_locked_conduit_export             => CONNECTED_TO_altpll_0_locked_conduit_export,             --    altpll_0_locked_conduit.export
-			altpll_0_pll_slave_read                    => CONNECTED_TO_altpll_0_pll_slave_read,                    --         altpll_0_pll_slave.read
-			altpll_0_pll_slave_write                   => CONNECTED_TO_altpll_0_pll_slave_write,                   --                           .write
-			altpll_0_pll_slave_address                 => CONNECTED_TO_altpll_0_pll_slave_address,                 --                           .address
-			altpll_0_pll_slave_readdata                => CONNECTED_TO_altpll_0_pll_slave_readdata,                --                           .readdata
-			altpll_0_pll_slave_writedata               => CONNECTED_TO_altpll_0_pll_slave_writedata,               --                           .writedata
 			clk_clk                                    => CONNECTED_TO_clk_clk,                                    --                        clk.clk
+			nco_ii_0_clk_clk                           => CONNECTED_TO_nco_ii_0_clk_clk,                           --               nco_ii_0_clk.clk
+			nco_ii_0_in_valid                          => CONNECTED_TO_nco_ii_0_in_valid,                          --                nco_ii_0_in.valid
+			nco_ii_0_in_data                           => CONNECTED_TO_nco_ii_0_in_data,                           --                           .data
 			nco_ii_0_out_data                          => CONNECTED_TO_nco_ii_0_out_data,                          --               nco_ii_0_out.data
 			nco_ii_0_out_valid                         => CONNECTED_TO_nco_ii_0_out_valid,                         --                           .valid
 			nco_ii_0_rst_reset_n                       => CONNECTED_TO_nco_ii_0_rst_reset_n,                       --               nco_ii_0_rst.reset_n
@@ -87,6 +82,8 @@
 			pcie_ip_pipe_ext_rxpolarity0_ext           => CONNECTED_TO_pcie_ip_pipe_ext_rxpolarity0_ext,           --                           .rxpolarity0_ext
 			pcie_ip_pipe_ext_txcompl0_ext              => CONNECTED_TO_pcie_ip_pipe_ext_txcompl0_ext,              --                           .txcompl0_ext
 			pcie_ip_pipe_ext_txelecidle0_ext           => CONNECTED_TO_pcie_ip_pipe_ext_txelecidle0_ext,           --                           .txelecidle0_ext
+			pcie_ip_powerdown_pll_powerdown            => CONNECTED_TO_pcie_ip_powerdown_pll_powerdown,            --          pcie_ip_powerdown.pll_powerdown
+			pcie_ip_powerdown_gxb_powerdown            => CONNECTED_TO_pcie_ip_powerdown_gxb_powerdown,            --                           .gxb_powerdown
 			pcie_ip_reconfig_busy_busy_altgxb_reconfig => CONNECTED_TO_pcie_ip_reconfig_busy_busy_altgxb_reconfig, --      pcie_ip_reconfig_busy.busy_altgxb_reconfig
 			pcie_ip_reconfig_fromgxb_0_data            => CONNECTED_TO_pcie_ip_reconfig_fromgxb_0_data,            -- pcie_ip_reconfig_fromgxb_0.data
 			pcie_ip_reconfig_togxb_data                => CONNECTED_TO_pcie_ip_reconfig_togxb_data,                --     pcie_ip_reconfig_togxb.data
@@ -95,7 +92,6 @@
 			pcie_ip_test_in_test_in                    => CONNECTED_TO_pcie_ip_test_in_test_in,                    --            pcie_ip_test_in.test_in
 			pcie_ip_tx_out_tx_dataout_0                => CONNECTED_TO_pcie_ip_tx_out_tx_dataout_0,                --             pcie_ip_tx_out.tx_dataout_0
 			pio_0_external_connection_export           => CONNECTED_TO_pio_0_external_connection_export,           --  pio_0_external_connection.export
-			reset_reset_n                              => CONNECTED_TO_reset_reset_n,                              --                      reset.reset_n
-			altpll_0_c1_clk                            => CONNECTED_TO_altpll_0_c1_clk                             --                altpll_0_c1.clk
+			reset_reset_n                              => CONNECTED_TO_reset_reset_n                               --                      reset.reset_n
 		);
 

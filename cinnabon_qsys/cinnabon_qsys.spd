@@ -662,10 +662,6 @@
    path="simulation/submodules/c_model/nco_model.h"
    type="OTHER"
    library="nco_ii_0" />
- <file
-   path="simulation/submodules/cinnabon_qsys_altpll_0.vo"
-   type="VERILOG"
-   library="altpll_0" />
  <file path="simulation/cinnabon_qsys.v" type="VERILOG" />
  <topLevel name="cinnabon_qsys" />
  <deviceFamily name="cycloneivgx" />

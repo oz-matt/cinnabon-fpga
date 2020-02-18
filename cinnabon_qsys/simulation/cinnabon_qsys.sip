@@ -144,4 +144,3 @@ set_global_assignment -library "lib_cinnabon_qsys" -name MISC_FILE [file join $:
 set_global_assignment -library "lib_cinnabon_qsys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/c_model/model_wrapper.cpp"]
 set_global_assignment -library "lib_cinnabon_qsys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/c_model/nco_model.cpp"]
 set_global_assignment -library "lib_cinnabon_qsys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/c_model/nco_model.h"]
-set_global_assignment -library "lib_cinnabon_qsys" -name MISC_FILE [file join $::quartus(sip_path) "submodules/cinnabon_qsys_altpll_0.vo"]

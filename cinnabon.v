@@ -509,7 +509,27 @@ wire ncodv;
 wire[35:0] ncodata;
 
 wire rst;
-wire locked;
+wire pll_locked;
+reg areset = 0;
+wire clk2, locked;
+
+reg nco_in_valid = 1;
+reg[31:0] nco_in_data  = 0;
+
+reg[1:0] pll_address  = 0;
+reg pll_read = 0;
+reg pll_write = 0;
+reg[31:0] pll_writedata  = 0;
+
+wire CLK_65, CLK_125;
+
+pll  pll_100   (
+				 .inclk0(CLOCK_50),
+                 .pllena(1),
+                 .areset(0),
+                 .c0    (CLK_125),
+                 .c1	(CLK_65)
+			   );
 
     cinnabon_qsys u0 (
         .clk_clk                                    (CLOCK_50),                                    //                        clk.clk
@@ -518,7 +538,8 @@ wire locked;
         .pcie_ip_pcie_rstn_export                   (PCIE_PERST_N),                   //          pcie_ip_pcie_rstn.export
         .pcie_ip_rx_in_rx_datain_0                  (PCIE_RX_P[0]),                  //              pcie_ip_rx_in.rx_datain_0
         .pcie_ip_tx_out_tx_dataout_0                (PCIE_TX_P[0]),                //             pcie_ip_tx_out.tx_dataout_0
-       // .led_external_connection_export             (LEDR[4:1]),             //    led_external_connection.export
+       
+.pcie_ip_clocks_sim_clk125_export           (HSMC_ADC_CLK_A)  ,  // .led_external_connection_export             (LEDR[4:1]),             //    led_external_connection.export
        // .button_external_connection_export          (KEY),           // button_external_connection.export
 		  .onchip_memory_s2_address                       (rw_address),                       //               onchip_memory2_0_s2.address
         .onchip_memory_s2_chipselect                    (1),                    //                                  .chipselect
@@ -528,14 +549,12 @@ wire locked;
         .onchip_memory_s2_writedata                     (rw_data),    
 		  .onchip_memory_s2_byteenable                    (rw_byteen),
 		  .pio_0_external_connection_export           (ppw),
-        .nco_ii_0_out_data(ncodata),
-        .nco_ii_0_out_valid(ncodv),                         //                           .valid
-		  .nco_ii_0_rst_reset_n(rst),             //    altpll_0_locked_conduit.export
-		  .altpll_0_locked_conduit_export(locked),                    //         altpll_0_pll_slave.read
-		  .altpll_0_pll_slave_write(),                   //                           .write
-		  .altpll_0_pll_slave_address(),                 //                           .address
-		  .altpll_0_pll_slave_readdata(),                //                           .readdata
-		  .altpll_0_pll_slave_writedata()		  
+       .nco_ii_0_in_valid                          (nco_in_valid),                          //                nco_ii_0_in.valid
+        .nco_ii_0_in_data                           (nco_in_data),                           //                           .data
+        .nco_ii_0_out_data                          (),                          //               nco_ii_0_out.data
+        .nco_ii_0_out_valid                         (),                         //                           .valid
+        .nco_ii_0_clk_clk                           (clk2),                           //               nco_ii_0_clk.clk
+        .nco_ii_0_rst_reset_n                       (reset_n)                        //               nco_ii_0_rst.reset_n
     );
 
 assign PCIE_WAKE_N = 1'b1;	 // 07/30/2013, pull-high to avoid system reboot after power off
@@ -551,7 +570,7 @@ assign LEDR[0] = hb_50;
 assign HEX5[6:0] = ncodata[6:0];
 
 assign HSMC_I2C_SDAT = 1;
-
+assign HSMC_ADC_CLK_B = CLK_125;
 //assign LEDG[7:0] = M10K_data_buffer[7:0];
 
 

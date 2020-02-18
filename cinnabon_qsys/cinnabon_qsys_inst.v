@@ -1,11 +1,8 @@
 	cinnabon_qsys u0 (
-		.altpll_0_locked_conduit_export             (<connected-to-altpll_0_locked_conduit_export>),             //    altpll_0_locked_conduit.export
-		.altpll_0_pll_slave_read                    (<connected-to-altpll_0_pll_slave_read>),                    //         altpll_0_pll_slave.read
-		.altpll_0_pll_slave_write                   (<connected-to-altpll_0_pll_slave_write>),                   //                           .write
-		.altpll_0_pll_slave_address                 (<connected-to-altpll_0_pll_slave_address>),                 //                           .address
-		.altpll_0_pll_slave_readdata                (<connected-to-altpll_0_pll_slave_readdata>),                //                           .readdata
-		.altpll_0_pll_slave_writedata               (<connected-to-altpll_0_pll_slave_writedata>),               //                           .writedata
 		.clk_clk                                    (<connected-to-clk_clk>),                                    //                        clk.clk
+		.nco_ii_0_clk_clk                           (<connected-to-nco_ii_0_clk_clk>),                           //               nco_ii_0_clk.clk
+		.nco_ii_0_in_valid                          (<connected-to-nco_ii_0_in_valid>),                          //                nco_ii_0_in.valid
+		.nco_ii_0_in_data                           (<connected-to-nco_ii_0_in_data>),                           //                           .data
 		.nco_ii_0_out_data                          (<connected-to-nco_ii_0_out_data>),                          //               nco_ii_0_out.data
 		.nco_ii_0_out_valid                         (<connected-to-nco_ii_0_out_valid>),                         //                           .valid
 		.nco_ii_0_rst_reset_n                       (<connected-to-nco_ii_0_rst_reset_n>),                       //               nco_ii_0_rst.reset_n
@@ -35,6 +32,8 @@
 		.pcie_ip_pipe_ext_rxpolarity0_ext           (<connected-to-pcie_ip_pipe_ext_rxpolarity0_ext>),           //                           .rxpolarity0_ext
 		.pcie_ip_pipe_ext_txcompl0_ext              (<connected-to-pcie_ip_pipe_ext_txcompl0_ext>),              //                           .txcompl0_ext
 		.pcie_ip_pipe_ext_txelecidle0_ext           (<connected-to-pcie_ip_pipe_ext_txelecidle0_ext>),           //                           .txelecidle0_ext
+		.pcie_ip_powerdown_pll_powerdown            (<connected-to-pcie_ip_powerdown_pll_powerdown>),            //          pcie_ip_powerdown.pll_powerdown
+		.pcie_ip_powerdown_gxb_powerdown            (<connected-to-pcie_ip_powerdown_gxb_powerdown>),            //                           .gxb_powerdown
 		.pcie_ip_reconfig_busy_busy_altgxb_reconfig (<connected-to-pcie_ip_reconfig_busy_busy_altgxb_reconfig>), //      pcie_ip_reconfig_busy.busy_altgxb_reconfig
 		.pcie_ip_reconfig_fromgxb_0_data            (<connected-to-pcie_ip_reconfig_fromgxb_0_data>),            // pcie_ip_reconfig_fromgxb_0.data
 		.pcie_ip_reconfig_togxb_data                (<connected-to-pcie_ip_reconfig_togxb_data>),                //     pcie_ip_reconfig_togxb.data
@@ -43,7 +42,6 @@
 		.pcie_ip_test_in_test_in                    (<connected-to-pcie_ip_test_in_test_in>),                    //            pcie_ip_test_in.test_in
 		.pcie_ip_tx_out_tx_dataout_0                (<connected-to-pcie_ip_tx_out_tx_dataout_0>),                //             pcie_ip_tx_out.tx_dataout_0
 		.pio_0_external_connection_export           (<connected-to-pio_0_external_connection_export>),           //  pio_0_external_connection.export
-		.reset_reset_n                              (<connected-to-reset_reset_n>),                              //                      reset.reset_n
-		.altpll_0_c1_clk                            (<connected-to-altpll_0_c1_clk>)                             //                altpll_0_c1.clk
+		.reset_reset_n                              (<connected-to-reset_reset_n>)                               //                      reset.reset_n
 	);
 

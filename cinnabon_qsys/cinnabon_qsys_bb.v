@@ -1,12 +1,9 @@
 
 module cinnabon_qsys (
-	altpll_0_locked_conduit_export,
-	altpll_0_pll_slave_read,
-	altpll_0_pll_slave_write,
-	altpll_0_pll_slave_address,
-	altpll_0_pll_slave_readdata,
-	altpll_0_pll_slave_writedata,
 	clk_clk,
+	nco_ii_0_clk_clk,
+	nco_ii_0_in_valid,
+	nco_ii_0_in_data,
 	nco_ii_0_out_data,
 	nco_ii_0_out_valid,
 	nco_ii_0_rst_reset_n,
@@ -36,6 +33,8 @@ module cinnabon_qsys (
 	pcie_ip_pipe_ext_rxpolarity0_ext,
 	pcie_ip_pipe_ext_txcompl0_ext,
 	pcie_ip_pipe_ext_txelecidle0_ext,
+	pcie_ip_powerdown_pll_powerdown,
+	pcie_ip_powerdown_gxb_powerdown,
 	pcie_ip_reconfig_busy_busy_altgxb_reconfig,
 	pcie_ip_reconfig_fromgxb_0_data,
 	pcie_ip_reconfig_togxb_data,
@@ -44,16 +43,12 @@ module cinnabon_qsys (
 	pcie_ip_test_in_test_in,
 	pcie_ip_tx_out_tx_dataout_0,
 	pio_0_external_connection_export,
-	reset_reset_n,
-	altpll_0_c1_clk);	
+	reset_reset_n);	
 
-	output		altpll_0_locked_conduit_export;
-	input		altpll_0_pll_slave_read;
-	input		altpll_0_pll_slave_write;
-	input	[1:0]	altpll_0_pll_slave_address;
-	output	[31:0]	altpll_0_pll_slave_readdata;
-	input	[31:0]	altpll_0_pll_slave_writedata;
 	input		clk_clk;
+	input		nco_ii_0_clk_clk;
+	input		nco_ii_0_in_valid;
+	input	[31:0]	nco_ii_0_in_data;
 	output	[35:0]	nco_ii_0_out_data;
 	output		nco_ii_0_out_valid;
 	input		nco_ii_0_rst_reset_n;
@@ -83,6 +78,8 @@ module cinnabon_qsys (
 	output		pcie_ip_pipe_ext_rxpolarity0_ext;
 	output		pcie_ip_pipe_ext_txcompl0_ext;
 	output		pcie_ip_pipe_ext_txelecidle0_ext;
+	input		pcie_ip_powerdown_pll_powerdown;
+	input		pcie_ip_powerdown_gxb_powerdown;
 	input		pcie_ip_reconfig_busy_busy_altgxb_reconfig;
 	output	[4:0]	pcie_ip_reconfig_fromgxb_0_data;
 	input	[3:0]	pcie_ip_reconfig_togxb_data;
@@ -92,5 +89,4 @@ module cinnabon_qsys (
 	output		pcie_ip_tx_out_tx_dataout_0;
 	input	[15:0]	pio_0_external_connection_export;
 	input		reset_reset_n;
-	output		altpll_0_c1_clk;
 endmodule

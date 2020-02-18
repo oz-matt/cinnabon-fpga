@@ -41,4 +41,3 @@ pio_0
 pcie_ip
 onchip_memory
 nco_ii_0
-altpll_0
