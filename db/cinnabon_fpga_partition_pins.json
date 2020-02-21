@@ -1,0 +1,69 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HSMC_DAC_DA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

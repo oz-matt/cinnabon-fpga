@@ -1,0 +1,171 @@
+Flow report for cinnabon_fpga
+Thu Feb 20 19:07:09 2020
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Thu Feb 20 19:07:04 2020           ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
+; Revision Name                      ; cinnabon_fpga                                   ;
+; Top-level Entity Name              ; cinnabon_fpga                                   ;
+; Family                             ; Cyclone IV GX                                   ;
+; Device                             ; EP4CGX150DF31C7                                 ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 170 / 149,760 ( < 1 % )                         ;
+;     Total combinational functions  ; 117 / 149,760 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 150 / 149,760 ( < 1 % )                         ;
+; Total registers                    ; 150                                             ;
+; Total pins                         ; 362 / 508 ( 71 % )                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 9,984 / 6,635,520 ( < 1 % )                     ;
+; Embedded Multiplier 9-bit elements ; 4 / 720 ( < 1 % )                               ;
+; Total GXB Receiver Channel PCS     ; 0 / 8 ( 0 % )                                   ;
+; Total GXB Receiver Channel PMA     ; 0 / 8 ( 0 % )                                   ;
+; Total GXB Transmitter Channel PCS  ; 0 / 8 ( 0 % )                                   ;
+; Total GXB Transmitter Channel PMA  ; 0 / 8 ( 0 % )                                   ;
+; Total PLLs                         ; 1 / 8 ( 13 % )                                  ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 02/20/2020 19:06:26 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; cinnabon_fpga       ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                             ;
++-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                                       ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 132098954566624.158224358610244                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/pll.bsf                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/pll.ppf                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/../lpm_nco.cmp                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/../../lpm_nco.qsys                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/../../lpm_nco.qsys                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/lpm_nco.v                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_madx_cen.v    ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_madx_cen.v     ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_mady_cen.v    ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_mady_cen.v     ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_isdr.v        ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_isdr.v         ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_apr_dxx.v     ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_apr_dxx.v      ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_mob_w.v       ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_mob_w.v        ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_dxx_g.v           ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_dxx_g.v            ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_dxx.v             ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_dxx.v              ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_as_m_dp_cen.v ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_as_m_dp_cen.v  ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_as_m_cen.v    ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_as_m_cen.v     ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_altqmcpipe.v      ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_altqmcpipe.v       ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_gam_dp.v          ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_gam_dp.v           ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/mentor/asj_nco_derot.v       ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/aldec/asj_nco_derot.v        ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/lpm_nco_nco_ii_0_sin_c.hex   ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/lpm_nco_nco_ii_0_cos_c.hex   ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/lpm_nco_nco_ii_0_sin_f.hex   ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/lpm_nco_nco_ii_0_cos_f.hex   ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/lpm_nco_nco_ii_0.v           ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/lpm_nco_nco_ii_0_tb.vhd      ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/c_model/model_wrapper.cpp    ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/c_model/nco_model.cpp        ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_nco/synthesis/simulation/submodules/c_model/nco_model.h          ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_add/lpm_add.bsf                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_add/lpm_add_inst.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; megaip/lpm_add/lpm_add_bb.v                                                 ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                      ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                      ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                      ; --            ; --          ; Top        ;
+; SLD_FILE                            ; megaip/lpm_nco/synthesis/lpm_nco.debuginfo                                  ; --            ; --          ; --         ;
+; SLD_INFO                            ; QSYS_NAME lpm_nco HAS_SOPCINFO 1 GENERATION_ID 1581726927                   ; --            ; lpm_nco     ; --         ;
+; SOPCINFO_FILE                       ; megaip/lpm_nco/synthesis/../../lpm_nco.sopcinfo                             ; --            ; --          ; --         ;
+; SPD_FILE                            ; megaip/lpm_nco/synthesis/simulation/../lpm_nco.spd                          ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                          ; --            ; --          ; --         ;
++-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4877 MB             ; 00:00:24                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 5887 MB             ; 00:00:28                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4769 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4947 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:39     ; --                      ; --                  ; 00:00:58                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; HAL9000          ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; HAL9000          ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; HAL9000          ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; HAL9000          ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off cinnabon_fpga -c cinnabon_fpga
+quartus_fit --read_settings_files=off --write_settings_files=off cinnabon_fpga -c cinnabon_fpga
+quartus_asm --read_settings_files=off --write_settings_files=off cinnabon_fpga -c cinnabon_fpga
+quartus_sta cinnabon_fpga -c cinnabon_fpga
+
+
+

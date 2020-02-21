@@ -1,0 +1,6 @@
+DATE = "13:41:54 February 20, 2020"
+QUARTUS_VERSION = "13.1"
+
+# Revisions
+
+PROJECT_REVISION = "cinnabon_fpga"
