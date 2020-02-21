@@ -126,8 +126,8 @@ wire    [31:0]	phasinc2;
 assign  phasinc1 = {g,g,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,v};
 assign  phasinc2 = {g,v,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g};
 
-assign  DAC_DA = comb; //B
-assign  DAC_DB = comb; //A
+//assign  DAC_DA = comb; //B
+//assign  DAC_DB = comb; //A
 
 
 //===================================================================================
@@ -174,7 +174,7 @@ pll  pll_100   (
 wire dclk;
 		
 divclk10 dct(
-  .clk(CLOCK_50),
+  .clk(comb[7]),
   .oclk(dclk)
   );
   
@@ -184,8 +184,8 @@ assign GPIO[0] = dclk;
 //  Structural coding
 //=======================================================
 
-assign HSMC_DAC_CLK_B = CLK_125;
-assign HSMC_DAC_DA = sin_out;
+//assign HSMC_DAC_CLK_B = CLK_125;
+//assign HSMC_DAC_DA = sin_out;
 	//////////// FAN Control //////////
 assign FAN_CTRL = 1'bz; // turn on FAN
 
@@ -199,12 +199,12 @@ module divclk10(
 input clk,
 output oclk);
 
-reg [6:0] ctr = 0;
+reg [10:0] ctr = 0;
 reg rclk =   0;
 
 always @(posedge clk)
 begin
-  if(ctr>=10)
+  if(ctr>=500)
   begin
     rclk <= ~rclk;
     ctr <= 0;

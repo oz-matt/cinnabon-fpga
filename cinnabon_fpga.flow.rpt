@@ -1,5 +1,5 @@
 Flow report for cinnabon_fpga
-Thu Feb 20 19:07:09 2020
+Thu Feb 20 22:33:43 2020
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 
 
@@ -41,21 +41,21 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 20 19:07:04 2020           ;
+; Flow Status                        ; Successful - Thu Feb 20 22:33:39 2020           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
 ; Revision Name                      ; cinnabon_fpga                                   ;
 ; Top-level Entity Name              ; cinnabon_fpga                                   ;
 ; Family                             ; Cyclone IV GX                                   ;
 ; Device                             ; EP4CGX150DF31C7                                 ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 170 / 149,760 ( < 1 % )                         ;
-;     Total combinational functions  ; 117 / 149,760 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 150 / 149,760 ( < 1 % )                         ;
-; Total registers                    ; 150                                             ;
+; Total logic elements               ; 234 / 149,760 ( < 1 % )                         ;
+;     Total combinational functions  ; 170 / 149,760 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 188 / 149,760 ( < 1 % )                         ;
+; Total registers                    ; 188                                             ;
 ; Total pins                         ; 362 / 508 ( 71 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 9,984 / 6,635,520 ( < 1 % )                     ;
-; Embedded Multiplier 9-bit elements ; 4 / 720 ( < 1 % )                               ;
+; Total memory bits                  ; 19,968 / 6,635,520 ( < 1 % )                    ;
+; Embedded Multiplier 9-bit elements ; 8 / 720 ( 1 % )                                 ;
 ; Total GXB Receiver Channel PCS     ; 0 / 8 ( 0 % )                                   ;
 ; Total GXB Receiver Channel PMA     ; 0 / 8 ( 0 % )                                   ;
 ; Total GXB Transmitter Channel PCS  ; 0 / 8 ( 0 % )                                   ;
@@ -69,7 +69,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/20/2020 19:06:26 ;
+; Start date & time ; 02/20/2020 22:32:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cinnabon_fpga       ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                                       ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 132098954566624.158224358610244                                             ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 132098954566624.158225597907504                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; megaip/pll.bsf                                                              ; --            ; --          ; --         ;
 ; MISC_FILE                           ; megaip/pll.ppf                                                              ; --            ; --          ; --         ;
 ; MISC_FILE                           ; megaip/lpm_nco/synthesis/../lpm_nco.cmp                                     ; --            ; --          ; --         ;
@@ -139,11 +139,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4877 MB             ; 00:00:24                           ;
-; Fitter                    ; 00:00:19     ; 1.0                     ; 5887 MB             ; 00:00:28                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4769 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4947 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:39     ; --                      ; --                  ; 00:00:58                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4896 MB             ; 00:00:27                           ;
+; Fitter                    ; 00:00:20     ; 1.0                     ; 5884 MB             ; 00:00:30                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4767 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 4959 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:40     ; --                      ; --                  ; 00:01:04                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
