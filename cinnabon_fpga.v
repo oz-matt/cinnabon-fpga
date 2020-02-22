@@ -74,8 +74,8 @@ module cinnabon_fpga(
 	//////////// PCIe //////////
 	input 		          		PCIE_PERST_N,
 	input 		          		PCIE_REFCLK_P,
-	//input 		     [1:0]		PCIE_RX_P,
-	//output		     [1:0]		PCIE_TX_P,
+	input 		     [0:0]		PCIE_RX_P,
+	output		     [0:0]		PCIE_TX_P,
 	output		          		PCIE_WAKE_N,
 
 	//////////// GPIO, GPIO connect to GPIO Default //////////
@@ -106,7 +106,29 @@ module cinnabon_fpga(
 	inout 		          		FAN_CTRL
 );
 
+wire reset_n;
+assign reset_n = 1'b1;
+	
+	
 
+wire[63:0] rw_data;
+wire[13:0] rw_address;
+wire[7:0] rw_byteen;
+wire rw_wbit;
+
+wire[15:0] ppw;
+
+assign ppw = {2'b0, rw_address[13:0]};
+
+ramwriter rw0(
+  .i_clk			(CLOCK_50),
+  .o_data		(rw_data),
+  .o_address	(rw_address),
+  .o_byteen		(rw_byteen),
+  .o_wbit		(rw_wbit)
+);
+	
+	
 wire    CLK_65, CLK_125;
 
 
@@ -178,19 +200,62 @@ divclk10 dct(
   .oclk(dclk)
   );
   
+  cinnabon_fpga_qsys u0 (
+        .clk_clk                                    (CLOCK_50),                                    //                        clk.clk
+        .reset_reset_n                              (reset_n),                              //                      reset.reset_n
+        .pcie_ip_refclk_export                      (PCIE_REFCLK_P),                      //             pcie_ip_refclk.export
+        .pcie_ip_pcie_rstn_export                   (PCIE_PERST_N),                   //          pcie_ip_pcie_rstn.export
+        .pcie_ip_rx_in_rx_datain_0                  (PCIE_RX_P[0]),                  //              pcie_ip_rx_in.rx_datain_0
+        .pcie_ip_tx_out_tx_dataout_0                (PCIE_TX_P[0]),                //             pcie_ip_tx_out.tx_dataout_0
+        .onchip_memory_s2_address                       (rw_address),                       //               onchip_memory2_0_s2.address
+        .onchip_memory_s2_chipselect                    (1),                    //                                  .chipselect
+        .onchip_memory_s2_clken                         (1),                         //                                  .clken
+        .onchip_memory_s2_write                         (rw_wbit),                         //                                  .write
+        .onchip_memory_s2_readdata                      (),                      //                                  .readdata
+        .onchip_memory_s2_writedata                     (rw_data),    
+		  .onchip_memory_s2_byteenable                    (rw_byteen),
+		  .pio_0_external_connection_export           (ppw)
+		  
+		  );
+
+  assign PCIE_WAKE_N = 1'b1;	 // pull-high to avoid system reboot after power off
+
+  
+  
 assign GPIO[0] = dclk;
 
-//=======================================================
-//  Structural coding
-//=======================================================
-
-//assign HSMC_DAC_CLK_B = CLK_125;
-//assign HSMC_DAC_DA = sin_out;
 	//////////// FAN Control //////////
 assign FAN_CTRL = 1'bz; // turn on FAN
-
+wire hb_50;
+assign LEDR[0] = hb_50;
+heart_beat	heart_beat_clk50(
+	.clk(CLOCK_50),
+	.led(hb_50)
+);
 endmodule
 
+module heart_beat(
+	clk,
+	led
+);
+
+parameter DUR_BITS = 26;
+
+input  clk;
+output led;
+
+
+reg [(DUR_BITS-1):0] cnt;
+always @ (posedge clk)
+begin
+	cnt <= cnt + 1;
+end
+
+assign led = cnt[DUR_BITS-1];
+
+
+
+endmodule
 
 
 

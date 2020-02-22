@@ -136,8 +136,8 @@ HSMC_ADC_DA[4]               : AA29      : input  : 2.5 V             :         
 HSMC_ADC_DB[11]              : AA30      : input  : 2.5 V             :         : 5         : Y              
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
-GXB_NC                       : AB3       :        :                   :         : QL0       :                
-GXB_NC                       : AB4       :        :                   :         : QL0       :                
+PCIE_TX_P[0](n)              : AB3       : output : 1.5-V PCML        :         : QL0       : N              
+PCIE_TX_P[0]                 : AB4       : output : 1.5-V PCML        :         : QL0       : Y              
 GND                          : AB5       : gnd    :                   :         :           :                
 GND                          : AB6       : gnd    :                   :         :           :                
 GND                          : AB7       : gnd    :                   :         :           :                
@@ -164,8 +164,8 @@ HSMC_DAC_CLK_A               : AB27      : output : 2.5 V             :         
 HSMC_DAC_CLK_B               : AB28      : output : 2.5 V             :         : 5         : Y              
 HSMC_ADC_DA[5]               : AB29      : input  : 2.5 V             :         : 5         : Y              
 SW[4]                        : AB30      : input  : 2.5 V             :         : 5         : Y              
-GXB_GND*                     : AC1       :        :                   :         : QL0       :                
-GXB_GND*                     : AC2       :        :                   :         : QL0       :                
+PCIE_RX_P[0](n)              : AC1       : input  : 1.5-V PCML        :         : QL0       : N              
+PCIE_RX_P[0]                 : AC2       : input  : 1.5-V PCML        :         : QL0       : Y              
 GND                          : AC3       : gnd    :                   :         :           :                
 GND                          : AC4       : gnd    :                   :         :           :                
 GND                          : AC5       : gnd    :                   :         :           :                

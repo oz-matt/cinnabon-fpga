@@ -1,18 +1,18 @@
-Analysis & Synthesis Status : Successful - Thu Feb 20 22:33:13 2020
+Analysis & Synthesis Status : Successful - Sat Feb 22 15:20:18 2020
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 Revision Name : cinnabon_fpga
 Top-level Entity Name : cinnabon_fpga
 Family : Cyclone IV GX
-Total logic elements : 240
-    Total combinational functions : 170
-    Dedicated logic registers : 188
-Total registers : 188
-Total pins : 361
+Total logic elements : 8,015
+    Total combinational functions : 5,948
+    Dedicated logic registers : 4,836
+Total registers : 4836
+Total pins : 363
 Total virtual pins : 0
-Total memory bits : 19,968
+Total memory bits : 1,125,880
 Embedded Multiplier 9-bit elements : 8
-Total GXB Receiver Channel PCS : 0
-Total GXB Receiver Channel PMA : 0
-Total GXB Transmitter Channel PCS : 0
-Total GXB Transmitter Channel PMA : 0
-Total PLLs : 1
+Total GXB Receiver Channel PCS : 1
+Total GXB Receiver Channel PMA : 1
+Total GXB Transmitter Channel PCS : 1
+Total GXB Transmitter Channel PMA : 1
+Total PLLs : 2
