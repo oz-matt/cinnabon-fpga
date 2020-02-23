@@ -1,0 +1,294 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/simulation/modelsim
+vCXhMaN265jLimSSBWkzlkg==
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1582473130
+!i10b 0
+!s100 <>4nfW9?0H;fhgPG@T_QS3
+IO[l_cDlkAH]f18NlRh`0<2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!i8a 1109331792
+!s105 asj_altqmcpipe_v_unit
+S1
+R0
+w1582473130
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_altqmcpipe.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_altqmcpipe.v
+Z4 L0 38
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1582473129.000000
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_altqmcpipe.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_altqmcpipe.v|-work|nco_ii_0|
+!i113 1
+Z7 o-work nco_ii_0
+Z8 tSvlog 1 CvgOpt 0
+ne3ff555
+vwDA5FM5zJuTUDvOAnlsPrQ==
+R1
+Z9 !s110 1582473129
+!i10b 0
+!s100 n>n?l;J5^4^FiUoDWFl9d3
+IXm8AM`;nKia941?VVZLnK3
+R3
+!i8a 1868815984
+!s105 asj_dxx_v_unit
+S1
+R0
+Z10 w1582473129
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx.v
+R4
+R5
+r1
+!s85 0
+31
+Z11 !s108 1582473128.000000
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+n8a05b98
+vgIbIqqx/QKxwIOkTLkrfpQ==
+R1
+Z12 !s110 1582473128
+!i10b 0
+!s100 nLF29DbEi;T4z9h^04R8g3
+IE6gFfVF>zFTFPWKN_UfNK3
+R3
+!i8a 1532696240
+!s105 asj_dxx_g_v_unit
+S1
+R0
+Z13 w1582473128
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx_g.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx_g.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx_g.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_dxx_g.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+n5b96f7
+vRBL2r0Eu9Sqi7Ees6lXc3Q==
+R1
+R9
+!i10b 0
+!s100 0QT;^GJJ6l902mE[BaeHT1
+Ib]dMQ[4GBIP0R;fXGlHJL1
+R3
+!i8a 1461986672
+!s105 asj_gal_v_unit
+S1
+R0
+R10
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_gal.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_gal.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_gal.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_gal.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+n8a05d1c
+vINfVse+YlwU8/6QnH58x4g==
+R1
+R12
+!i10b 0
+!s100 UMBaeVO90mWGUHe8DZgg13
+I@mGN<jKzKIV0Y1i3?zlgY1
+R3
+!i8a 1641757408
+!s105 asj_nco_apr_dxx_v_unit
+S1
+R0
+R13
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_apr_dxx.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_apr_dxx.v
+R4
+R5
+r1
+!s85 0
+31
+Z14 !s108 1582473127.000000
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_apr_dxx.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_apr_dxx.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+n8135608
+veySBQjbUA6TSXEBKLuG291KXcxkgmArdTa311CeVXwg=
+R1
+R9
+!i10b 0
+!s100 o_cm;SmX^:i[W55R6A_Ul3
+I0ZiF^gZdbl3aU97I]@B:40
+R3
+!i8a 1230824608
+!s105 asj_nco_as_m_cen_v_unit
+S1
+R0
+R10
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_as_m_cen.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_as_m_cen.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_as_m_cen.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_as_m_cen.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+nf13863e
+vNL/pT1ocJeK98xz9vXhbLQ==
+R1
+Z15 !s110 1582473127
+!i10b 0
+!s100 ]_VM8Sf?RSZRFg7zc3Na31
+IoHLT[4CIT6I8VV;l:acQG2
+R3
+!i8a 1874278320
+!s105 asj_nco_fxx_v_unit
+S1
+R0
+Z16 w1582473127
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_fxx.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_fxx.v
+R4
+R5
+r1
+!s85 0
+31
+!s108 1582473126.000000
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_fxx.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_fxx.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+n50dfd98
+vac05kpAZIEcgyAcNK2auvw==
+R1
+R15
+!i10b 0
+!s100 ?K3dW1Mm]hD<PCc9S5bDR1
+IG`VGZ;>`Y3L9PR=Pa;29c2
+R3
+!i8a 764396048
+!s105 asj_nco_isdr_v_unit
+S1
+R0
+R16
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_isdr.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_isdr.v
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_isdr.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_isdr.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+ne00fe2
+vsqY2QrZiCPqMHSAxpyj2nA==
+R1
+R15
+!i10b 0
+!s100 KYIE``Ak]KbW_bKDCiH[W0
+I67g98ki9AAch>;dD?1WWP2
+R3
+!i8a 316087840
+!s105 asj_nco_mob_rw_v_unit
+S1
+R0
+R16
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_mob_rw.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_mob_rw.v
+R4
+R5
+r1
+!s85 0
+31
+R14
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_mob_rw.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_mob_rw.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+n433677
+vv163b+eGkQKNutmrk8g3/Q==
+R1
+R12
+!i10b 0
+!s100 ozkMIS@AmGeP[Y?lWmfPa2
+II[B>^6X32Tfcc7CGk=X4_3
+R3
+!i8a 147086704
+!s105 asj_nco_pxx_v_unit
+S1
+R0
+R13
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_pxx.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_pxx.v
+R4
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_pxx.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/mentor/asj_nco_pxx.v|-work|nco_ii_0|
+!i113 1
+R7
+R8
+n50dc798
+vnco_nco_ii_0
+R1
+R2
+!i10b 1
+!s100 7g;:k::SDI[SHMzfVKJl_3
+InJn5Wd=4z_zbnh0iQhYb^2
+R3
+!s105 nco_nco_ii_0_v_unit
+S1
+R0
+w1582443848
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/nco_nco_ii_0.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/nco_nco_ii_0.v
+L0 23
+R5
+r1
+!s85 0
+31
+!s108 1582473130.000000
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/nco_nco_ii_0.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/submodules/nco_nco_ii_0.v|-work|nco_ii_0|
+!i113 1
+R7
+R8

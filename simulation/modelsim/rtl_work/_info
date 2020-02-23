@@ -1,0 +1,105 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/simulation/modelsim
+vadd
+Z1 !s110 1582473131
+!i10b 1
+!s100 zMEgJ@:dR:BWh_^]5JWVb2
+IZ[?NPjP^bKPN`cf7GN`E21
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 add_v_unit
+S1
+R0
+w1582446307
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/add/add.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/add/add.v
+Z3 L0 40
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1582473131.000000
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/add/add.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/add|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/add/add.v|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/add
+Z7 tSvlog 1 CvgOpt 0
+vcinnabon_fpga
+R1
+!i10b 1
+!s100 e0A43;;geJWZ>O?3L8@l:2
+ILaU<=`S:J@GgS>5l;lCDN1
+R2
+!s105 cinnabon_fpga_v_unit
+S1
+R0
+w1582446398
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cinnabon_fpga.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cinnabon_fpga.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cinnabon_fpga.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cinnabon_fpga.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga
+R7
+vnco
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z8 !s110 1582473130
+!i10b 1
+!s100 <_em7<2L>CXC6Uj:_IlCi2
+I25<AX_9]gW[j5BRAR07?]1
+R2
+!s105 nco_v_unit
+S1
+R0
+w1582443847
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/nco.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/nco.v
+L0 6
+R4
+r1
+!s85 0
+31
+Z9 !s108 1582473130.000000
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/nco.v|
+!s90 -reportprogress|300|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/simulation/nco.v|
+!i113 1
+R7
+vpll
+R8
+!i10b 1
+!s100 CmmFa7[C_=k2_BiW=D;`;3
+I3UK`WgoShooQ;9:06QYXF0
+R2
+!s105 pll_v_unit
+S1
+R0
+w1582443065
+8D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/pll/pll.v
+FD:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/pll/pll.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/pll/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/pll|D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/pll/pll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/pll
+R7

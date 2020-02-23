@@ -7,7 +7,7 @@ set_global_assignment -name DEVICE EP4CGX150DF31C7
 set_global_assignment -name TOP_LEVEL_ENTITY "cinnabon_fpga"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Standard Edition"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:41:54 FEBRUARY 20,2020"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "02:16:09 FEBRUARY 23,2020"
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
@@ -424,6 +424,36 @@ set_location_assignment PIN_AE10 -to DRAM_ADDR[12]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12]
 
 #============================================================
+# SSRAM
+#============================================================
+set_location_assignment PIN_AJ21 -to SSRAM0_CE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM0_CE_N
+set_location_assignment PIN_AG23 -to SSRAM1_CE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM1_CE_N
+set_location_assignment PIN_AK25 -to SSRAM_ADSC_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_ADSC_N
+set_location_assignment PIN_AJ25 -to SSRAM_ADSP_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_ADSP_N
+set_location_assignment PIN_AH26 -to SSRAM_ADV_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_ADV_N
+set_location_assignment PIN_AF22 -to SSRAM_BE[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_BE[0]
+set_location_assignment PIN_AK22 -to SSRAM_BE[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_BE[1]
+set_location_assignment PIN_AJ22 -to SSRAM_BE[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_BE[2]
+set_location_assignment PIN_AF21 -to SSRAM_BE[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_BE[3]
+set_location_assignment PIN_AF24 -to SSRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_CLK
+set_location_assignment PIN_AK23 -to SSRAM_GW_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_GW_N
+set_location_assignment PIN_AG24 -to SSRAM_OE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_OE_N
+set_location_assignment PIN_AK24 -to SSRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SSRAM_WE_N
+
+#============================================================
 # Flash
 #============================================================
 set_location_assignment PIN_AG19 -to FL_CE_N
@@ -810,14 +840,19 @@ set_instance_assignment -name IO_STANDARD "2.5 V" -to FAN_CTRL
 #============================================================
 
 
-set_global_assignment -name QIP_FILE megaip/pll.qip
-set_global_assignment -name QIP_FILE megaip/lpm_nco/synthesis/lpm_nco.qip
-set_global_assignment -name SIP_FILE megaip/lpm_nco/synthesis/simulation/lpm_nco.sip
+set_global_assignment -name QIP_FILE cores/pll/pll.qip
+set_global_assignment -name QIP_FILE cores/nco/nco/synthesis/nco.qip
+set_global_assignment -name SIP_FILE cores/nco/nco/simulation/nco.sip
+set_global_assignment -name SIP_FILE cores/pll/pll.sip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name QIP_FILE megaip/lpm_add/lpm_add.qip
-set_global_assignment -name VERILOG_FILE ramwriter.v
+set_global_assignment -name QIP_FILE cores/add/add.qip
+set_global_assignment -name SIP_FILE cores/add/add.sip
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name QSYS_FILE cinnabon_fpga_qsys.qsys
 set_global_assignment -name QIP_FILE cinnabon_fpga_qsys/synthesis/cinnabon_fpga_qsys.qip
 set_global_assignment -name SIP_FILE cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.sip
+set_global_assignment -name VERILOG_FILE src/ramwriter.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

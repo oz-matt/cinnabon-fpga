@@ -274,10 +274,10 @@ GND                          : AF17      : gnd    :                   :         
 SD_CMD                       : AF18      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 FL_RY                        : AF19      : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AF20      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF22      :        :                   :         : 4         :                
+SSRAM_BE[3]                  : AF21      : output : 3.3-V LVTTL       :         : 4         : Y              
+SSRAM_BE[0]                  : AF22      : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AF23      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF24      :        :                   :         : 4         :                
+SSRAM_CLK                    : AF24      : output : 3.3-V LVTTL       :         : 4         : Y              
 SMA_CLKOUT                   : AF25      : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AF26      : gnd    :                   :         :           :                
 LCD_ON                       : AF27      : output : 2.5 V             :         : 5         : Y              
@@ -306,8 +306,8 @@ FL_CE_N                      : AG19      : output : 3.3-V LVTTL       :         
 FS_ADDR[19]                  : AG20      : output : 3.3-V LVTTL       :         : 4         : Y              
 FS_ADDR[11]                  : AG21      : output : 3.3-V LVTTL       :         : 4         : Y              
 FS_ADDR[12]                  : AG22      : output : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG24      :        :                   :         : 4         :                
+SSRAM1_CE_N                  : AG23      : output : 3.3-V LVTTL       :         : 4         : Y              
+SSRAM_OE_N                   : AG24      : output : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4         :                
 GPIO[34]                     : AG26      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG27      :        :                   :         : 4         :                
@@ -339,7 +339,7 @@ FS_DQ[12]                    : AH22      : bidir  : 3.3-V LVTTL       :         
 FS_DQ[3]                     : AH23      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 FS_DQ[2]                     : AH24      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 SD_CLK                       : AH25      : output : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH26      :        :                   :         : 4         :                
+SSRAM_ADV_N                  : AH26      : output : 3.3-V LVTTL       :         : 4         : Y              
 SD_DAT[0]                    : AH27      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH28      :        :                   :         : 4         :                
 HSMC_ADC_DB[1]               : AH29      : input  : 2.5 V             :         : 5         : Y              
@@ -364,11 +364,11 @@ GND                          : AJ17      : gnd    :                   :         
 FS_ADDR[4]                   : AJ18      : output : 3.3-V LVTTL       :         : 4         : Y              
 FL_OE_N                      : AJ19      : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AJ20      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ21      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ22      :        :                   :         : 4         :                
+SSRAM0_CE_N                  : AJ21      : output : 3.3-V LVTTL       :         : 4         : Y              
+SSRAM_BE[2]                  : AJ22      : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AJ23      : gnd    :                   :         :           :                
 FS_DQ[13]                    : AJ24      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ25      :        :                   :         : 4         :                
+SSRAM_ADSP_N                 : AJ25      : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : AJ26      : gnd    :                   :         :           :                
 SD_WP_N                      : AJ27      : input  : 3.3-V LVTTL       :         : 4         : Y              
 SD_DAT[1]                    : AJ28      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
@@ -394,10 +394,10 @@ FL_WP_N                      : AK18      : output : 3.3-V LVTTL       :         
 FS_ADDR[3]                   : AK19      : output : 3.3-V LVTTL       :         : 4         : Y              
 FS_ADDR[20]                  : AK20      : output : 3.3-V LVTTL       :         : 4         : Y              
 FS_ADDR[9]                   : AK21      : output : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK22      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK23      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK24      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK25      :        :                   :         : 4         :                
+SSRAM_BE[1]                  : AK22      : output : 3.3-V LVTTL       :         : 4         : Y              
+SSRAM_GW_N                   : AK23      : output : 3.3-V LVTTL       :         : 4         : Y              
+SSRAM_WE_N                   : AK24      : output : 3.3-V LVTTL       :         : 4         : Y              
+SSRAM_ADSC_N                 : AK25      : output : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK26      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK27      :        :                   :         : 4         :                
 FS_DQ[15]                    : AK28      : bidir  : 3.3-V LVTTL       :         : 4         : Y              

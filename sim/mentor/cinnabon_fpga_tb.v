@@ -52,35 +52,35 @@ pll  pll_100   (
                  .outclk_1	(CLK_65)
 			   );
 			   
-lpm_nco sin1    (
+nco sin1    (
 				  .phi_inc_i(phasinc1),
 			      .clk	    (CLK_125),
 				  .reset_n  (rst),
 				  .clken	(v),
-				  .fsin_o	(sin_out),
+				  .freq_mod_i  (888),  //    .freq_mod_i
+		.phase_mod_i (66), //    .phase_mod_i
+		.fsin_o	(sin_out),
 				  .fcos_o   (),
 				  .out_valid(ovalid)
 		       );
 
-lpm_nco sin2   (
+nco sin2   (
 				  .phi_inc_i(phasinc2),
 				  .clk	   (CLK_125),
 				  .reset_n  (rst),
-				  .clken	   (v),
+				  .freq_mod_i  (789),  //    .freq_mod_i
+		.phase_mod_i (78), //    .phase_mod_i
+		.clken	   (v),
 			     .fsin_o	(sin10_out),
 				  .fcos_o	(),
 			     .out_valid(ovalid)
 		       );
 
 			   
-lpm_add lpm  (
-              .clock (CLK_125),
+add lpm  (
               .dataa ({g,~sin_out[12],sin_out[11:0]}),
               .datab ({g,~sin10_out[12],sin10_out[11:0]}),
               .result(comb)
              );
-				 
-			
-
 
 endmodule

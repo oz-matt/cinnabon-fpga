@@ -59,6 +59,18 @@ module cinnabon_fpga(
 	output		          		DRAM_RAS_N,
 	output		          		DRAM_WE_N,
 
+	//////////// SSRAM //////////
+	output		          		SSRAM_ADSC_N,
+	output		          		SSRAM_ADSP_N,
+	output		          		SSRAM_ADV_N,
+	output		     [3:0]		SSRAM_BE,
+	output		          		SSRAM_CLK,
+	output		          		SSRAM_GW_N,
+	output		          		SSRAM_OE_N,
+	output		          		SSRAM_WE_N,
+	output		          		SSRAM0_CE_N,
+	output		          		SSRAM1_CE_N,
+
 	//////////// Flash //////////
 	output		          		FL_CE_N,
 	output		          		FL_OE_N,

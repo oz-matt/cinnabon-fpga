@@ -1,5 +1,1 @@
 v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,lpm_nco:sin1|lpm_nco_nco_ii_0:nco_ii_0|asj_nco_mady_cen:m0|lpm_mult:Mult0|mult_r9t:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,lpm_nco:sin1|lpm_nco_nco_ii_0:nco_ii_0|asj_nco_mady_cen:m0|lpm_mult:Mult1|mult_r9t:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,lpm_nco:sin2|lpm_nco_nco_ii_0:nco_ii_0|asj_nco_mady_cen:m0|lpm_mult:Mult0|mult_r9t:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,lpm_nco:sin2|lpm_nco_nco_ii_0:nco_ii_0|asj_nco_mady_cen:m0|lpm_mult:Mult1|mult_r9t:auto_generated|mac_out2,

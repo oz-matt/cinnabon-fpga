@@ -59,6 +59,18 @@ module cinnabon_fpga(
 	output		          		DRAM_RAS_N,
 	output		          		DRAM_WE_N,
 
+	//////////// SSRAM //////////
+	output		          		SSRAM_ADSC_N,
+	output		          		SSRAM_ADSP_N,
+	output		          		SSRAM_ADV_N,
+	output		     [3:0]		SSRAM_BE,
+	output		          		SSRAM_CLK,
+	output		          		SSRAM_GW_N,
+	output		          		SSRAM_OE_N,
+	output		          		SSRAM_WE_N,
+	output		          		SSRAM0_CE_N,
+	output		          		SSRAM1_CE_N,
+
 	//////////// Flash //////////
 	output		          		FL_CE_N,
 	output		          		FL_OE_N,
@@ -106,6 +118,47 @@ module cinnabon_fpga(
 	inout 		          		FAN_CTRL
 );
 
+
+
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+reg rst;
+
+wire    CLK_65, CLK_125;
+
+
+wire    g = 0;
+wire    v = 1;
+
+wire    ovalid;
+
+wire    [13:0]	sin10_out;
+wire    [13:0]	sin_out;
+wire    [13:0]	comb;
+wire    [31:0]	phasinc1;
+wire    [31:0]	phasinc2;
+
+assign  phasinc1 = {g,g,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,v};
+assign  phasinc2 = {g,v,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g};
+
+	nco u0k (
+		.clk         (CLOCK_50),         // clk.clk
+		.reset_n     (1),     // rst.reset_n
+		.clken       (1),       //  in.clken
+		.phi_inc_i   (phasinc1),   //    .phi_inc_i
+		.freq_mod_i  (),  //    .freq_mod_i
+		.phase_mod_i (), //    .phase_mod_i
+		.fsin_o      (sin_out),      // out.fsin_o
+		.fcos_o      (),      //    .fcos_o
+		.out_valid   (ovalid)    //    .out_valid
+	);
+add	add_inst (
+	.dataa ( sin_out ),
+	.datab ( sin_out ),
+	.result ( comb )
+	);
+
 wire reset_n;
 assign reset_n = 1'b1;
 	
@@ -128,77 +181,6 @@ ramwriter rw0(
   .o_wbit		(rw_wbit)
 );
 	
-	
-wire    CLK_65, CLK_125;
-
-
-wire    g = 0;
-wire    v = 1;
-
-wire    ovalid;
-
-
-
-wire    [13:0]	sin10_out;
-wire    [13:0]	sin_out;
-wire    [13:0]	comb;
-wire    [31:0]	phasinc1;
-wire    [31:0]	phasinc2;
-
-assign  phasinc1 = {g,g,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,g,v,v,g,v};
-assign  phasinc2 = {g,v,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g};
-
-//assign  DAC_DA = comb; //B
-//assign  DAC_DB = comb; //A
-
-
-//===================================================================================
-//  Structural coding
-//===================================================================================
-
-lpm_nco sin1    (
-				   .phi_inc_i(phasinc1),
-			      .clk	    (CLK_125),
-				   .reset_n  (v),
-				   .clken	 (v),
-				   .fsin_o	 (sin_out),
-				   .fcos_o   (),
-				   .out_valid(ovalid)
-		        );
-				  
-lpm_nco sin2   (
-				  .phi_inc_i(phasinc2),
-				  .clk	   (CLK_125),
-				  .reset_n  (v),
-				  .clken	   (v),
-			     .fsin_o	(sin10_out),
-				  .fcos_o	(),
-			     .out_valid(ovalid)
-		       );
-
-		
-lpm_add lpm  (
-              .clock (CLK_125),
-              .dataa ({g,~sin_out[12],sin_out[11:0]}),
-              .datab ({g,~sin10_out[12],sin10_out[11:0]}),
-              .result(comb)
-             );
-				 
-
-pll  pll_100   (
-				 .inclk0(CLOCK_50),
-                 .pllena(v),
-                 .areset(g),
-                 .c0    (CLK_125),
-                 .c1	(CLK_65)
-			   );
-				
-wire dclk;
-		
-divclk10 dct(
-  .clk(comb[7]),
-  .oclk(dclk)
-  );
   
   cinnabon_fpga_qsys u0 (
         .clk_clk                                    (CLOCK_50),                                    //                        clk.clk
@@ -218,12 +200,15 @@ divclk10 dct(
 		  
 		  );
 
+
+//=======================================================
+//  Structural coding
+//=======================================================
+
+
   assign PCIE_WAKE_N = 1'b1;	 // pull-high to avoid system reboot after power off
 
   
-  
-assign GPIO[0] = dclk;
-
 	//////////// FAN Control //////////
 assign FAN_CTRL = 1'bz; // turn on FAN
 wire hb_50;
@@ -252,34 +237,6 @@ begin
 end
 
 assign led = cnt[DUR_BITS-1];
-
-
-
-endmodule
-
-
-
-
-module divclk10(
-input clk,
-output oclk);
-
-reg [10:0] ctr = 0;
-reg rclk =   0;
-
-always @(posedge clk)
-begin
-  if(ctr>=500)
-  begin
-    rclk <= ~rclk;
-    ctr <= 0;
-  end
-  else
-    ctr <= ctr + 1;
-
-end
-
-assign oclk = rclk;
 
 endmodule
 

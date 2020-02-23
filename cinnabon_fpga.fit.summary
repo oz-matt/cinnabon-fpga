@@ -1,20 +1,20 @@
-Fitter Status : Successful - Sat Feb 22 15:21:15 2020
+Fitter Status : Successful - Sun Feb 23 11:18:52 2020
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 Revision Name : cinnabon_fpga
 Top-level Entity Name : cinnabon_fpga
 Family : Cyclone IV GX
 Device : EP4CGX150DF31C7
 Timing Models : Final
-Total logic elements : 7,416 / 149,760 ( 5 % )
-    Total combinational functions : 5,966 / 149,760 ( 4 % )
-    Dedicated logic registers : 4,836 / 149,760 ( 3 % )
-Total registers : 4836
-Total pins : 366 / 508 ( 72 % )
+Total logic elements : 7,132 / 149,760 ( 5 % )
+    Total combinational functions : 5,793 / 149,760 ( 4 % )
+    Dedicated logic registers : 4,648 / 149,760 ( 3 % )
+Total registers : 4648
+Total pins : 379 / 508 ( 75 % )
 Total virtual pins : 0
-Total memory bits : 1,125,880 / 6,635,520 ( 17 % )
-Embedded Multiplier 9-bit elements : 8 / 720 ( 1 % )
+Total memory bits : 1,105,912 / 6,635,520 ( 17 % )
+Embedded Multiplier 9-bit elements : 0 / 720 ( 0 % )
 Total GXB Receiver Channel PCS : 1 / 8 ( 13 % )
 Total GXB Receiver Channel PMA : 1 / 8 ( 13 % )
 Total GXB Transmitter Channel PCS : 1 / 8 ( 13 % )
 Total GXB Transmitter Channel PMA : 1 / 8 ( 13 % )
-Total PLLs : 2 / 8 ( 25 % )
+Total PLLs : 1 / 8 ( 13 % )
