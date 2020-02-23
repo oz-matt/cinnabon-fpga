@@ -45,11 +45,11 @@ end
 always #20 r_fakeclock = ~r_fakeclock;
 
 pll  pll_100   (
-				 .refclk(r_fakeclock),
+				 .inclk0(r_fakeclock),
                  .locked(locked),
-                 .rst(0),
-                 .outclk_0    (CLK_125),
-                 .outclk_1	(CLK_65)
+                 .areset(0),
+                 .c0    (CLK_125),
+                 .c1	(CLK_65)
 			   );
 			   
 nco sin1    (

@@ -1,5 +1,5 @@
 Info: Start Nativelink Simulation process
-executing command line: ip-make-simscript --nativelink-mode --output-directory=cinnabon_fpga_iputf_input --spd=D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/nco/nco/nco.spd --spd=D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/pll/pll.spd --spd=D:/DE2i-150_v.2.2.0_SystemCD/Tools/SystemBuilder/CodeGenerated/DE2i_150/cinnabon_fpga/cores/add/add.spd 
+executing command line: ip-make-simscript --nativelink-mode --output-directory=cinnabon_fpga_iputf_input --spd=D:/cinnabon_fpga/cores/nco/nco/nco.spd --spd=D:/cinnabon_fpga/cores/pll/pll.spd --spd=D:/cinnabon_fpga/cores/add/add.spd --spd=D:/cinnabon_fpga/cinnabon_fpga_qsys/cinnabon_fpga_qsys.spd 
 
 ========= EDA Simulation Settings =====================
 
@@ -18,5 +18,5 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script d:/intelfpga/16.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File cinnabon_fpga_run_msim_rtl_systemverilog.do already exists - backing up current file as cinnabon_fpga_run_msim_rtl_systemverilog.do.bak
+Warning: File cinnabon_fpga_run_msim_rtl_systemverilog.do already exists - backing up current file as cinnabon_fpga_run_msim_rtl_systemverilog.do.bak10
 Info: Spawning ModelSim-Altera Simulation software 
