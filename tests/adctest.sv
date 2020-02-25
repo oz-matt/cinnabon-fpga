@@ -1,7 +1,7 @@
 module adctest(
   input i_125clk,
-  input i_rst,
-  output[63:0] o_data
+  input i_nreset,
+  output reg[63:0] o_data = 0
 );
 
 //reg[13:0] r_data1 = 0;
@@ -9,6 +9,7 @@ module adctest(
 //reg[13:0] r_data3 = 0;
 //reg[13:0] r_data4 = 0;
 
+//reg[63:0] r_odata = 0;
 reg[63:0] r_odata = 0;
 
 reg[2:0] current_state = 3'b000;
@@ -19,15 +20,18 @@ parameter SECOND_SAMPLE = 3'b010;
 parameter THIRD_SAMPLE = 3'b011;
 parameter FOURTH_SAMPLE = 3'b100;
 
-always @(posedge i_125clk or negedge i_rst)
+reg is_first_sample = 1;
+
+always @(posedge i_125clk or negedge i_nreset)
 begin
 
-  if(!i_rst)
+  if(!i_nreset)
   begin
-    r_odata <= 0;
-	current_state <= INIT_STATE;
+    current_state <= INIT_STATE;
+	o_data <= 0;
+	r_odata <= 0;
+	is_first_sample <= 1;
   end
-  
   else
   begin
 
@@ -42,7 +46,11 @@ begin
 	    //r_data1 <= $urandom_range(16384, 0);
 		r_odata[13:0] <= $urandom_range(16384, 0);
 		current_state <= SECOND_SAMPLE;
-	  end
+		
+        if (!is_first_sample)
+		  o_data <= r_odata;
+		
+      end
 	  
 	  SECOND_SAMPLE:
 	  begin
@@ -63,13 +71,11 @@ begin
 	    //r_data4 <= $urandom_range(16384, 0);
 		current_state <= FIRST_SAMPLE;
 		r_odata[61:48] <= $urandom_range(16384, 0);
-		//r_odata <= {2'h0, r_data4, 2'h0, r_data3, 2'h0, r_data2, 2'h0, r_data1};
+		is_first_sample = 0;
 	  end
 	  
     endcase
   end
 end
-
-assign o_data = r_odata;
 
 endmodule

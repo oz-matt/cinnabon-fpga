@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.1 196 win32 2020.02.23.16:18:26
+# ACDS 16.1 196 win32 2020.02.24.15:33:41
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -96,7 +96,7 @@
 # 
 # IP SIMULATION SCRIPT
 # ----------------------------------------
-# ACDS 16.1 196 win32 2020.02.23.16:18:26
+# ACDS 16.1 196 win32 2020.02.24.15:33:41
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="pll"
