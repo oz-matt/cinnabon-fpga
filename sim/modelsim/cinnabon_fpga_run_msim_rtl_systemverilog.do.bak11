@@ -207,9 +207,12 @@ vlog     "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpg
 vlog     "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.v"                                                                                                                       
 
 vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga/cores/pll {D:/cinnabon_fpga/cores/pll/pll.v}
-vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga/cores/add {D:/cinnabon_fpga/cores/add/add.v}
 vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga/src {D:/cinnabon_fpga/src/ramwriter.v}
+vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga/cores/add {D:/cinnabon_fpga/cores/add/add.v}
+vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga/cores/bram1 {D:/cinnabon_fpga/cores/bram1/bram1.v}
+vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga/src {D:/cinnabon_fpga/src/adcproc.v}
 vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga {D:/cinnabon_fpga/cinnabon_fpga.v}
+vlog -vlog01compat -work work +incdir+D:/cinnabon_fpga/db {D:/cinnabon_fpga/db/pll_altpll.v}
 vlib cinnabon_fpga_qsys
 vmap cinnabon_fpga_qsys cinnabon_fpga_qsys
 vlog -vlog01compat -work cinnabon_fpga_qsys +incdir+D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis {D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/cinnabon_fpga_qsys.v}

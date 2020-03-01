@@ -10,49 +10,49 @@ cModel Technology
 Z0 dD:/cinnabon_fpga/sim/modelsim
 valtera_reset_controller
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1582600836
+Z2 !s110 1582674643
 !i10b 1
 !s100 BY0`7TD<QPSCOO[`H0GM11
 I<XnBlmc@Q=A2c3zeehT<00
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 altera_reset_controller_v_unit
 S1
 R0
-Z3 w1582473619
+Z4 w1582651260
 8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v
 FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v
 L0 42
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1582600836.000000
+Z6 !s108 1582674643.000000
 !s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
 !i113 1
-Z5 o-work rst_controller
-Z6 tSvlog 1 CvgOpt 0
+Z7 o-work rst_controller
+Z8 tSvlog 1 CvgOpt 0
 valtera_reset_synchronizer
 R1
-!s110 1582600837
+R2
 !i10b 1
 !s100 jGF0G[N3WmCeE44bVz8Kc3
 IZcgXh`TKZzWVnQQ:Led0]3
-R2
+R3
 !s105 altera_reset_synchronizer_v_unit
 S1
 R0
-R3
+R4
 8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_synchronizer.v
 FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_synchronizer.v
 L0 24
-R4
+R5
 r1
 !s85 0
 31
-!s108 1582600837.000000
+R6
 !s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_synchronizer.v|
 !s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_synchronizer.v|-work|rst_controller|
 !i113 1
-R5
-R6
+R7
+R8

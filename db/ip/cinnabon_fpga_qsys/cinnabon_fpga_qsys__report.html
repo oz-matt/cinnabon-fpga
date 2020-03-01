@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2020.02.23.11:16:48</td>
+    <td class="l">2020.02.25.19:49:30</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -273,6 +273,49 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_in31clk_bridge"> </a>
+  <div>
+   <hr/>
+   <h2>in31clk_bridge</h2>altera_clock_bridge v16.1
+   <br/>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">DERIVED_CLOCK_RATE</td>
+        <td class="parametervalue">0</td>
+       </tr>
+       <tr>
+        <td class="parametername">EXPLICIT_CLOCK_RATE</td>
+        <td class="parametervalue">3125000</td>
+       </tr>
+       <tr>
+        <td class="parametername">NUM_CLOCK_OUTPUTS</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
   <a name="module_onchip_memory"> </a>
   <div>
    <hr/>
@@ -285,7 +328,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_pcie_ip">pcie_ip</a>
       </td>
       <td class="from">bar1_0&#160;&#160;</td>
-      <td class="main" rowspan="18">onchip_memory</td>
+      <td class="main" rowspan="19">onchip_memory</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -324,15 +367,21 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
      </tr>
      <tr>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_clk_50">clk_50</a>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_in31clk_bridge">in31clk_bridge</a>
       </td>
-      <td class="from">clk&#160;&#160;</td>
+      <td class="from">out_clk&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk2</td>
      </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
      <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_clk_50">clk_50</a>
+      </td>
       <td class="from">clk_reset&#160;&#160;</td>
      </tr>
      <tr>
@@ -2116,8 +2165,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.00 seconds</td>
-    <td class="r">rendering took 0.12 seconds</td>
+    <td class="l">generation took 0.01 seconds</td>
+    <td class="r">rendering took 0.05 seconds</td>
    </tr>
   </table>
  </body>

@@ -113,19 +113,19 @@ module cinnabon_fpga(
 	output		          		HSMC_DAC_WRT_B,
 	input 		          		HSMC_OSC_SMA_ADC4,
 	input 		          		HSMC_SMA_DAC4,
+	
+	output							POWER_ON,
 
 	//////////// Fan Control //////////
 	inout 		          		FAN_CTRL
 );
 
-
+/*
 
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
 reg rst;
-
-wire    CLK_65, CLK_125;
 
 
 wire    g = 0;
@@ -162,7 +162,12 @@ add	add_inst (
 wire reset_n;
 assign reset_n = 1'b1;
 	
-	
+			  wire locked;
+		  wire CLK_125;
+		  wire CLK_31p25;
+		  wire CLK_62;
+		  wire[63:0] clked31_adcdata;
+		  
 
 wire[63:0] rw_data;
 wire[13:0] rw_address;
@@ -188,7 +193,7 @@ ramwriter rw0(
         .pcie_ip_refclk_export                      (PCIE_REFCLK_P),                      //             pcie_ip_refclk.export
         .pcie_ip_pcie_rstn_export                   (PCIE_PERST_N),                   //          pcie_ip_pcie_rstn.export
         .pcie_ip_rx_in_rx_datain_0                  (PCIE_RX_P[0]),                  //              pcie_ip_rx_in.rx_datain_0
-        .pcie_ip_tx_out_tx_dataout_0                (PCIE_TX_P[0]),                //             pcie_ip_tx_out.tx_dataout_0
+        .pcie_ip_tx_out_tx_dataout_0                (PCIE_TX_P[0]),                                       //                        clk.clk
         .onchip_memory_s2_address                       (rw_address),                       //               onchip_memory2_0_s2.address
         .onchip_memory_s2_chipselect                    (1),                    //                                  .chipselect
         .onchip_memory_s2_clken                         (1),                         //                                  .clken
@@ -199,15 +204,162 @@ ramwriter rw0(
 		  .pio_0_external_connection_export           (ppw)
 		  
 		  );
+		  
 
+pll  pll_100   (
+				 .inclk0(CLOCK_50),
+                 .locked(locked),
+                 .areset(reset_n),
+                 .c0    (CLK_125),
+                 .c1	(CLK_31p25),
+                 .c2	(CLK_62)
+			   );
+			   
+adcproc adcproc_inst(
+  .i_125clk(CLK_125),
+  .i_31clk(CLK_31p25),
+  .i_nreset(reset_n),
+  .ow_data(clked31_adcdata)
+);
+*/
+wire reset_n;
 
-//=======================================================
-//  Structural coding
-//=======================================================
-
+assign reset_n = 1'b1;
 
   assign PCIE_WAKE_N = 1'b1;	 // pull-high to avoid system reboot after power off
+			  wire locked;
+		  wire CLK_125;
+		  wire CLK_31p25;
+wire CLK_62;
+	wire CLK_SLO;
 
+wire    g = 0;
+wire    v = 1;
+
+wire    ovalid;
+wire   ovalid2;
+
+wire    [13:0]	sin10_out;
+wire    [13:0]	sin_out;
+wire    [13:0]	comb;
+wire    [31:0]	phasinc1;
+wire    [31:0]	phasinc2;
+
+assign  phasinc1 = {g,g,g,g,g,g,v,g,g,g,g,g,v,v,g,g,g,v,g,g,v,g,g,v,v,g,v,v,v,g,v,g};
+assign  phasinc2 = {g,v,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g};
+
+
+wire[63:0] rw_data;
+wire[13:0] rw_address;
+wire[7:0] rw_byteen;
+wire rw_wbit;
+
+//reg[15:0] pp = 777;
+
+wire[15:0] ppw;
+
+assign ppw = {2'b0, rw_address[13:0]};
+//assign LEDG[3:0] = pp[3:0];
+assign  HSMC_DAC_WRT_B = CLK_62;      //Input write signal for PORT B
+assign  HSMC_DAC_WRT_A = CLK_62;      //Input write signal for PORT A
+
+assign  HSMC_DAC_MODE  = 1; 		       //Mode Select. 1 = dual port, 0 = interleaved.
+
+assign  HSMC_DAC_CLK_B = CLK_62; 	    //PLL Clock to DAC_B
+assign  HSMC_DAC_CLK_A = CLK_62; 	    //PLL Clock to DAC_A
+
+assign  HSMC_ADC_CLK_B = CLK_62;  	    //PLL Clock to ADC_B
+assign  HSMC_ADC_CLK_A = CLK_62;  	    //PLL Clock to ADC_A
+
+//assign POWER_ON = 1;
+
+assign  HSMC_ADC_OEB_A = 0; 		  	    //ADC_OEA
+assign  HSMC_ADC_OEB_B = 0; 			    //ADC_OEB
+
+//assign  HSMC_DAC_DB = sin_out; //A
+
+
+
+	nco u0k (
+		.clk         (CLK_62),         // clk.clk
+		.reset_n     (1),     // rst.reset_n
+		.clken       (1),       //  in.clken
+		.phi_inc_i   (68719477),  //    .freq_mod_i
+		//.phase_mod_i (0), //    .phase_mod_i
+		.fsin_o      (sin_out),
+				  .fcos_o   (),      // out.fsin_o
+		.out_valid   (ovalid)    //    .out_valid
+	);
+	
+	
+assign  HSMC_DAC_DA = sin_out; //B
+	/*
+	nco u1k (
+		.clk         (CLK_62),         // clk.clk
+		.reset_n     (1),     // rst.reset_n
+		.clken       (1),       //  in.clken
+		.phi_inc_i   (6871948),   //    .phi_inc_i
+		//.freq_mod_i  (1000),  //    .freq_mod_i
+		//.phase_mod_i (0), //    .phase_mod_i
+		.fsin_o      (sin10_out),
+				  .fcos_o   (),      // out.fsin_o
+		.out_valid   (ovalid2)    //    .out_valid
+	);
+	
+add	add_inst (
+	.dataa ( {g,~sin_out[12],sin_out[11:0]} ),
+	.datab ( {g,~sin10_out[12],sin10_out[11:0]} ),
+	.result ( comb )
+	);
+*/
+pll  pll_100   (
+				 .inclk0(CLOCK_50),
+                 .locked(locked),
+                 .areset(0),
+                 .c0    (CLK_125),
+                 .c1	(CLK_SLO),
+                 .c2	(CLK_62)
+			   );
+			   
+
+ramwriter rw0(
+  .i_clk			(CLOCK_50),
+  .o_data		(rw_data),
+  .o_address	(rw_address),
+  .o_byteen		(rw_byteen),
+  .o_wbit		(rw_wbit)
+);
+
+    cinnabon_fpga_qsys u0 (
+        .clk_clk                                    (CLOCK_50),                                    //                        clk.clk
+        .reset_reset_n                              (reset_n),                              //                      reset.reset_n
+        .pcie_ip_refclk_export                      (PCIE_REFCLK_P),                      //             pcie_ip_refclk.export
+        .pcie_ip_pcie_rstn_export                   (PCIE_PERST_N),                   //          pcie_ip_pcie_rstn.export
+        .pcie_ip_rx_in_rx_datain_0                  (PCIE_RX_P[0]),                  //              pcie_ip_rx_in.rx_datain_0
+        .pcie_ip_tx_out_tx_dataout_0                (PCIE_TX_P[0]),                //             pcie_ip_tx_out.tx_dataout_0
+       // .led_external_connection_export             (LEDR[4:1]),             //    led_external_connection.export
+       // .button_external_connection_export          (KEY),           // button_external_connection.export
+		  .onchip_memory_s2_address                       (rw_address),                       //               onchip_memory2_0_s2.address
+        .onchip_memory_s2_chipselect                    (1),                    //                                  .chipselect
+        .onchip_memory_s2_clken                         (1),                         //                                  .clken
+        .onchip_memory_s2_write                         (rw_wbit),                         //                                  .write
+        .onchip_memory_s2_readdata                      (),                      //                                  .readdata
+        .onchip_memory_s2_writedata                     (rw_data),    
+		  .onchip_memory_s2_byteenable                    (rw_byteen),
+		  .pio_0_external_connection_export           (ppw)       
+    );
+	 
+	 wire dw;
+	 
+	 clkdiv cd (
+	   .clk(CLK_125),
+		.div(dw)
+	 );
+	 
+	 assign GPIO[0] = CLK_SLO;
+	 
+	 assign GPIO[2] = comb;
+	 assign GPIO[3] = ovalid;
   
 	//////////// FAN Control //////////
 assign FAN_CTRL = 1'bz; // turn on FAN
@@ -217,7 +369,66 @@ heart_beat	heart_beat_clk50(
 	.clk(CLOCK_50),
 	.led(hb_50)
 );
+
+
+adcqreader aqr (
+  .clk(CLOCK_50),
+  .data(HSMC_ADC_DB),
+  .oled(LEDR[17:4])
+);
+
+
+
 endmodule
+
+
+module clkdiv(
+  input clk,
+  output reg div = 0
+);
+  
+  reg[30:0] ctr;
+  
+  always @(posedge clk)
+  begin
+    if (ctr >= 250000)
+	 begin
+	   div <= !div;
+	   ctr <= 0;
+	 end
+	 else
+	   ctr <= ctr + 1;
+  end
+  
+
+endmodule
+
+
+module adcqreader(
+  input clk,
+  input wire[13:0] data,
+  output reg[13:0] oled
+  );
+  
+  reg[31:0] ctr = 0;
+  
+  always @ (posedge clk)
+  begin
+    if(ctr >= 25000000)
+    begin
+	   oled <= data;
+	   ctr <= 0;
+	 end
+	 else
+	   ctr <= ctr + 1;
+  
+  
+  end
+  
+  
+  endmodule
+
+
 
 module heart_beat(
 	clk,

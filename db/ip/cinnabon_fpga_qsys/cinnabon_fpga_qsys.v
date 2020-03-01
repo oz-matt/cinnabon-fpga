@@ -5,6 +5,7 @@
 `timescale 1 ps / 1 ps
 module cinnabon_fpga_qsys (
 		input  wire        clk_clk,                                    //                        clk.clk
+		input  wire        in31clk_bridge_in_clk_clk,                  //      in31clk_bridge_in_clk.clk
 		input  wire [13:0] onchip_memory_s2_address,                   //           onchip_memory_s2.address
 		input  wire        onchip_memory_s2_chipselect,                //                           .chipselect
 		input  wire        onchip_memory_s2_clken,                     //                           .clken
@@ -144,7 +145,7 @@ module cinnabon_fpga_qsys (
 		.readdata2   (onchip_memory_s2_readdata),                     //       .readdata
 		.writedata2  (onchip_memory_s2_writedata),                    //       .writedata
 		.byteenable2 (onchip_memory_s2_byteenable),                   //       .byteenable
-		.clk2        (clk_clk),                                       //   clk2.clk
+		.clk2        (in31clk_bridge_in_clk_clk),                     //   clk2.clk
 		.reset2      (rst_controller_001_reset_out_reset),            // reset2.reset
 		.reset_req2  (rst_controller_001_reset_out_reset_req),        //       .reset_req
 		.freeze      (1'b0)                                           // (terminated)
@@ -604,7 +605,7 @@ module cinnabon_fpga_qsys (
 		.ADAPT_RESET_REQUEST       (0)
 	) rst_controller_001 (
 		.reset_in0      (~reset_reset_n),                         // reset_in0.reset
-		.clk            (clk_clk),                                //       clk.clk
+		.clk            (in31clk_bridge_in_clk_clk),              //       clk.clk
 		.reset_out      (rst_controller_001_reset_out_reset),     // reset_out.reset
 		.reset_req      (rst_controller_001_reset_out_reset_req), //          .reset_req
 		.reset_req_in0  (1'b0),                                   // (terminated)

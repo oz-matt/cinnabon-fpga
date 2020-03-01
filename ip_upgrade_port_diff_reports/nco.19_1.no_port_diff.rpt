@@ -1,0 +1,23 @@
+IP Ports Diff Report for nco
+Sat Feb 29 10:58:58 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++--------------------------------------------------+
+; IP Information                                   ;
++----------------------+---------------------------+
+; IP Variation Name    ; nco                       ;
+; Prior Version        ; 16.1                      ;
+; New Version          ; 19.1                      ;
+; New File             ; cores/nco/synthesis/nco.v ;
+; Has Port Differences ; No                        ;
++----------------------+---------------------------+
+
+

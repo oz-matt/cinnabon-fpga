@@ -1,0 +1,136 @@
+IP Upgrade report for cinnabon_fpga
+Sat Feb 29 10:58:58 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Successfully Upgraded IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Sat Feb 29 10:58:58 2020           ;
+; Quartus Prime Version        ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                ; cinnabon_fpga                               ;
+; Top-level Entity Name        ; cinnabon_fpga                               ;
+; Family                       ; Cyclone IV GX                               ;
++------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Successfully Upgraded IP Components                                                                                                 ;
++-------------+----------------+---------+-----------------------------+----------------------+-----------------------------+---------+
+; Entity Name ; Component Name ; Version ; Original Source File        ; Generation File Path ; New Source File             ; Message ;
++-------------+----------------+---------+-----------------------------+----------------------+-----------------------------+---------+
+; nco         ; altera_nco_ii  ; 16.1    ; cores/nco/synthesis/nco.qip ; cores/nco.qsys       ; cores/nco/synthesis/nco.qip ;         ;
++-------------+----------------+---------+-----------------------------+----------------------+-----------------------------+---------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "cores/nco.qsys" to "cores/nco.BAK.qsys"
+Info (11902): Backing up file "cores/nco/synthesis/nco.v" to "cores/nco.BAK.v"
+Info (11837): Started upgrading IP component altera_nco_ii with file "cores/nco.qsys"
+Info: 2020.02.29.10:58:47 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2020.02.29.10:58:47 Info: Finished upgrading the ip cores
+Info: 2020.02.29.10:58:52 Info: Saving generation log to D:/cinnabon_fpga/cores/nco
+Info: 2020.02.29.10:58:52 Info: Starting: Create simulation model
+Info: 2020.02.29.10:58:52 Info: qsys-generate D:\cinnabon_fpga\cores\nco.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\cinnabon_fpga\cores\nco\simulation --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Info: 2020.02.29.10:58:52 Info: Loading cores
+Info: 2020.02.29.10:58:53 Info: Reading input file
+Info: 2020.02.29.10:58:53 Info: Adding nco_ii_0 [altera_nco_ii 19.1]
+Info: 2020.02.29.10:58:53 Info: Parameterizing module nco_ii_0
+Info: 2020.02.29.10:58:53 Info: Building connections
+Info: 2020.02.29.10:58:53 Info: Parameterizing connections
+Info: 2020.02.29.10:58:53 Info: Validating
+Info: 2020.02.29.10:58:53 Info: Done reading input file
+Info: 2020.02.29.10:58:53 Info: nco: Generating nco "nco" for SIM_VERILOG
+Info: 2020.02.29.10:58:54 Info: nco_ii_0: "nco" instantiated altera_nco_ii "nco_ii_0"
+Info: 2020.02.29.10:58:54 Info: nco: Done "nco" with 2 modules, 28 files
+Info: 2020.02.29.10:58:54 Info: qsys-generate succeeded.
+Info: 2020.02.29.10:58:54 Info: Finished: Create simulation model
+Info: 2020.02.29.10:58:54 Info: Starting: Create Modelsim Project.
+Info: 2020.02.29.10:58:54 Info: sim-script-gen --spd=D:\cinnabon_fpga\cores\nco\nco.spd --output-directory=D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:54 Info: Doing: ip-make-simscript --spd=D:\cinnabon_fpga\cores\nco\nco.spd --output-directory=D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:55 Info: Generating the following file(s) for MODELSIM simulator in D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:55 Info:     mentor
+Info: 2020.02.29.10:58:55 Info: Generating the following file(s) for VCS simulator in D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:55 Info:     synopsys/vcs
+Info: 2020.02.29.10:58:55 Info: Generating the following file(s) for VCSMX simulator in D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:55 Info:     synopsys/vcsmx
+Info: 2020.02.29.10:58:55 Info:     synopsys/vcsmx
+Info: 2020.02.29.10:58:55 Info: Generating the following file(s) for NCSIM simulator in D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:55 Info:     cadence
+Info: 2020.02.29.10:58:55 Info:     cadence
+Info: 2020.02.29.10:58:55 Info:     cadence
+Info: 2020.02.29.10:58:55 Info:     1 .cds.lib files in cadence/cds_libs
+Info: 2020.02.29.10:58:55 Info: Generating the following file(s) for RIVIERA simulator in D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:55 Info:     aldec
+Info: 2020.02.29.10:58:55 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/cinnabon_fpga/cores/nco/simulation
+Info: 2020.02.29.10:58:55 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2020.02.29.10:58:55 Info: Finished: Create Modelsim Project.
+Info: 2020.02.29.10:58:55 Info: Starting: Create block symbol file (.bsf)
+Info: 2020.02.29.10:58:55 Info: qsys-generate D:\cinnabon_fpga\cores\nco.qsys --block-symbol-file --output-directory=D:\cinnabon_fpga\cores\nco --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Info: 2020.02.29.10:58:55 Info: Loading cores
+Info: 2020.02.29.10:58:55 Info: Reading input file
+Info: 2020.02.29.10:58:55 Info: Adding nco_ii_0 [altera_nco_ii 19.1]
+Info: 2020.02.29.10:58:55 Info: Parameterizing module nco_ii_0
+Info: 2020.02.29.10:58:55 Info: Building connections
+Info: 2020.02.29.10:58:55 Info: Parameterizing connections
+Info: 2020.02.29.10:58:55 Info: Validating
+Info: 2020.02.29.10:58:55 Info: Done reading input file
+Info: 2020.02.29.10:58:56 Info: qsys-generate succeeded.
+Info: 2020.02.29.10:58:56 Info: Finished: Create block symbol file (.bsf)
+Info: 2020.02.29.10:58:56 Info:
+Info: 2020.02.29.10:58:56 Info: Starting: Create HDL design files for synthesis
+Info: 2020.02.29.10:58:56 Info: qsys-generate D:\cinnabon_fpga\cores\nco.qsys --synthesis=VERILOG --output-directory=D:\cinnabon_fpga\cores\nco\synthesis --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Info: 2020.02.29.10:58:56 Info: Loading cores
+Info: 2020.02.29.10:58:57 Info: Reading input file
+Info: 2020.02.29.10:58:57 Info: Adding nco_ii_0 [altera_nco_ii 19.1]
+Info: 2020.02.29.10:58:57 Info: Parameterizing module nco_ii_0
+Info: 2020.02.29.10:58:57 Info: Building connections
+Info: 2020.02.29.10:58:57 Info: Parameterizing connections
+Info: 2020.02.29.10:58:57 Info: Validating
+Info: 2020.02.29.10:58:57 Info: Done reading input file
+Info: 2020.02.29.10:58:57 Info: nco: Generating nco "nco" for QUARTUS_SYNTH
+Info: 2020.02.29.10:58:58 Info: nco_ii_0: "nco" instantiated altera_nco_ii "nco_ii_0"
+Info: 2020.02.29.10:58:58 Info: nco: Done "nco" with 2 modules, 18 files
+Info: 2020.02.29.10:58:58 Info: qsys-generate succeeded.
+Info: 2020.02.29.10:58:58 Info: Finished: Create HDL design files for synthesis
+Info (11131): Completed upgrading IP component altera_nco_ii with file "cores/nco.qsys"
+Info (23030): Evaluation of Tcl script d:/intelfpga_lite/19.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Sat Feb 29 10:58:59 2020
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:59
+
+

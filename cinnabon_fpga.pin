@@ -492,8 +492,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D27       :        :                   :      
 GPIO[17]                     : D28       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
 HSMC_DAC_DA[4]               : D29       : output : 2.5 V             :         : 6         : Y              
 HSMC_DAC_DA[5]               : D30       : output : 2.5 V             :         : 6         : Y              
-TMS                          : E1        : input  :                   :         : 9         :                
-TDI                          : E2        : input  :                   :         : 9         :                
+altera_reserved_tms          : E1        : input  : 2.5 V             :         : 9         : N              
+altera_reserved_tdi          : E2        : input  : 2.5 V             :         : 9         : N              
 HEX3[4]                      : E3        : output : 2.5 V             :         : 8         : Y              
 HEX3[3]                      : E4        : output : 2.5 V             :         : 8         : Y              
 GND                          : E5        : gnd    :                   :         :           :                
@@ -522,8 +522,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E27       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : E28       :        :                   :         : 6         :                
 GND                          : E29       : gnd    :                   :         :           :                
 HSMC_DAC_DA[7]               : E30       : output : 2.5 V             :         : 6         : Y              
-TDO                          : F1        : output :                   :         : 9         :                
-TCK                          : F2        : input  :                   :         : 9         :                
+altera_reserved_tdo          : F1        : output : 2.5 V             :         : 9         : N              
+altera_reserved_tck          : F2        : input  : 2.5 V             :         : 9         : N              
 GND                          : F3        : gnd    :                   :         :           :                
 HEX2[5]                      : F4        : output : 2.5 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 8         :                
@@ -876,7 +876,7 @@ SW[5]                        : U21       : input  : 2.5 V             :         
 VCCIO5                       : U22       : power  :                   : 2.5V    : 5         :                
 GND                          : U23       : gnd    :                   :         :           :                
 VCCIO5                       : U24       : power  :                   : 2.5V    : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U25       :        :                   :         : 5         :                
+POWER_ON                     : U25       : output : 2.5 V             :         : 5         : Y              
 GND                          : U26       : gnd    :                   :         :           :                
 HSMC_ADC_OEB_A               : U27       : output : 2.5 V             :         : 5         : Y              
 HSMC_ADC_OEB_B               : U28       : output : 2.5 V             :         : 5         : Y              

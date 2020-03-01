@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.1 196 win32 2020.02.23.11:00:38
+# ACDS 19.1 670 win32 2020.02.29.10:42:01
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,12 +94,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 16.1 196 win32 2020.02.23.11:00:38
+# ACDS 19.1 670 win32 2020.02.29.10:42:01
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="cinnabon_fpga_qsys"
 QSYS_SIMDIR="./../../"
-QUARTUS_INSTALL_DIR="D:/intelfpga/16.1/quartus/"
+QUARTUS_INSTALL_DIR="D:/intelfpga_lite/19.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_SIM=0
 USER_DEFINED_ELAB_OPTIONS=""
@@ -158,9 +158,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_rsp_mux_003.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_rsp_mux.sv \
-  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_rsp_demux_002.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_rsp_demux.sv \
-  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_cmd_mux_002.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_cmd_mux_001.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_cmd_mux.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_cmd_demux_003.sv \
@@ -178,9 +176,10 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/altera_merlin_traffic_limiter.sv \
   $QSYS_SIMDIR/submodules/altera_merlin_reorder_memory.sv \
   $QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v \
+  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_008.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_007.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_006.sv \
-  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_005.sv \
+  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_004.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_003.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_001.sv \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router.sv \
@@ -197,6 +196,20 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_pcie_ip_altgx_internal.vo \
   $QSYS_SIMDIR/submodules/altpciexpav_stif_app.v \
   $QSYS_SIMDIR/submodules/altpcie_hip_pipen1b_qsys.v \
+  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_J2A_master_p2b_adapter.sv \
+  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_J2A_master_b2p_adapter.sv \
+  $QSYS_SIMDIR/submodules/altera_avalon_packets_to_master.v \
+  $QSYS_SIMDIR/submodules/altera_avalon_st_packets_to_bytes.v \
+  $QSYS_SIMDIR/submodules/altera_avalon_st_bytes_to_packets.v \
+  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_J2A_master_timing_adt.sv \
+  $QSYS_SIMDIR/submodules/altera_avalon_st_jtag_interface.v \
+  $QSYS_SIMDIR/submodules/altera_jtag_dc_streaming.v \
+  $QSYS_SIMDIR/submodules/altera_jtag_sld_node.v \
+  $QSYS_SIMDIR/submodules/altera_jtag_streaming.v \
+  $QSYS_SIMDIR/submodules/altera_avalon_st_clock_crosser.v \
+  $QSYS_SIMDIR/submodules/altera_std_synchronizer_nocut.v \
+  $QSYS_SIMDIR/submodules/altera_avalon_st_idle_remover.v \
+  $QSYS_SIMDIR/submodules/altera_avalon_st_idle_inserter.v \
   $QSYS_SIMDIR/submodules/altera_reset_controller.v \
   $QSYS_SIMDIR/submodules/altera_reset_synchronizer.v \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_irq_mapper.sv \
@@ -206,6 +219,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_pio_0.v \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_pcie_ip.v \
   $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_onchip_memory.v \
+  $QSYS_SIMDIR/submodules/cinnabon_fpga_qsys_J2A_master.v \
   $QSYS_SIMDIR/cinnabon_fpga_qsys.v \
   -top $TOP_LEVEL_NAME
 # ----------------------------------------

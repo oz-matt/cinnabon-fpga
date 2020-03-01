@@ -1,0 +1,23 @@
+IP Ports Diff Report for cinnabon_fpga_qsys
+Sat Feb 29 10:42:37 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++--------------------------------------------------------------------------+
+; IP Information                                                           ;
++----------------------+---------------------------------------------------+
+; IP Variation Name    ; cinnabon_fpga_qsys                                ;
+; Prior Version        ; ACDS_v16.1                                        ;
+; New Version          ; ACDS_v19.1                                        ;
+; New File             ; cinnabon_fpga_qsys/synthesis/cinnabon_fpga_qsys.v ;
+; Has Port Differences ; No                                                ;
++----------------------+---------------------------------------------------+
+
+
