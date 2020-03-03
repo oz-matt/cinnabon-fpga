@@ -68,7 +68,7 @@
   <parameter name="design_env" value="NATIVE" />
   <parameter name="dpri" value="4" />
   <parameter name="fmod_pipe" value="1" />
-  <parameter name="freq_out" value="1.0" />
+  <parameter name="freq_out" value="0.1" />
   <parameter name="fsamp" value="62.5" />
   <parameter name="hyper_opt_select" value="false" />
   <parameter name="mpr" value="18" />
@@ -78,7 +78,7 @@
   <parameter name="selected_device_family" value="Cyclone IV GX" />
   <parameter name="trig_cycles_per_output" value="1" />
   <parameter name="use_dedicated_multipliers" value="true" />
-  <parameter name="want_dither" value="false" />
+  <parameter name="want_dither" value="true" />
   <parameter name="want_freq_mod" value="false" />
   <parameter name="want_phase_mod" value="false" />
   <parameter name="want_sin_and_cos" value="dual_output" />

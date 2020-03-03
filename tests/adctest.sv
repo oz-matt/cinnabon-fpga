@@ -1,5 +1,5 @@
 module adctest(
-  input i_125clk,
+  input i_62clk,
   input i_nreset,
   output reg[63:0] o_data = 0
 );
@@ -22,7 +22,7 @@ parameter FOURTH_SAMPLE = 3'b100;
 
 reg is_first_sample = 1;
 
-always @(posedge i_125clk or negedge i_nreset)
+always @(posedge i_62clk or negedge i_nreset)
 begin
 
   if(!i_nreset)

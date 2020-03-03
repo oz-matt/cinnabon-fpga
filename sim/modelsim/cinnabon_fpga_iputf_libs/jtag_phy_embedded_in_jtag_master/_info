@@ -1,0 +1,298 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/cinnabon_fpga/sim/modelsim
+valtera_avalon_st_clock_crosser
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1583201986
+!i10b 1
+!s100 HXcGESGB1AIK<[k96k8GW3
+Ij<<FB5VVAVMDYQzV@:KKo1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 altera_avalon_st_clock_crosser_v_unit
+S1
+R0
+Z4 w1582990899
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_clock_crosser.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_clock_crosser.v
+Z5 L0 22
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1583201986.000000
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_clock_crosser.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_clock_crosser.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+Z8 o-work jtag_phy_embedded_in_jtag_master
+Z9 tSvlog 1 CvgOpt 0
+valtera_avalon_st_idle_inserter
+R1
+Z10 !s110 1583201987
+!i10b 1
+!s100 f_FZAnQ1jTjHG>F=M4Pal2
+IaXoHgWWd8dWf_GcS>kKe72
+R3
+!s105 altera_avalon_st_idle_inserter_v_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_inserter.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_inserter.v
+Z11 L0 19
+R6
+r1
+!s85 0
+31
+Z12 !s108 1583201987.000000
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_inserter.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_inserter.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9
+valtera_avalon_st_idle_remover
+R1
+R10
+!i10b 1
+!s100 l4f@0m@SXgoil<VeT?llj1
+I?U`E1`PRcbKUeI[XFj_j51
+R3
+!s105 altera_avalon_st_idle_remover_v_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_remover.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_remover.v
+R11
+R6
+r1
+!s85 0
+31
+R12
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_remover.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_remover.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9
+valtera_avalon_st_jtag_interface
+R1
+R2
+!i10b 1
+!s100 GHZ42Kk><UkDFR]>>lO7h1
+I_eB2P;E5jSDn:2KgU?>Bb2
+R3
+!s105 altera_avalon_st_jtag_interface_v_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_jtag_interface.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_jtag_interface.v
+L0 20
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_jtag_interface.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_jtag_interface.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9
+valtera_avalon_st_pipeline_base
+R1
+R2
+!i10b 1
+!s100 IZ246NSd;dW2a7WAUFMLa1
+I7dh=BkF[z;f8XaM2abYD?0
+R3
+!s105 altera_avalon_st_pipeline_base_v_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9
+valtera_avalon_st_pipeline_stage
+R1
+R10
+!i10b 1
+!s100 0[eR^H<[LF9R7ZA?d`HaW2
+IPcZZA7SB3[Uz]ooR9=a322
+R3
+!s105 altera_avalon_st_pipeline_stage_sv_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_stage.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_stage.sv|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+o-sv -work jtag_phy_embedded_in_jtag_master
+R9
+valtera_jtag_control_signal_crosser
+R1
+R2
+!i10b 1
+!s100 U2_g4KUMne;gJ6B7z9>K21
+I69Q0X_i^2[Ln4=Ein[5a`3
+R3
+Z13 !s105 altera_jtag_dc_streaming_v_unit
+S1
+R0
+R4
+Z14 8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_dc_streaming.v
+Z15 FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_dc_streaming.v
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+Z16 !s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_dc_streaming.v|
+Z17 !s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_dc_streaming.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9
+valtera_jtag_dc_streaming
+R1
+R2
+!i10b 1
+!s100 _K[oDQ5I636Kd3M7`ATLa1
+IJm90<^ahd^41I9a<ECXEN1
+R3
+R13
+S1
+R0
+R4
+R14
+R15
+L0 135
+R6
+r1
+!s85 0
+31
+R7
+R16
+R17
+!i113 1
+R8
+R9
+valtera_jtag_sld_node
+R1
+R2
+!i10b 1
+!s100 9CH?ljATG;knXW1SKzfld0
+IK5VX>jn`BFJFT_zf6@WAD1
+R3
+!s105 altera_jtag_sld_node_v_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_sld_node.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_sld_node.v
+L0 17
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_sld_node.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_sld_node.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9
+valtera_jtag_src_crosser
+R1
+R2
+!i10b 1
+!s100 1faoWCK`z48o3gYlH?lA@3
+IF3<K4H3dO<V8hn4lJL=bF1
+R3
+R13
+S1
+R0
+R4
+R14
+R15
+L0 72
+R6
+r1
+!s85 0
+31
+R7
+R16
+R17
+!i113 1
+R8
+R9
+valtera_jtag_streaming
+R1
+R2
+!i10b 1
+!s100 UJ^k<KWVl3]FT2?iAe[Ub1
+IS7o3EPmJnGOmlzaVm@jni0
+R3
+!s105 altera_jtag_streaming_v_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_streaming.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_streaming.v
+L0 18
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_streaming.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_streaming.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9
+valtera_std_synchronizer_nocut
+R1
+R2
+!i10b 1
+!s100 VXZB9eG5R<c?e0Q]eX?@a3
+IDojQ=[HPM0E0[g5zhDkQX0
+R3
+!s105 altera_std_synchronizer_nocut_v_unit
+S1
+R0
+R4
+8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_std_synchronizer_nocut.v
+FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_std_synchronizer_nocut.v
+L0 44
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_std_synchronizer_nocut.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_std_synchronizer_nocut.v|-work|jtag_phy_embedded_in_jtag_master|
+!i113 1
+R8
+R9

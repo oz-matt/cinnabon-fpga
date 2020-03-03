@@ -120,6 +120,66 @@
 					"strict" : false
 				},
 				{
+					"name" : "HSMC_DAC_DB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "HSMC_DAC_DB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[2]",
+					"strict" : false
+				},
+				{
 					"name" : "CLOCK_50",
 					"strict" : false
 				},

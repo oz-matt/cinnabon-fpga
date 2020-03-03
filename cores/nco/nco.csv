@@ -1,12 +1,12 @@
-# system info nco on 2020.03.01.12:01:23
+# system info nco on 2020.03.01.23:05:16
 system_info:
 name,value
 DEVICE,EP4CGX150DF31C7
 DEVICE_FAMILY,Cyclone IV GX
-GENERATION_ID,1583082082
+GENERATION_ID,1583121914
 #
 #
-# Files generated for nco on 2020.03.01.12:01:23
+# Files generated for nco on 2020.03.01.23:05:16
 files:
 filepath,kind,attributes,module,is_top
 simulation/nco.v,VERILOG,,nco,true
@@ -16,8 +16,14 @@ simulation/submodules/mentor/asj_nco_mady_cen.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,
 simulation/submodules/aldec/asj_nco_mady_cen.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,nco_nco_ii_0,false
 simulation/submodules/mentor/asj_nco_isdr.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,nco_nco_ii_0,false
 simulation/submodules/aldec/asj_nco_isdr.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,nco_nco_ii_0,false
+simulation/submodules/mentor/asj_nco_apr_dxx.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,nco_nco_ii_0,false
+simulation/submodules/aldec/asj_nco_apr_dxx.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,nco_nco_ii_0,false
 simulation/submodules/mentor/asj_nco_mob_w.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,nco_nco_ii_0,false
 simulation/submodules/aldec/asj_nco_mob_w.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,nco_nco_ii_0,false
+simulation/submodules/mentor/asj_dxx_g.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,nco_nco_ii_0,false
+simulation/submodules/aldec/asj_dxx_g.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,nco_nco_ii_0,false
+simulation/submodules/mentor/asj_dxx.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,nco_nco_ii_0,false
+simulation/submodules/aldec/asj_dxx.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,nco_nco_ii_0,false
 simulation/submodules/mentor/asj_nco_as_m_dp_cen.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,nco_nco_ii_0,false
 simulation/submodules/aldec/asj_nco_as_m_dp_cen.v,VERILOG_ENCRYPT,ALDEC_SPECIFIC,nco_nco_ii_0,false
 simulation/submodules/mentor/asj_nco_as_m_cen.v,VERILOG_ENCRYPT,MENTOR_SPECIFIC,nco_nco_ii_0,false

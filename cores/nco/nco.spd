@@ -31,12 +31,42 @@
    library="nco_ii_0"
    simulator="riviera" />
  <file
+   path="simulation/submodules/mentor/asj_nco_apr_dxx.v"
+   type="VERILOG_ENCRYPT"
+   library="nco_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/asj_nco_apr_dxx.v"
+   type="VERILOG_ENCRYPT"
+   library="nco_ii_0"
+   simulator="riviera" />
+ <file
    path="simulation/submodules/mentor/asj_nco_mob_w.v"
    type="VERILOG_ENCRYPT"
    library="nco_ii_0"
    simulator="modelsim" />
  <file
    path="simulation/submodules/aldec/asj_nco_mob_w.v"
+   type="VERILOG_ENCRYPT"
+   library="nco_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/asj_dxx_g.v"
+   type="VERILOG_ENCRYPT"
+   library="nco_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/asj_dxx_g.v"
+   type="VERILOG_ENCRYPT"
+   library="nco_ii_0"
+   simulator="riviera" />
+ <file
+   path="simulation/submodules/mentor/asj_dxx.v"
+   type="VERILOG_ENCRYPT"
+   library="nco_ii_0"
+   simulator="modelsim" />
+ <file
+   path="simulation/submodules/aldec/asj_dxx.v"
    type="VERILOG_ENCRYPT"
    library="nco_ii_0"
    simulator="riviera" />

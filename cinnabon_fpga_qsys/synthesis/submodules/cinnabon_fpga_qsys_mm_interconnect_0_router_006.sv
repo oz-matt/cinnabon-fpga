@@ -1,10 +1,10 @@
-// (C) 2001-2019 Intel Corporation. All rights reserved.
+// (C) 2001-2016 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
-// files from any of the foregoing (including device programming or simulation 
+// files any of the foregoing (including device programming or simulation 
 // files), and any associated documentation or information are expressly subject 
 // to the terms and conditions of the Intel Program License Subscription 
-// Agreement, Intel FPGA IP License Agreement, or other applicable 
+// Agreement, Intel MegaCore Function License Agreement, or other applicable 
 // license agreement, including, without limitation, that your use is for the 
 // sole purpose of programming logic devices manufactured by Intel and sold by 
 // Intel or its authorized distributors.  Please refer to the applicable 
@@ -24,10 +24,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/19.1std/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
+// $Id: //acds/rel/16.1/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2018/11/07 $
-// $Author: psgswbuild $
+// $Date: 2016/08/07 $
+// $Author: swbranch $
 
 // -------------------------------------------------------
 // Merlin Router
@@ -47,23 +47,23 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_006_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 1 
+               DEFAULT_DESTID = 0 
    )
-  (output [135 - 133 : 0] default_destination_id,
-   output [6-1 : 0] default_wr_channel,
-   output [6-1 : 0] default_rd_channel,
-   output [6-1 : 0] default_src_channel
+  (output [99 - 97 : 0] default_destination_id,
+   output [5-1 : 0] default_wr_channel,
+   output [5-1 : 0] default_rd_channel,
+   output [5-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[135 - 133 : 0];
+    DEFAULT_DESTID[99 - 97 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 6'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 5'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_006_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 6'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 6'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 5'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 5'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -93,7 +93,7 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_006
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [149-1 : 0]    sink_data,
+    input  [113-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,8 +102,8 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_006
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [149-1    : 0] src_data,
-    output reg [6-1 : 0] src_channel,
+    output reg [113-1    : 0] src_data,
+    output reg [5-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -112,18 +112,18 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_006
     // -------------------------------------------------------
     // Local parameters and variables
     // -------------------------------------------------------
-    localparam PKT_ADDR_H = 103;
-    localparam PKT_ADDR_L = 72;
-    localparam PKT_DEST_ID_H = 135;
-    localparam PKT_DEST_ID_L = 133;
-    localparam PKT_PROTECTION_H = 139;
-    localparam PKT_PROTECTION_L = 137;
-    localparam ST_DATA_W = 149;
-    localparam ST_CHANNEL_W = 6;
+    localparam PKT_ADDR_H = 67;
+    localparam PKT_ADDR_L = 36;
+    localparam PKT_DEST_ID_H = 99;
+    localparam PKT_DEST_ID_L = 97;
+    localparam PKT_PROTECTION_H = 103;
+    localparam PKT_PROTECTION_L = 101;
+    localparam ST_DATA_W = 113;
+    localparam ST_CHANNEL_W = 5;
     localparam DECODER_TYPE = 1;
 
-    localparam PKT_TRANS_WRITE = 106;
-    localparam PKT_TRANS_READ  = 107;
+    localparam PKT_TRANS_WRITE = 70;
+    localparam PKT_TRANS_READ  = 71;
 
     localparam PKT_ADDR_W = PKT_ADDR_H-PKT_ADDR_L + 1;
     localparam PKT_DEST_ID_W = PKT_DEST_ID_H-PKT_DEST_ID_L + 1;
@@ -158,18 +158,11 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_006
     assign src_valid         = sink_valid;
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
-    wire [6-1 : 0] default_src_channel;
+    wire [5-1 : 0] default_src_channel;
 
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire write_transaction;
-    assign write_transaction = sink_data[PKT_TRANS_WRITE];
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     cinnabon_fpga_qsys_mm_interconnect_0_router_006_default_decode the_default_decode(
@@ -191,20 +184,8 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_006
 
 
 
-        if (destid == 1 ) begin
-            src_channel = 6'b0001;
-        end
-
-        if (destid == 4  && read_transaction) begin
-            src_channel = 6'b0010;
-        end
-
-        if (destid == 5  && write_transaction) begin
-            src_channel = 6'b0100;
-        end
-
         if (destid == 0 ) begin
-            src_channel = 6'b1000;
+            src_channel = 5'b1;
         end
 
 

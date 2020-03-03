@@ -1,25 +1,60 @@
 module adcproc(
-  input i_125clk,
-  input i_31clk,
+  input i_62clk,
+  input i_50clk,
   input i_nreset,
-  output wire[63:0] ow_data
+  output wire[63:0] rw_q_sig,
+  output wire[13:0] rw_buffed_address,
+  output wire[7:0] rw_byteen,
+  output wire owbit
 );
 
+reg cwbit = 0;
+reg wbit = 0;
+
+wire[63:0] q_sig;
+
+reg[13:0] rw_address = 0;
 wire[63:0] adcdata;
 
 bram1	bram1_inst (
 	.data ( adcdata ),
 	.rdaddress ( 0 ),
-	.rdclock ( i_31clk ),
+	.rdclock ( i_50clk ),
 	.wraddress ( 0 ),
-	.wrclock ( i_125clk ),
+	.wrclock ( i_62clk ),
 	.wren ( 1 ),
-	.q ( ow_data )
+	.q ( q_sig )
 	);
+	
+assign owbit = cwbit | wbit;
+	
+assign rw_q_sig = i_nreset ? q_sig : 0;
+assign rw_buffed_address = owbit ? rw_address : 0;
+assign rw_byteen = owbit ? 8'hFF : 8'h00;
+
+always @(q_sig)
+begin
+  if(i_nreset)
+  begin
+    cwbit <= 1;
+	rw_address <= rw_address + 1;
+  end
+  else
+  begin
+    cwbit <= 0;
+	rw_address <= 0;
+  end
+end
+
+always @(posedge i_50clk)
+begin
+  if(wbit)
+    wbit <= 0;
+end
 
 adcraw adcraw_inst
   (
-  .i_125clk(i_125clk),
+  .i_62clk(i_62clk),
   .i_nreset(i_nreset),
   .o_data(adcdata)
   );
@@ -27,7 +62,7 @@ adcraw adcraw_inst
 endmodule
 
 module adcraw(
-  input i_125clk,
+  input i_62clk,
   input i_nreset,
   output reg[63:0] o_data = 0
 );
@@ -52,7 +87,7 @@ reg[13:0] fakeadcdata = 0;
 
 reg is_first_sample = 1;
 
-always @(posedge i_125clk or negedge i_nreset)
+always @(posedge i_62clk or negedge i_nreset)
 begin
 
   if(!i_nreset)

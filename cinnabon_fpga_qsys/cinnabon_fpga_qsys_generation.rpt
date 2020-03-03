@@ -2,17 +2,15 @@ Info: Starting: Create simulation model
 Info: qsys-generate D:\cinnabon_fpga\cinnabon_fpga_qsys.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\cinnabon_fpga\cinnabon_fpga_qsys\simulation --family="Cyclone IV GX" --part=EP4CGX150DF31C7
 Progress: Loading cinnabon_fpga/cinnabon_fpga_qsys.qsys
 Progress: Reading input file
-Progress: Adding J2A_master [altera_jtag_avalon_master 19.1]
-Progress: Parameterizing module J2A_master
-Progress: Adding clk_50 [clock_source 19.1]
+Progress: Adding clk_50 [clock_source 16.1]
 Progress: Parameterizing module clk_50
-Progress: Adding onchip_memory [altera_avalon_onchip_memory2 19.1]
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 16.1]
 Progress: Parameterizing module onchip_memory
-Progress: Adding pcie_ip [altera_pcie_hard_ip 19.1]
+Progress: Adding pcie_ip [altera_pcie_hard_ip 16.1]
 Progress: Parameterizing module pcie_ip
-Progress: Adding pio_0 [altera_avalon_pio 19.1]
+Progress: Adding pio_0 [altera_avalon_pio 16.1]
 Progress: Parameterizing module pio_0
-Progress: Adding sgdma [altera_avalon_sgdma 19.1]
+Progress: Adding sgdma [altera_avalon_sgdma 16.1]
 Progress: Parameterizing module sgdma
 Progress: Building connections
 Progress: Parameterizing connections
@@ -20,8 +18,8 @@ Progress: Validating
 Progress: Done reading input file
 Info: cinnabon_fpga_qsys.pcie_ip:  Rx Master BAR 1_0 mapped to 18 -bit Avalon-MM address
 Info: cinnabon_fpga_qsys.pcie_ip:  Rx Master BAR 2 mapped to 15 -bit Avalon-MM address
-Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 19.1)
-Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "avalon_clk" (altera_clock_bridge 19.1), "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 19.1)
+Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1)
+Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "avalon_clk" (altera_clock_bridge 16.1), "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1)
 Info: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip:  Txs Address width is 31
 Info: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip: Application clock frequency is 125 Mhz 
 Warning: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip.app_msi_ack: Interface has no signals
@@ -57,18 +55,17 @@ Info: cinnabon_fpga_qsys.sgdma: Scatter-Gather DMA Controller will only be suppo
 Warning: cinnabon_fpga_qsys.pcie_ip: pcie_ip.powerdown must be exported, or connected to a matching conduit.
 Warning: cinnabon_fpga_qsys.pcie_ip: Interrupt sender pcie_ip.cra_irq is not connected to an interrupt receiver
 Info: cinnabon_fpga_qsys: Generating cinnabon_fpga_qsys "cinnabon_fpga_qsys" for SIM_VERILOG
-Info: J2A_master: "cinnabon_fpga_qsys" instantiated altera_jtag_avalon_master "J2A_master"
 Info: onchip_memory: Starting RTL generation for module 'cinnabon_fpga_qsys_onchip_memory'
-Info: onchip_memory:   Generation command is [exec D:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=cinnabon_fpga_qsys_onchip_memory --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0003_onchip_memory_gen/ --quartus_dir=D:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0003_onchip_memory_gen//cinnabon_fpga_qsys_onchip_memory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0003_onchip_memory_gen/  ]
+Info: onchip_memory:   Generation command is [exec D:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/16.1/quartus/bin64/perl/lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=cinnabon_fpga_qsys_onchip_memory --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0003_onchip_memory_gen/ --quartus_dir=D:/intelfpga/16.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0003_onchip_memory_gen//cinnabon_fpga_qsys_onchip_memory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0003_onchip_memory_gen/  ]
 Info: onchip_memory: Done RTL generation for module 'cinnabon_fpga_qsys_onchip_memory'
 Info: onchip_memory: "cinnabon_fpga_qsys" instantiated altera_avalon_onchip_memory2 "onchip_memory"
 Info: pcie_ip: "cinnabon_fpga_qsys" instantiated altera_pcie_hard_ip "pcie_ip"
 Info: pio_0: Starting RTL generation for module 'cinnabon_fpga_qsys_pio_0'
-Info: pio_0:   Generation command is [exec D:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=cinnabon_fpga_qsys_pio_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0004_pio_0_gen/ --quartus_dir=D:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0004_pio_0_gen//cinnabon_fpga_qsys_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0004_pio_0_gen/  ]
+Info: pio_0:   Generation command is [exec D:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/16.1/quartus/bin64/perl/lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=cinnabon_fpga_qsys_pio_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0004_pio_0_gen/ --quartus_dir=D:/intelfpga/16.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0004_pio_0_gen//cinnabon_fpga_qsys_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0004_pio_0_gen/  ]
 Info: pio_0: Done RTL generation for module 'cinnabon_fpga_qsys_pio_0'
 Info: pio_0: "cinnabon_fpga_qsys" instantiated altera_avalon_pio "pio_0"
 Info: sgdma: Starting RTL generation for module 'cinnabon_fpga_qsys_sgdma'
-Info: sgdma:   Generation command is [exec D:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=cinnabon_fpga_qsys_sgdma --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0005_sgdma_gen/ --quartus_dir=D:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0005_sgdma_gen//cinnabon_fpga_qsys_sgdma_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0005_sgdma_gen/  ]
+Info: sgdma:   Generation command is [exec D:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/16.1/quartus/bin64/perl/lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=cinnabon_fpga_qsys_sgdma --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0005_sgdma_gen/ --quartus_dir=D:/intelfpga/16.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0005_sgdma_gen//cinnabon_fpga_qsys_sgdma_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0005_sgdma_gen/  ]
 Info: sgdma: Done RTL generation for module 'cinnabon_fpga_qsys_sgdma'
 Info: sgdma: "cinnabon_fpga_qsys" instantiated altera_avalon_sgdma "sgdma"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -80,22 +77,14 @@ Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_1: "cinnabon_fpga_qsys" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: irq_mapper: "cinnabon_fpga_qsys" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "cinnabon_fpga_qsys" instantiated altera_reset_controller "rst_controller"
-Info: jtag_phy_embedded_in_jtag_master: "J2A_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
-Info: timing_adt: "J2A_master" instantiated timing_adapter "timing_adt"
-Info: fifo: "J2A_master" instantiated altera_avalon_sc_fifo "fifo"
-Info: b2p: "J2A_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
-Info: p2b: "J2A_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
-Info: transacto: "J2A_master" instantiated altera_avalon_packets_to_master "transacto"
-Info: b2p_adapter: "J2A_master" instantiated channel_adapter "b2p_adapter"
-Info: p2b_adapter: "J2A_master" instantiated channel_adapter "p2b_adapter"
 Info: pcie_internal_hip: "pcie_ip" instantiated altera_pcie_internal_hard_ip_qsys "pcie_internal_hip"
 Info: altgx_internal: Family: Cyclone IV GX
 Info: altgx_internal: Subprotocol: Gen 1-x1
 Info: altgx_internal: qmegawiz -silent module=alt_c3gxb LOCKDOWN_EXCL=PCIE IP_MODE=PCIE_HIP_8 gxb_analog_power=AUTO tx_analog_power=AUTO elec_idle_infer_enable=false tx_allow_polarity_inversion=false rx_cdrctrl_enable=true hip_tx_clkout rx_elecidleinfersel fixedclk enable_0ppm=false pll_powerdown intended_device_family=cycloneiv starting_channel_number=84   deviceFamily="Cyclone IV GX"  wiz_subprotocol="Gen 1-x1"  OPTIONAL_FILES=NONE cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v
 Info: altgx_internal: Generating Verilog simulation model
 Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Warning: Output port "rx_patterndetect[0]" at cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v(106) has no driver File: C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0019_sopcqmap/cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v Line: 106
-Warning: Output port "rx_syncstatus[0]" at cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v(107) has no driver File: C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0019_sopcqmap/cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v Line: 107
+Warning: Output port "rx_patterndetect[0]" at cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v(106) has no driver File: C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0011_sopcqmap/cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v Line: 106
+Warning: Output port "rx_syncstatus[0]" at cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v(107) has no driver File: C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0011_sopcqmap/cinnabon_fpga_qsys_pcie_ip_altgx_internal_inst.v Line: 107
 Info: altgx_internal: Generated simulation model cinnabon_fpga_qsys_pcie_ip_altgx_internal.vo
 Info: altgx_internal: "pcie_ip" instantiated altera_pcie_internal_altgx "altgx_internal"
 Info: reset_controller_internal: "pcie_ip" instantiated altera_pcie_internal_reset_controller_qsys "reset_controller_internal"
@@ -104,18 +93,16 @@ Info: pcie_ip_bar1_0_translator: "mm_interconnect_0" instantiated altera_merlin_
 Info: onchip_memory_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "onchip_memory_s1_translator"
 Info: pcie_ip_bar1_0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "pcie_ip_bar1_0_agent"
 Info: onchip_memory_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "onchip_memory_s1_agent"
+Info: onchip_memory_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "onchip_memory_s1_agent_rsp_fifo"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
-Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
 Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
 Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
-Info: router_008: "mm_interconnect_0" instantiated altera_merlin_router "router_008"
 Info: pcie_ip_bar1_0_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "pcie_ip_bar1_0_limiter"
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_sc_fifo.v
-Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v
 Info: onchip_memory_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "onchip_memory_s1_burst_adapter"
-Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_stage.sv
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
@@ -123,7 +110,10 @@ Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexe
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
@@ -143,7 +133,7 @@ Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_m
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
-Info: cinnabon_fpga_qsys: Done "cinnabon_fpga_qsys" with 54 modules, 120 files
+Info: cinnabon_fpga_qsys: Done "cinnabon_fpga_qsys" with 47 modules, 105 files
 Info: qsys-generate succeeded.
 Info: Finished: Create simulation model
 Info: Starting: Create Modelsim Project.
@@ -160,7 +150,7 @@ Info: Generating the following file(s) for NCSIM simulator in D:/cinnabon_fpga/c
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	46 .cds.lib files in cadence/cds_libs/ directory
+Info: 	39 .cds.lib files in cadence/cds_libs/ directory
 Info: Generating the following file(s) for RIVIERA simulator in D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/ directory:
 Info: 	aldec/rivierapro_setup.tcl
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/.
@@ -170,17 +160,15 @@ Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate D:\cinnabon_fpga\cinnabon_fpga_qsys.qsys --block-symbol-file --output-directory=D:\cinnabon_fpga\cinnabon_fpga_qsys --family="Cyclone IV GX" --part=EP4CGX150DF31C7
 Progress: Loading cinnabon_fpga/cinnabon_fpga_qsys.qsys
 Progress: Reading input file
-Progress: Adding J2A_master [altera_jtag_avalon_master 19.1]
-Progress: Parameterizing module J2A_master
-Progress: Adding clk_50 [clock_source 19.1]
+Progress: Adding clk_50 [clock_source 16.1]
 Progress: Parameterizing module clk_50
-Progress: Adding onchip_memory [altera_avalon_onchip_memory2 19.1]
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 16.1]
 Progress: Parameterizing module onchip_memory
-Progress: Adding pcie_ip [altera_pcie_hard_ip 19.1]
+Progress: Adding pcie_ip [altera_pcie_hard_ip 16.1]
 Progress: Parameterizing module pcie_ip
-Progress: Adding pio_0 [altera_avalon_pio 19.1]
+Progress: Adding pio_0 [altera_avalon_pio 16.1]
 Progress: Parameterizing module pio_0
-Progress: Adding sgdma [altera_avalon_sgdma 19.1]
+Progress: Adding sgdma [altera_avalon_sgdma 16.1]
 Progress: Parameterizing module sgdma
 Progress: Building connections
 Progress: Parameterizing connections
@@ -188,8 +176,8 @@ Progress: Validating
 Progress: Done reading input file
 Info: cinnabon_fpga_qsys.pcie_ip:  Rx Master BAR 1_0 mapped to 18 -bit Avalon-MM address
 Info: cinnabon_fpga_qsys.pcie_ip:  Rx Master BAR 2 mapped to 15 -bit Avalon-MM address
-Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 19.1)
-Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 19.1), "avalon_clk" (altera_clock_bridge 19.1)
+Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1)
+Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1), "avalon_clk" (altera_clock_bridge 16.1)
 Info: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip:  Txs Address width is 31
 Info: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip: Application clock frequency is 125 Mhz 
 Warning: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip.app_msi_ack: Interface has no signals
@@ -231,17 +219,15 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate D:\cinnabon_fpga\cinnabon_fpga_qsys.qsys --synthesis=VERILOG --output-directory=D:\cinnabon_fpga\cinnabon_fpga_qsys\synthesis --family="Cyclone IV GX" --part=EP4CGX150DF31C7
 Progress: Loading cinnabon_fpga/cinnabon_fpga_qsys.qsys
 Progress: Reading input file
-Progress: Adding J2A_master [altera_jtag_avalon_master 19.1]
-Progress: Parameterizing module J2A_master
-Progress: Adding clk_50 [clock_source 19.1]
+Progress: Adding clk_50 [clock_source 16.1]
 Progress: Parameterizing module clk_50
-Progress: Adding onchip_memory [altera_avalon_onchip_memory2 19.1]
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 16.1]
 Progress: Parameterizing module onchip_memory
-Progress: Adding pcie_ip [altera_pcie_hard_ip 19.1]
+Progress: Adding pcie_ip [altera_pcie_hard_ip 16.1]
 Progress: Parameterizing module pcie_ip
-Progress: Adding pio_0 [altera_avalon_pio 19.1]
+Progress: Adding pio_0 [altera_avalon_pio 16.1]
 Progress: Parameterizing module pio_0
-Progress: Adding sgdma [altera_avalon_sgdma 19.1]
+Progress: Adding sgdma [altera_avalon_sgdma 16.1]
 Progress: Parameterizing module sgdma
 Progress: Building connections
 Progress: Parameterizing connections
@@ -249,8 +235,8 @@ Progress: Validating
 Progress: Done reading input file
 Info: cinnabon_fpga_qsys.pcie_ip:  Rx Master BAR 1_0 mapped to 18 -bit Avalon-MM address
 Info: cinnabon_fpga_qsys.pcie_ip:  Rx Master BAR 2 mapped to 15 -bit Avalon-MM address
-Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 19.1)
-Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "avalon_clk" (altera_clock_bridge 19.1), "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 19.1)
+Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1)
+Warning: cinnabon_fpga_qsys.pcie_ip.pcie_ip: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 16.1), "avalon_clk" (altera_clock_bridge 16.1)
 Info: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip:  Txs Address width is 31
 Info: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip: Application clock frequency is 125 Mhz 
 Warning: cinnabon_fpga_qsys.pcie_ip.pcie_internal_hip.app_msi_ack: Interface has no signals
@@ -286,18 +272,17 @@ Info: cinnabon_fpga_qsys.sgdma: Scatter-Gather DMA Controller will only be suppo
 Warning: cinnabon_fpga_qsys.pcie_ip: pcie_ip.powerdown must be exported, or connected to a matching conduit.
 Warning: cinnabon_fpga_qsys.pcie_ip: Interrupt sender pcie_ip.cra_irq is not connected to an interrupt receiver
 Info: cinnabon_fpga_qsys: Generating cinnabon_fpga_qsys "cinnabon_fpga_qsys" for QUARTUS_SYNTH
-Info: J2A_master: "cinnabon_fpga_qsys" instantiated altera_jtag_avalon_master "J2A_master"
 Info: onchip_memory: Starting RTL generation for module 'cinnabon_fpga_qsys_onchip_memory'
-Info: onchip_memory:   Generation command is [exec D:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=cinnabon_fpga_qsys_onchip_memory --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0054_onchip_memory_gen/ --quartus_dir=D:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0054_onchip_memory_gen//cinnabon_fpga_qsys_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory:   Generation command is [exec D:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/16.1/quartus/bin64/perl/lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=cinnabon_fpga_qsys_onchip_memory --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0048_onchip_memory_gen/ --quartus_dir=D:/intelfpga/16.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0048_onchip_memory_gen//cinnabon_fpga_qsys_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory: Done RTL generation for module 'cinnabon_fpga_qsys_onchip_memory'
 Info: onchip_memory: "cinnabon_fpga_qsys" instantiated altera_avalon_onchip_memory2 "onchip_memory"
 Info: pcie_ip: "cinnabon_fpga_qsys" instantiated altera_pcie_hard_ip "pcie_ip"
 Info: pio_0: Starting RTL generation for module 'cinnabon_fpga_qsys_pio_0'
-Info: pio_0:   Generation command is [exec D:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=cinnabon_fpga_qsys_pio_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0055_pio_0_gen/ --quartus_dir=D:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0055_pio_0_gen//cinnabon_fpga_qsys_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec D:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/16.1/quartus/bin64/perl/lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=cinnabon_fpga_qsys_pio_0 --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0049_pio_0_gen/ --quartus_dir=D:/intelfpga/16.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0049_pio_0_gen//cinnabon_fpga_qsys_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'cinnabon_fpga_qsys_pio_0'
 Info: pio_0: "cinnabon_fpga_qsys" instantiated altera_avalon_pio "pio_0"
 Info: sgdma: Starting RTL generation for module 'cinnabon_fpga_qsys_sgdma'
-Info: sgdma:   Generation command is [exec D:/intelfpga_lite/19.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/19.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- D:/intelfpga_lite/19.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=cinnabon_fpga_qsys_sgdma --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0056_sgdma_gen/ --quartus_dir=D:/intelfpga_lite/19.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8321_3297331464688987206.dir/0056_sgdma_gen//cinnabon_fpga_qsys_sgdma_component_configuration.pl  --do_build_sim=0  ]
+Info: sgdma:   Generation command is [exec D:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/16.1/quartus/bin64/perl/lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/16.1/quartus/sopc_builder/bin -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma -- D:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_sgdma/generate_rtl.pl --name=cinnabon_fpga_qsys_sgdma --dir=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0050_sgdma_gen/ --quartus_dir=D:/intelfpga/16.1/quartus --verilog --config=C:/Users/KLUTC_~1/AppData/Local/Temp/alt8324_7659120624639469648.dir/0050_sgdma_gen//cinnabon_fpga_qsys_sgdma_component_configuration.pl  --do_build_sim=0  ]
 Info: sgdma: Done RTL generation for module 'cinnabon_fpga_qsys_sgdma'
 Info: sgdma: "cinnabon_fpga_qsys" instantiated altera_avalon_sgdma "sgdma"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -309,14 +294,6 @@ Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_1: "cinnabon_fpga_qsys" instantiated altera_mm_interconnect "mm_interconnect_1"
 Info: irq_mapper: "cinnabon_fpga_qsys" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "cinnabon_fpga_qsys" instantiated altera_reset_controller "rst_controller"
-Info: jtag_phy_embedded_in_jtag_master: "J2A_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
-Info: timing_adt: "J2A_master" instantiated timing_adapter "timing_adt"
-Info: fifo: "J2A_master" instantiated altera_avalon_sc_fifo "fifo"
-Info: b2p: "J2A_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
-Info: p2b: "J2A_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
-Info: transacto: "J2A_master" instantiated altera_avalon_packets_to_master "transacto"
-Info: b2p_adapter: "J2A_master" instantiated channel_adapter "b2p_adapter"
-Info: p2b_adapter: "J2A_master" instantiated channel_adapter "p2b_adapter"
 Info: pcie_internal_hip: "pcie_ip" instantiated altera_pcie_internal_hard_ip_qsys "pcie_internal_hip"
 Info: altgx_internal: Family: Cyclone IV GX
 Info: altgx_internal: Subprotocol: Gen 1-x1
@@ -328,18 +305,16 @@ Info: pcie_ip_bar1_0_translator: "mm_interconnect_0" instantiated altera_merlin_
 Info: onchip_memory_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "onchip_memory_s1_translator"
 Info: pcie_ip_bar1_0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "pcie_ip_bar1_0_agent"
 Info: onchip_memory_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "onchip_memory_s1_agent"
+Info: onchip_memory_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "onchip_memory_s1_agent_rsp_fifo"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
-Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
 Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
 Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
-Info: router_008: "mm_interconnect_0" instantiated altera_merlin_router "router_008"
 Info: pcie_ip_bar1_0_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "pcie_ip_bar1_0_limiter"
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_avalon_sc_fifo.v
-Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: onchip_memory_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "onchip_memory_s1_burst_adapter"
-Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
@@ -347,7 +322,10 @@ Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexe
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
@@ -367,6 +345,6 @@ Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_m
 Info: Reusing file D:/cinnabon_fpga/cinnabon_fpga_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
-Info: cinnabon_fpga_qsys: Done "cinnabon_fpga_qsys" with 54 modules, 102 files
+Info: cinnabon_fpga_qsys: Done "cinnabon_fpga_qsys" with 47 modules, 87 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

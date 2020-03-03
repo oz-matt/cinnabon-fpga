@@ -6,38 +6,59 @@ reg r_fakeclock;
 //reg r_fake31clock;
 reg rst;
 reg frst;
-wire[63:0] adcdataunbuffed;
+reg wbit = 0;
 wire[63:0] adcdata;
-wire    CLK_31TB, CLK_125TB;
+wire    CLK_250, CLK_1;
 		  wire CLK_62;
 
+wire[63:0] q_sig;
+wire[63:0] q_sig_wr;
 
-reg	[63:0]  data_sig;
-	reg	[3:0]  rdaddress_sig;
-	reg	  rdclock_sig;
-	reg	[3:0]  wraddress_sig;
-	reg	  wrclock_sig;
-	reg	  wren_sig;
-	wire	[63:0]  q_sig;
+reg[13:0] rw_address = 0;
+wire[13:0] buff_address;
 
+wire[7:0] w_byteen;
 
-/*bram1	bram1_inst (
+assign q_sig_wr = frst ? q_sig : 0;
+assign buff_address = wbit ? rw_address : 0;
+assign w_byteen = wbit ? 8'hFF : 8'h00;
+
+always @(q_sig)
+begin
+  if(frst)
+  begin
+    wbit <= 1;
+	rw_address <= rw_address + 1;
+  end
+  else
+  begin
+    wbit <= 0;
+	rw_address <= 0;
+  end
+end
+
+always @(posedge r_fakeclock)
+begin
+  if(wbit)
+    wbit <= 0;
+end
+
+bram1	bram1_inst (
 	.data ( adcdata ),
 	.rdaddress ( 0 ),
-	.rdclock ( CLK_62 ),
+	.rdclock ( r_fakeclock ),
 	.wraddress ( 0 ),
-	.wrclock ( CLK_125TB ),
+	.wrclock ( CLK_62 ),
 	.wren ( 1 ),
 	.q ( q_sig )
 	);
-*/
 
 pll  pll_100   (
 				 .inclk0(r_fakeclock),
                  .locked(locked),
                  .areset(rst),
-                 .c0    (CLK_125TB),
-                 .c1	(CLK_31TB),
+                 .c0    (CLK_1),
+                 .c1	(CLK_250),
                  .c2	(CLK_62)
 			   );
 			   
@@ -52,24 +73,11 @@ always #20 r_fakeclock <= ~r_fakeclock;
 
 adctest UUT
   (
-  .i_125clk(CLK_125TB),
+  .i_62clk(CLK_62),
   .i_nreset(frst),
   .o_data(adcdata)
   );
 
-wire[63:0] rw_data1;
-wire[13:0] rw_address1;
-wire[7:0] rw_byteen1;
-wire rw_wbit1;
-
-ramwriter rw0(
-  .i_clk			(CLK_62),
-  .o_data		(rw_data1),
-  .o_address	(rw_address1),
-  .o_byteen		(rw_byteen1),
-  .o_wbit		(rw_wbit1)
-);
-	
 initial
 begin
   #10

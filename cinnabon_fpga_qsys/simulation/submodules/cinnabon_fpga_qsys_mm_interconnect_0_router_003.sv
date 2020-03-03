@@ -1,10 +1,10 @@
-// (C) 2001-2019 Intel Corporation. All rights reserved.
+// (C) 2001-2016 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
-// files from any of the foregoing (including device programming or simulation 
+// files any of the foregoing (including device programming or simulation 
 // files), and any associated documentation or information are expressly subject 
 // to the terms and conditions of the Intel Program License Subscription 
-// Agreement, Intel FPGA IP License Agreement, or other applicable 
+// Agreement, Intel MegaCore Function License Agreement, or other applicable 
 // license agreement, including, without limitation, that your use is for the 
 // sole purpose of programming logic devices manufactured by Intel and sold by 
 // Intel or its authorized distributors.  Please refer to the applicable 
@@ -24,10 +24,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/19.1std/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
+// $Id: //acds/rel/16.1/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2018/11/07 $
-// $Author: psgswbuild $
+// $Date: 2016/08/07 $
+// $Author: swbranch $
 
 // -------------------------------------------------------
 // Merlin Router
@@ -47,12 +47,12 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 0 
+               DEFAULT_DESTID = 1 
    )
   (output [99 - 97 : 0] default_destination_id,
-   output [6-1 : 0] default_wr_channel,
-   output [6-1 : 0] default_rd_channel,
-   output [6-1 : 0] default_src_channel
+   output [5-1 : 0] default_wr_channel,
+   output [5-1 : 0] default_rd_channel,
+   output [5-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
@@ -63,7 +63,7 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003_default_decode
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 6'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 5'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 6'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 6'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 5'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 5'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -103,7 +103,7 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003
     // -------------------
     output                          src_valid,
     output reg [113-1    : 0] src_data,
-    output reg [6-1 : 0] src_channel,
+    output reg [5-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -119,7 +119,7 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003
     localparam PKT_PROTECTION_H = 103;
     localparam PKT_PROTECTION_L = 101;
     localparam ST_DATA_W = 113;
-    localparam ST_CHANNEL_W = 6;
+    localparam ST_CHANNEL_W = 5;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 70;
@@ -134,13 +134,13 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h40000 - 64'h20000); 
+    localparam PAD0 = log2ceil(64'h100000000 - 64'h80000000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h40000;
+    localparam ADDR_RANGE = 64'h100000000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -159,7 +159,7 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [6-1 : 0] default_src_channel;
+    wire [5-1 : 0] default_src_channel;
 
 
 
@@ -184,9 +184,9 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_003
         // --------------------------------------------------
            
          
-          // ( 20000 .. 40000 )
-          src_channel = 6'b1;
-          src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+          // ( 80000000 .. 100000000 )
+          src_channel = 5'b1;
+          src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
 	     
         
 

@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/cinnabon_fpga/sim/modelsim
+vnco
+Z1 !s110 1583201995
+!i10b 1
+!s100 _X99YQa<i`Ma2Z=48kjN81
+Ik=5c;g^hmS24M=4:]a7[;1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 nco_v_unit
+S1
+R0
+Z3 w1583121920
+8D:/cinnabon_fpga/cores/nco/synthesis/nco.v
+FD:/cinnabon_fpga/cores/nco/synthesis/nco.v
+L0 6
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1583201995.000000
+!s107 D:/cinnabon_fpga/cores/nco/synthesis/nco.v|
+!s90 -reportprogress|300|-vlog01compat|-work|nco|+incdir+D:/cinnabon_fpga/cores/nco/synthesis|D:/cinnabon_fpga/cores/nco/synthesis/nco.v|
+!i113 1
+Z6 o-vlog01compat -work nco
+!s92 -vlog01compat -work nco +incdir+D:/cinnabon_fpga/cores/nco/synthesis
+Z7 tSvlog 1 CvgOpt 0
+vnco_nco_ii_0
+R1
+!i10b 1
+!s100 clnbVhMgT7IczQRFIKTFe3
+IdllR9oHQ]8f1n^22;Q1lU3
+R2
+!s105 nco_nco_ii_0_v_unit
+S1
+R0
+R3
+8D:/cinnabon_fpga/cores/nco/synthesis/submodules/nco_nco_ii_0.v
+FD:/cinnabon_fpga/cores/nco/synthesis/submodules/nco_nco_ii_0.v
+L0 23
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/cinnabon_fpga/cores/nco/synthesis/submodules/nco_nco_ii_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|nco|+incdir+D:/cinnabon_fpga/cores/nco/synthesis/submodules|D:/cinnabon_fpga/cores/nco/synthesis/submodules/nco_nco_ii_0.v|
+!i113 1
+R6
+!s92 -vlog01compat -work nco +incdir+D:/cinnabon_fpga/cores/nco/synthesis/submodules
+R7

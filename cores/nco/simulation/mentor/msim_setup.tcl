@@ -92,7 +92,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 16.1 196 win32 2020.03.01.12:01:24
+# ACDS 16.1 196 win32 2020.03.01.23:05:16
 
 # ----------------------------------------
 # Initialize variables
@@ -190,7 +190,10 @@ alias com {
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_nco_madx_cen.v"    -work nco_ii_0
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_nco_mady_cen.v"    -work nco_ii_0
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_nco_isdr.v"        -work nco_ii_0
+  eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_nco_apr_dxx.v"     -work nco_ii_0
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_nco_mob_w.v"       -work nco_ii_0
+  eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_dxx_g.v"           -work nco_ii_0
+  eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_dxx.v"             -work nco_ii_0
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_nco_as_m_dp_cen.v" -work nco_ii_0
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_nco_as_m_cen.v"    -work nco_ii_0
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/mentor/asj_altqmcpipe.v"      -work nco_ii_0

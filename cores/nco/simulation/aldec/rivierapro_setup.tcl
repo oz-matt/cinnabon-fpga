@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.1 196 win32 2020.03.01.12:01:24
+# ACDS 16.1 196 win32 2020.03.01.23:05:16
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -196,7 +196,10 @@ alias com {
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_nco_madx_cen.v"    -work nco_ii_0
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_nco_mady_cen.v"    -work nco_ii_0
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_nco_isdr.v"        -work nco_ii_0
+  eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_nco_apr_dxx.v"     -work nco_ii_0
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_nco_mob_w.v"       -work nco_ii_0
+  eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_dxx_g.v"           -work nco_ii_0
+  eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_dxx.v"             -work nco_ii_0
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_nco_as_m_dp_cen.v" -work nco_ii_0
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_nco_as_m_cen.v"    -work nco_ii_0
   eval  vlog -v2k5 $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/asj_altqmcpipe.v"      -work nco_ii_0

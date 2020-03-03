@@ -1,10 +1,10 @@
-// (C) 2001-2019 Intel Corporation. All rights reserved.
+// (C) 2001-2016 Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
-// files from any of the foregoing (including device programming or simulation 
+// files any of the foregoing (including device programming or simulation 
 // files), and any associated documentation or information are expressly subject 
 // to the terms and conditions of the Intel Program License Subscription 
-// Agreement, Intel FPGA IP License Agreement, or other applicable 
+// Agreement, Intel MegaCore Function License Agreement, or other applicable 
 // license agreement, including, without limitation, that your use is for the 
 // sole purpose of programming logic devices manufactured by Intel and sold by 
 // Intel or its authorized distributors.  Please refer to the applicable 
@@ -24,10 +24,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/19.1std/ip/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer.sv.terp#1 $
+// $Id: //acds/rel/16.1/ip/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2018/11/07 $
-// $Author: psgswbuild $
+// $Date: 2016/08/07 $
+// $Author: swbranch $
 
 // ------------------------------------------
 // Merlin Multiplexer
@@ -45,7 +45,7 @@
 //   PIPELINE_ARB:        0
 //   PKT_TRANS_LOCK:      108 (arbitration locking enabled)
 //   ST_DATA_W:           149
-//   ST_CHANNEL_W:        6
+//   ST_CHANNEL_W:        5
 // ------------------------------------------
 
 module cinnabon_fpga_qsys_mm_interconnect_0_rsp_mux
@@ -55,14 +55,14 @@ module cinnabon_fpga_qsys_mm_interconnect_0_rsp_mux
     // ----------------------
     input                       sink0_valid,
     input [149-1   : 0]  sink0_data,
-    input [6-1: 0]  sink0_channel,
+    input [5-1: 0]  sink0_channel,
     input                       sink0_startofpacket,
     input                       sink0_endofpacket,
     output                      sink0_ready,
 
     input                       sink1_valid,
     input [149-1   : 0]  sink1_data,
-    input [6-1: 0]  sink1_channel,
+    input [5-1: 0]  sink1_channel,
     input                       sink1_startofpacket,
     input                       sink1_endofpacket,
     output                      sink1_ready,
@@ -73,7 +73,7 @@ module cinnabon_fpga_qsys_mm_interconnect_0_rsp_mux
     // ----------------------
     output                      src_valid,
     output [149-1    : 0] src_data,
-    output [6-1 : 0] src_channel,
+    output [5-1 : 0] src_channel,
     output                      src_startofpacket,
     output                      src_endofpacket,
     input                       src_ready,
@@ -84,12 +84,12 @@ module cinnabon_fpga_qsys_mm_interconnect_0_rsp_mux
     input clk,
     input reset
 );
-    localparam PAYLOAD_W        = 149 + 6 + 2;
+    localparam PAYLOAD_W        = 149 + 5 + 2;
     localparam NUM_INPUTS       = 2;
     localparam SHARE_COUNTER_W  = 1;
     localparam PIPELINE_ARB     = 0;
     localparam ST_DATA_W        = 149;
-    localparam ST_CHANNEL_W     = 6;
+    localparam ST_CHANNEL_W     = 5;
     localparam PKT_TRANS_LOCK   = 108;
 
     // ------------------------------------------

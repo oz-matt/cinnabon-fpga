@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2020.03.01.12:01:28"
+ date="2020.03.01.23:05:20"
  outputDirectory="D:/cinnabon_fpga/cores/nco/">
  <perimeter>
   <parameter
@@ -78,13 +78,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="nco:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CGX150DF31C7,AUTO_DEVICE_FAMILY=Cyclone IV GX,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1583082087,AUTO_UNIQUE_ID=(altera_nco_ii:16.1:apr=32,aprf=32,apri=16,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=1.0,fsamp=62.5,hyper_opt=false,hyper_opt_select=false,mpr=18,numba=1,numch=1,phi_inc=68719477,pmod_pipe=1,real_freq_out=1.0,selected_device_family=Cyclone IV GX,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=false,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=dual_output)"
+   parameterizationKey="nco:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CGX150DF31C7,AUTO_DEVICE_FAMILY=Cyclone IV GX,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1583121919,AUTO_UNIQUE_ID=(altera_nco_ii:16.1:apr=32,aprf=32,apri=16,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.1,fsamp=62.5,hyper_opt=false,hyper_opt_select=false,mpr=18,numba=1,numch=1,phi_inc=6871948,pmod_pipe=1,real_freq_out=0.1,selected_device_family=Cyclone IV GX,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=dual_output)"
    instancePathKey="nco"
    kind="nco"
    version="1.0"
    name="nco">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1583082087" />
+  <parameter name="AUTO_GENERATION_ID" value="1583121919" />
   <parameter name="AUTO_DEVICE" value="EP4CGX150DF31C7" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV GX" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -108,7 +108,19 @@
        type="VERILOG"
        attributes="" />
    <file
+       path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_nco_apr_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
        path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_nco_mob_w.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_dxx_g.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_dxx.v"
        type="VERILOG"
        attributes="" />
    <file
@@ -195,7 +207,7 @@
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="altera_nco_ii:16.1:apr=32,aprf=32,apri=16,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=1.0,fsamp=62.5,hyper_opt=false,hyper_opt_select=false,mpr=18,numba=1,numch=1,phi_inc=68719477,pmod_pipe=1,real_freq_out=1.0,selected_device_family=Cyclone IV GX,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=false,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=dual_output"
+   parameterizationKey="altera_nco_ii:16.1:apr=32,aprf=32,apri=16,aprp=16,arch=trig,cordic_arch=parallel,cycles_per_output=1,design_env=NATIVE,dpri=4,fmod_pipe=1,freq_out=0.1,fsamp=62.5,hyper_opt=false,hyper_opt_select=false,mpr=18,numba=1,numch=1,phi_inc=6871948,pmod_pipe=1,real_freq_out=0.1,selected_device_family=Cyclone IV GX,trig_cycles_per_output=1,use_dedicated_multipliers=true,want_dither=true,want_freq_mod=false,want_phase_mod=false,want_sin_and_cos=dual_output"
    instancePathKey="nco:.:nco_ii_0"
    kind="altera_nco_ii"
    version="16.1"
@@ -209,7 +221,7 @@
   <parameter name="selected_device_family" value="Cyclone IV GX" />
   <parameter name="apri" value="16" />
   <parameter name="aprf" value="32" />
-  <parameter name="want_dither" value="false" />
+  <parameter name="want_dither" value="true" />
   <parameter name="hyper_opt_select" value="false" />
   <parameter name="want_phase_mod" value="false" />
   <parameter name="apr" value="32" />
@@ -222,11 +234,11 @@
   <parameter name="want_freq_mod" value="false" />
   <parameter name="use_dedicated_multipliers" value="true" />
   <parameter name="want_sin_and_cos" value="dual_output" />
-  <parameter name="phi_inc" value="68719477" />
+  <parameter name="phi_inc" value="6871948" />
   <parameter name="fmod_pipe" value="1" />
   <parameter name="arch" value="trig" />
-  <parameter name="freq_out" value="1.0" />
-  <parameter name="real_freq_out" value="1.0" />
+  <parameter name="freq_out" value="0.1" />
+  <parameter name="real_freq_out" value="0.1" />
   <generatedFiles>
    <file
        path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_nco_madx_cen.v"
@@ -241,7 +253,19 @@
        type="VERILOG"
        attributes="" />
    <file
+       path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_nco_apr_dxx.v"
+       type="VERILOG"
+       attributes="" />
+   <file
        path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_nco_mob_w.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_dxx_g.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/cinnabon_fpga/cores/nco/synthesis/submodules/asj_dxx.v"
        type="VERILOG"
        attributes="" />
    <file

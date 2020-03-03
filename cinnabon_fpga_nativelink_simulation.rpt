@@ -1,5 +1,5 @@
 Info: Start Nativelink Simulation process
-executing command line: ip-make-simscript --nativelink-mode --output-directory=cinnabon_fpga_iputf_input --spd=D:/cinnabon_fpga/cores/nco/nco/nco.spd --spd=D:/cinnabon_fpga/cores/pll/pll.spd --spd=D:/cinnabon_fpga/cores/add/add.spd --spd=D:/cinnabon_fpga/cinnabon_fpga_qsys/cinnabon_fpga_qsys.spd 
+executing command line: ip-make-simscript --nativelink-mode --output-directory=cinnabon_fpga_iputf_input --spd=D:/cinnabon_fpga/cinnabon_fpga_qsys/cinnabon_fpga_qsys.spd --spd=D:/cinnabon_fpga/cores/add/add.spd --spd=D:/cinnabon_fpga/cores/pll/pll.spd --spd=D:/cinnabon_fpga/cores/nco/nco.spd 
 
 ========= EDA Simulation Settings =====================
 

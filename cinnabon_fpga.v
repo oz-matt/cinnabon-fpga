@@ -229,9 +229,10 @@ assign reset_n = 1'b1;
   assign PCIE_WAKE_N = 1'b1;	 // pull-high to avoid system reboot after power off
 			  wire locked;
 		  wire CLK_125;
+		  wire CLK_1;
 		  wire CLK_31p25;
 wire CLK_62;
-	wire CLK_SLO;
+	wire CLK_250;
 
 wire    g = 0;
 wire    v = 1;
@@ -247,9 +248,8 @@ wire    [31:0]	phasinc2;
 
 assign  phasinc1 = {g,g,g,g,g,g,v,g,g,g,g,g,v,v,g,g,g,v,g,g,v,g,g,v,v,g,v,v,v,g,v,g};
 assign  phasinc2 = {g,v,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g};
-
-
-wire[63:0] rw_data;
+				
+wire[63:0] clk50d_adcdata;
 wire[13:0] rw_address;
 wire[7:0] rw_byteen;
 wire rw_wbit;
@@ -284,13 +284,14 @@ assign  HSMC_ADC_OEB_B = 0; 			    //ADC_OEB
 		.clk         (CLK_62),         // clk.clk
 		.reset_n     (1),     // rst.reset_n
 		.clken       (1),       //  in.clken
-		.phi_inc_i   (68719477),  //    .freq_mod_i
+		.phi_inc_i   (6871948),  //    .freq_mod_i
 		//.phase_mod_i (0), //    .phase_mod_i
 		.fsin_o      (sin_out),
 				  .fcos_o   (),      // out.fsin_o
 		.out_valid   (ovalid)    //    .out_valid
 	);
 	
+assign  HSMC_DAC_DB = sin_out; //B
 	
 assign  HSMC_DAC_DA = sin_out; //B
 	/*
@@ -316,19 +317,22 @@ pll  pll_100   (
 				 .inclk0(CLOCK_50),
                  .locked(locked),
                  .areset(0),
-                 .c0    (CLK_125),
-                 .c1	(CLK_SLO),
+                 .c0    (CLK_1),
+                 .c1	(CLK_250),
                  .c2	(CLK_62)
 			   );
-			   
 
-ramwriter rw0(
-  .i_clk			(CLOCK_50),
-  .o_data		(rw_data),
-  .o_address	(rw_address),
-  .o_byteen		(rw_byteen),
-  .o_wbit		(rw_wbit)
+adcproc uuu ( 
+  .i_62clk(CLK_62),
+  .i_50clk(CLOCK_50),
+  .i_nreset(1),
+  .rw_q_sig(clk50d_adcdata),
+  .rw_buffed_address(rw_address),
+  .rw_byteen(rw_byteen),
+  .owbit(rw_wbit)
 );
+   
+
 
     cinnabon_fpga_qsys u0 (
         .clk_clk                                    (CLOCK_50),                                    //                        clk.clk
@@ -344,7 +348,7 @@ ramwriter rw0(
         .onchip_memory_s2_clken                         (1),                         //                                  .clken
         .onchip_memory_s2_write                         (rw_wbit),                         //                                  .write
         .onchip_memory_s2_readdata                      (),                      //                                  .readdata
-        .onchip_memory_s2_writedata                     (rw_data),    
+        .onchip_memory_s2_writedata                     (clk50d_adcdata),    
 		  .onchip_memory_s2_byteenable                    (rw_byteen),
 		  .pio_0_external_connection_export           (ppw)       
     );
@@ -352,13 +356,13 @@ ramwriter rw0(
 	 wire dw;
 	 
 	 clkdiv cd (
-	   .clk(CLK_125),
+	   .clk(CLK_250),
 		.div(dw)
 	 );
 	 
-	 assign GPIO[0] = CLK_SLO;
+	 //assign GPIO[0] = CLK_250;
 	 
-	 assign GPIO[2] = comb;
+	 assign GPIO[2] = dw;
 	 assign GPIO[3] = ovalid;
   
 	//////////// FAN Control //////////

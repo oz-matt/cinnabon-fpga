@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/cinnabon_fpga/sim/modelsim
 vadcproc
-Z1 !s110 1582674645
+Z1 !s110 1583201994
 !i10b 1
 !s100 ZWPgClzH?biYc0SaLYOZ=2
 IW@P5A`eOkfK[@iMT9dU`^1
@@ -25,13 +25,37 @@ Z7 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z8 !s108 1582674645.000000
+Z8 !s108 1583201994.000000
 Z9 !s107 D:/cinnabon_fpga/src/adcproc.v|
 Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/cinnabon_fpga/src|D:/cinnabon_fpga/src/adcproc.v|
 !i113 1
 Z11 o-vlog01compat -work work
 Z12 !s92 -vlog01compat -work work +incdir+D:/cinnabon_fpga/src
 Z13 tSvlog 1 CvgOpt 0
+vadcqreader
+Z14 !s110 1583201995
+!i10b 1
+!s100 XciP?J03nYhOe@9aBFGEl0
+ILEPlf1C@4n@Ma^P4QDX<m2
+R2
+Z15 !s105 cinnabon_fpga_v_unit
+S1
+R0
+Z16 w1583201928
+Z17 8D:/cinnabon_fpga/cinnabon_fpga.v
+Z18 FD:/cinnabon_fpga/cinnabon_fpga.v
+L0 418
+R7
+r1
+!s85 0
+31
+Z19 !s108 1583201995.000000
+Z20 !s107 D:/cinnabon_fpga/cinnabon_fpga.v|
+Z21 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/cinnabon_fpga|D:/cinnabon_fpga/cinnabon_fpga.v|
+!i113 1
+R11
+Z22 !s92 -vlog01compat -work work +incdir+D:/cinnabon_fpga
+R13
 vadcraw
 R1
 !i10b 1
@@ -57,16 +81,16 @@ R11
 R12
 R13
 vadctest
-Z14 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1582674660
+Z23 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z24 !s110 1583249265
 !i10b 1
-!s100 NjYNh:442;YN<nNnzOGlG1
-If7gl6;RnJSAoRQSMCgEXM2
+!s100 Em64ogni4ZLl0B^PQeTLD2
+IbRTI5hAE^55M@Mi1K1jUb3
 R2
 !s105 adctest_sv_unit
 S1
 R0
-w1582598010
+w1583200683
 8D:/cinnabon_fpga/tests/adctest.sv
 FD:/cinnabon_fpga/tests/adctest.sv
 L0 1
@@ -74,24 +98,24 @@ R7
 r1
 !s85 0
 31
-Z15 !s108 1582674659.000000
+Z25 !s108 1583249265.000000
 !s107 D:/cinnabon_fpga/tests/adctest.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/cinnabon_fpga/tests|D:/cinnabon_fpga/tests/adctest.sv|
 !i113 1
-Z16 o-sv -work work
-Z17 !s92 -sv -work work +incdir+D:/cinnabon_fpga/tests
+Z26 o-sv -work work
+Z27 !s92 -sv -work work +incdir+D:/cinnabon_fpga/tests
 R13
 vadctesttb
-R14
-!s110 1582674659
+R23
+R24
 !i10b 1
-!s100 DXoEz3eP8EX8JB>z>hW2[1
-IZ]M2OOLT3SES`NHB1mj<03
+!s100 Z1>HET2DTQlCdmQ^e3=WU3
+IT99DE41IBfzb?MGiCLIDA2
 R2
 !s105 adctesttb_sv_unit
 S1
 R0
-w1582674269
+w1583249243
 8D:/cinnabon_fpga/tests/adctesttb.sv
 FD:/cinnabon_fpga/tests/adctesttb.sv
 L0 3
@@ -99,36 +123,35 @@ R7
 r1
 !s85 0
 31
-R15
+R25
 !s107 D:/cinnabon_fpga/tests/adctesttb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/cinnabon_fpga/tests|D:/cinnabon_fpga/tests/adctesttb.sv|
 !i113 1
-R16
-R17
+R26
+R27
 R13
 vadd
-R1
+R23
+Z28 !s110 1583201989
 !i10b 1
 !s100 zMEgJ@:dR:BWh_^]5JWVb2
-IzYloEKbn`c6?lcMo2SDY:0
+IfVDA<ZzCMHo;CUU7cAg?M2
 R2
 !s105 add_v_unit
 S1
 R0
-w1582673924
+w1583092776
 8D:/cinnabon_fpga/cores/add/add.v
 FD:/cinnabon_fpga/cores/add/add.v
-Z18 L0 40
+Z29 L0 40
 R7
 r1
 !s85 0
 31
-R8
+Z30 !s108 1583201989.000000
 !s107 D:/cinnabon_fpga/cores/add/add.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/cinnabon_fpga/cores/add|D:/cinnabon_fpga/cores/add/add.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cores/add/add.v|
 !i113 1
-R11
-!s92 -vlog01compat -work work +incdir+D:/cinnabon_fpga/cores/add
 R13
 vbram1
 R1
@@ -139,10 +162,10 @@ R2
 !s105 bram1_v_unit
 S1
 R0
-w1582673914
+w1583201302
 8D:/cinnabon_fpga/cores/bram1/bram1.v
 FD:/cinnabon_fpga/cores/bram1/bram1.v
-R18
+R29
 R7
 r1
 !s85 0
@@ -155,40 +178,40 @@ R11
 !s92 -vlog01compat -work work +incdir+D:/cinnabon_fpga/cores/bram1
 R13
 vcinnabon_fpga
-R1
+R14
 !i10b 1
-!s100 b]ZK=zR4T@N97?Efe[1`k0
-Ij@m<?HEAXe1<5iWSf9fdh1
+!s100 dhPRHSJGJ23GEOY22h1:[2
+ILOHYiM]ZSa;6OORASho383
 R2
-Z19 !s105 cinnabon_fpga_v_unit
+R15
 S1
 R0
-Z20 w1582674062
-Z21 8D:/cinnabon_fpga/cinnabon_fpga.v
-Z22 FD:/cinnabon_fpga/cinnabon_fpga.v
+R16
+R17
+R18
 L0 6
 R7
 r1
 !s85 0
 31
-R8
-Z23 !s107 D:/cinnabon_fpga/cinnabon_fpga.v|
-Z24 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/cinnabon_fpga|D:/cinnabon_fpga/cinnabon_fpga.v|
+R19
+R20
+R21
 !i113 1
 R11
-Z25 !s92 -vlog01compat -work work +incdir+D:/cinnabon_fpga
+R22
 R13
 vcinnabon_fpga_qsys
-R14
-Z26 !s110 1582674644
+R23
+R28
 !i10b 1
-!s100 MRFfZaLnF:KUWhT@;L`M43
-IRBe_DcE3c0^8Udg9FXMkI1
+!s100 >lViXcjko4`4L>EkgBYk?1
+I4N=ZP0?PL8X>Na0;<23m<3
 R2
 !s105 cinnabon_fpga_qsys_v_unit
 S1
 R0
-w1582651245
+w1582990881
 8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.v
 FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.v
 L0 6
@@ -196,76 +219,100 @@ R7
 r1
 !s85 0
 31
-Z27 !s108 1582674644.000000
+R30
 !s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.v|
 !s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.v|
 !i113 1
 R13
-vheart_beat
-R1
+vclkdiv
+R14
 !i10b 1
-!s100 k3Q=T[>^@4`LNF[klcC_A2
-IP56Wz]R1X><CP[Z^30>hH1
+!s100 LZ]AERmYV;j;ej45b=>ck2
+Ih6Yka0Z`M^E0WR<DAYf:S3
 R2
-R19
+R15
 S1
 R0
-R20
-R21
-R22
-L0 243
+R16
+R17
+R18
+L0 396
 R7
 r1
 !s85 0
 31
-R8
-R23
-R24
+R19
+R20
+R21
 !i113 1
 R11
-R25
+R22
+R13
+vheart_beat
+R14
+!i10b 1
+!s100 E=mMRfaZ`fXJjQ4e2TDE81
+I0YE_iLeOEO:=jiIl?QoTR2
+R2
+R15
+S1
+R0
+R16
+R17
+R18
+L0 444
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 1
+R11
+R22
 R13
 vnco
-R14
-!s110 1582674623
+R23
+R1
 !i10b 1
-!s100 <_em7<2L>CXC6Uj:_IlCi2
-IN0Cj6RDL7JY2fdbIU^?aX1
+!s100 _X99YQa<i`Ma2Z=48kjN81
+INAUl:L]Ak]9]nf5nG2Q703
 R2
 !s105 nco_v_unit
 S1
 R0
-w1582443847
-8D:/cinnabon_fpga/cores/nco/nco/simulation/nco.v
-FD:/cinnabon_fpga/cores/nco/nco/simulation/nco.v
+w1583121915
+8D:/cinnabon_fpga/cores/nco/simulation/nco.v
+FD:/cinnabon_fpga/cores/nco/simulation/nco.v
 L0 6
 R7
 r1
 !s85 0
 31
-!s108 1582674623.000000
-!s107 D:/cinnabon_fpga/cores/nco/nco/simulation/nco.v|
-!s90 -reportprogress|300|D:/cinnabon_fpga/cores/nco/nco/simulation/nco.v|
+R8
+!s107 D:/cinnabon_fpga/cores/nco/simulation/nco.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga/cores/nco/simulation/nco.v|
 !i113 1
 R13
 vpll
-R26
+R14
 !i10b 1
-!s100 VZC=NKC3abH0GKfoIm_@e1
-IcE7F[A3UL?P;Ge90:`]IP2
+!s100 TjZ[=;o@o4PaF^F`2<h^Z3
+I26J?oHi1DBiB_TH;DAD6E1
 R2
 !s105 pll_v_unit
 S1
 R0
-w1582673936
+w1583118044
 8D:/cinnabon_fpga/cores/pll/pll.v
 FD:/cinnabon_fpga/cores/pll/pll.v
-R18
+R29
 R7
 r1
 !s85 0
 31
-R27
+R19
 !s107 D:/cinnabon_fpga/cores/pll/pll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/cinnabon_fpga/cores/pll|D:/cinnabon_fpga/cores/pll/pll.v|
 !i113 1
@@ -273,15 +320,15 @@ R11
 !s92 -vlog01compat -work work +incdir+D:/cinnabon_fpga/cores/pll
 R13
 vpll_altpll
-R1
+R14
 !i10b 1
-!s100 T]ZVlYdDco0RY7]L^;BJ51
-Im5So6QzQcHQ:8Rc:EaASk1
+!s100 ]>iZPS8NiE@NMoJb5P<542
+IT0=ZjKTogX<dA18BHzIT00
 R2
 !s105 pll_altpll_v_unit
 S1
 R0
-w1582674404
+w1583118318
 8D:/cinnabon_fpga/db/pll_altpll.v
 FD:/cinnabon_fpga/db/pll_altpll.v
 L0 30
@@ -289,7 +336,7 @@ R7
 r1
 !s85 0
 31
-R8
+R19
 !s107 D:/cinnabon_fpga/db/pll_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/cinnabon_fpga/db|D:/cinnabon_fpga/db/pll_altpll.v|
 !i113 1
@@ -299,21 +346,21 @@ R13
 vramwriter
 R1
 !i10b 1
-!s100 ak<XY=V]6kMXhQ]k;B`eL3
-IDJBVa[Ng:kSRST9JFoCn53
+!s100 2>fW@]znK6NAVJOM[^o:X0
+I3hMmJAlz`IodX0_2m`J8Q2
 R2
 !s105 ramwriter_v_unit
 S1
 R0
-w1582672410
+w1582765440
 8D:/cinnabon_fpga/src/ramwriter.v
 FD:/cinnabon_fpga/src/ramwriter.v
-L0 2
+L0 110
 R7
 r1
 !s85 0
 31
-R27
+R8
 !s107 D:/cinnabon_fpga/src/ramwriter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/cinnabon_fpga/src|D:/cinnabon_fpga/src/ramwriter.v|
 !i113 1
