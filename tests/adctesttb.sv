@@ -6,41 +6,41 @@ reg r_fakeclock;
 //reg r_fake31clock;
 reg rst;
 reg frst;
-reg wbit = 0;
 wire[63:0] adcdata;
 wire    CLK_250, CLK_1;
 		  wire CLK_62;
 
 wire[63:0] q_sig;
-wire[63:0] q_sig_wr;
+reg[63:0] q_sig_buff = 0;
+wire[63:0] rw_q_sig;
+wire[13:0] rw_buffed_address;
+reg[13:0] pio_full_address_ptr = 0;
+wire[7:0] rw_byteen;
+reg wbit = 0;
 
-reg[13:0] rw_address = 0;
-wire[13:0] buff_address;
-
-wire[7:0] w_byteen;
-
-assign q_sig_wr = frst ? q_sig : 0;
-assign buff_address = wbit ? rw_address : 0;
-assign w_byteen = wbit ? 8'hFF : 8'h00;
-
-always @(q_sig)
-begin
-  if(frst)
-  begin
-    wbit <= 1;
-	rw_address <= rw_address + 1;
-  end
-  else
-  begin
-    wbit <= 0;
-	rw_address <= 0;
-  end
-end
+assign rw_q_sig = (frst & wbit) ? q_sig : 0;
+assign rw_buffed_address = wbit ? pio_full_address_ptr : 0;
+assign rw_byteen = wbit ? 8'hFF : 8'h00;
 
 always @(posedge r_fakeclock)
 begin
-  if(wbit)
-    wbit <= 0;
+
+    if(frst)
+    begin
+      wbit <= 1;
+	  
+    if(wbit) 
+	  wbit <= 0;
+	else
+	  pio_full_address_ptr <= pio_full_address_ptr + 1;
+    end
+    else
+    begin
+      wbit <= 0;
+	  pio_full_address_ptr <= 0;
+    end
+
+
 end
 
 bram1	bram1_inst (

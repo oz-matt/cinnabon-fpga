@@ -1,0 +1,21 @@
+
+WORK > DEFAULT
+DEFAULT:                ./libraries/work/                  
+work:                   ./libraries/work/                  
+altera_ver:             ./libraries/altera_ver/            
+lpm_ver:                ./libraries/lpm_ver/               
+sgate_ver:              ./libraries/sgate_ver/             
+altera_mf_ver:          ./libraries/altera_mf_ver/         
+altera_lnsim_ver:       ./libraries/altera_lnsim_ver/      
+cycloneiv_hssi_ver:     ./libraries/cycloneiv_hssi_ver/    
+cycloneiv_pcie_hip_ver: ./libraries/cycloneiv_pcie_hip_ver/
+cycloneiv_ver:          ./libraries/cycloneiv_ver/         
+altera:                 ./libraries/altera/                
+lpm:                    ./libraries/lpm/                   
+sgate:                  ./libraries/sgate/                 
+altera_mf:              ./libraries/altera_mf/             
+altera_lnsim:           ./libraries/altera_lnsim/          
+cycloneiv_hssi:         ./libraries/cycloneiv_hssi/        
+cycloneiv_pcie_hip:     ./libraries/cycloneiv_pcie_hip/    
+cycloneiv:              ./libraries/cycloneiv/             
+LIBRARY_SCAN = TRUE

@@ -4,16 +4,14 @@ module adcproc(
   input i_nreset,
   output wire[63:0] rw_q_sig,
   output wire[13:0] rw_buffed_address,
+  output reg[13:0] pio_full_address_ptr = 0,
   output wire[7:0] rw_byteen,
-  output wire owbit
+  output reg wbit = 0
 );
 
-reg cwbit = 0;
-reg wbit = 0;
-
 wire[63:0] q_sig;
+reg[63:0] q_sig_buff = 0;
 
-reg[13:0] rw_address = 0;
 wire[63:0] adcdata;
 
 bram1	bram1_inst (
@@ -26,30 +24,28 @@ bram1	bram1_inst (
 	.q ( q_sig )
 	);
 	
-assign owbit = cwbit | wbit;
-	
-assign rw_q_sig = i_nreset ? q_sig : 0;
-assign rw_buffed_address = owbit ? rw_address : 0;
-assign rw_byteen = owbit ? 8'hFF : 8'h00;
-
-always @(q_sig)
-begin
-  if(i_nreset)
-  begin
-    cwbit <= 1;
-	rw_address <= rw_address + 1;
-  end
-  else
-  begin
-    cwbit <= 0;
-	rw_address <= 0;
-  end
-end
+assign rw_q_sig = (i_nreset & wbit) ? q_sig : 0;
+assign rw_buffed_address = wbit ? pio_full_address_ptr : 0;
+assign rw_byteen = wbit ? 8'hFF : 8'h00;
 
 always @(posedge i_50clk)
 begin
-  if(wbit)
-    wbit <= 0;
+
+  if(i_nreset)
+    begin
+      wbit <= 1;
+	  
+    if(wbit) 
+	  wbit <= 0;
+	else
+	  pio_full_address_ptr <= pio_full_address_ptr + 1;
+    end
+    else
+    begin
+      wbit <= 0;
+	  pio_full_address_ptr <= 0;
+    end
+  
 end
 
 adcraw adcraw_inst
@@ -84,6 +80,8 @@ parameter THIRD_SAMPLE = 3'b011;
 parameter FOURTH_SAMPLE = 3'b100;
 
 reg[13:0] fakeadcdata = 0;
+
+reg[31:0] clkctr = 0;
 
 reg is_first_sample = 1;
 
@@ -132,9 +130,31 @@ begin
 	  begin
 		current_state <= FIRST_SAMPLE;
 		r_odata[61:48] <= fakeadcdata;
-		fakeadcdata <= fakeadcdata + 1;
+		
+		
+		
+		
+		if (clkctr >= 14062500)
+		begin
+		  fakeadcdata <= 1000;
+		  if (clkctr >= 15625000)
+		  begin
+		    fakeadcdata <= 1;
+		    clkctr <= 1;
+		  end
+		  else
+		    clkctr <= clkctr + 1;
+		end
+		else
+		begin
+		  fakeadcdata <= 1;
+		  clkctr <= clkctr + 1;
+		end
+		
+		
 		is_first_sample = 0;
 	  end
+	  
 	  
     endcase
   end

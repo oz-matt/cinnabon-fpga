@@ -251,6 +251,7 @@ assign  phasinc2 = {g,v,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,
 				
 wire[63:0] clk50d_adcdata;
 wire[13:0] rw_address;
+wire[13:0] pio_address;
 wire[7:0] rw_byteen;
 wire rw_wbit;
 
@@ -258,7 +259,7 @@ wire rw_wbit;
 
 wire[15:0] ppw;
 
-assign ppw = {2'b0, rw_address[13:0]};
+assign ppw = {2'b0, pio_address[13:0]};
 //assign LEDG[3:0] = pp[3:0];
 assign  HSMC_DAC_WRT_B = CLK_62;      //Input write signal for PORT B
 assign  HSMC_DAC_WRT_A = CLK_62;      //Input write signal for PORT A
@@ -328,8 +329,9 @@ adcproc uuu (
   .i_nreset(1),
   .rw_q_sig(clk50d_adcdata),
   .rw_buffed_address(rw_address),
+  .pio_full_address_ptr(pio_address),
   .rw_byteen(rw_byteen),
-  .owbit(rw_wbit)
+  .wbit(rw_wbit)
 );
    
 
@@ -360,7 +362,7 @@ adcproc uuu (
 		.div(dw)
 	 );
 	 
-	 //assign GPIO[0] = CLK_250;
+	 assign GPIO[0] = rw_wbit;
 	 
 	 assign GPIO[2] = dw;
 	 assign GPIO[3] = ovalid;

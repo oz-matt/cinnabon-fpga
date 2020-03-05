@@ -1,10 +1,14 @@
 
-cp -f D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_onchip_memory.hex ./
 cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_sin_c.hex ./
 cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_cos_c.hex ./
 cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_sin_f.hex ./
 cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_cos_f.hex ./
+cp -f D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_onchip_memory.hex ./
 
+vlogan +v2k           "D:/cinnabon_fpga/cores/add/add.v"                                                                                                                                                          
+vlogan +v2k           "D:/cinnabon_fpga/cores/pll/pll_sim/pll.vo"                                                                                                                                                 
+vlogan +v2k           "D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0.v"                                                                         -work nco_ii_0                                    
+vlogan +v2k           "D:/cinnabon_fpga/cores/nco/simulation/nco.v"                                                                                                                                               
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv" -work error_adapter_0                             
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"     -work error_adapter_0                             
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_1_rsp_mux.sv"                               -work rsp_mux                                     
@@ -24,7 +28,10 @@ vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv"                                                   -work rsp_mux_003                                 
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_rsp_mux.sv"                               -work rsp_mux                                     
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv"                                                   -work rsp_mux                                     
+vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_rsp_demux_002.sv"                         -work rsp_demux_002                               
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_rsp_demux.sv"                             -work rsp_demux                                   
+vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_cmd_mux_002.sv"                           -work cmd_mux_002                                 
+vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv"                                                   -work cmd_mux_002                                 
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_cmd_mux_001.sv"                           -work cmd_mux_001                                 
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_arbitrator.sv"                                                   -work cmd_mux_001                                 
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_cmd_mux.sv"                               -work cmd_mux                                     
@@ -46,13 +53,13 @@ vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_reorder_memory.sv"                                               -work pcie_ip_bar1_0_limiter                      
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_sc_fifo.v"                                                       -work pcie_ip_bar1_0_limiter                      
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v"                                              -work pcie_ip_bar1_0_limiter                      
-vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_008.sv"                            -work router_008                                  
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_007.sv"                            -work router_007                                  
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_006.sv"                            -work router_006                                  
-vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_004.sv"                            -work router_004                                  
+vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_005.sv"                            -work router_005                                  
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_003.sv"                            -work router_003                                  
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router_001.sv"                            -work router_001                                  
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_mm_interconnect_0_router.sv"                                -work router                                      
+vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_sc_fifo.v"                                                       -work onchip_memory_s1_agent_rsp_fifo             
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_slave_agent.sv"                                                  -work onchip_memory_s1_agent                      
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_burst_uncompressor.sv"                                           -work onchip_memory_s1_agent                      
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_merlin_master_agent.sv"                                                 -work pcie_ip_bar1_0_agent                        
@@ -67,23 +74,6 @@ vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_pcie_ip_altgx_internal.vo"                                  -work altgx_internal                              
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altpciexpav_stif_app.v"                                                        -work pcie_internal_hip                           
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altpcie_hip_pipen1b_qsys.v"                                                    -work pcie_internal_hip                           
-vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_J2A_master_p2b_adapter.sv"                                  -work p2b_adapter                                 
-vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_J2A_master_b2p_adapter.sv"                                  -work b2p_adapter                                 
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_packets_to_master.v"                                             -work transacto                                   
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_packets_to_bytes.v"                                           -work p2b                                         
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_bytes_to_packets.v"                                           -work b2p                                         
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_sc_fifo.v"                                                       -work fifo                                        
-vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_J2A_master_timing_adt.sv"                                   -work timing_adt                                  
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_jtag_interface.v"                                             -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_dc_streaming.v"                                                    -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_sld_node.v"                                                        -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_jtag_streaming.v"                                                       -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_clock_crosser.v"                                              -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_std_synchronizer_nocut.v"                                               -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v"                                              -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_remover.v"                                               -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_idle_inserter.v"                                              -work jtag_phy_embedded_in_jtag_master            
-vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_avalon_st_pipeline_stage.sv"                                            -work jtag_phy_embedded_in_jtag_master            
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v"                                                     -work rst_controller                              
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_synchronizer.v"                                                   -work rst_controller                              
 vlogan +v2k -sverilog "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_irq_mapper.sv"                                              -work irq_mapper                                  
@@ -93,9 +83,4 @@ vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_pio_0.v"                                                    -work pio_0                                       
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_pcie_ip.v"                                                  -work pcie_ip                                     
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_onchip_memory.v"                                            -work onchip_memory                               
-vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_J2A_master.v"                                               -work J2A_master                                  
 vlogan +v2k           "D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.v"                                                                                                                       
-vlogan +v2k           "D:/cinnabon_fpga/cores/add/add.v"                                                                                                                                                          
-vlogan +v2k           "D:/cinnabon_fpga/cores/pll/pll_sim/pll.vo"                                                                                                                                                 
-vlogan +v2k           "D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0.v"                                                                         -work nco_ii_0                                    
-vlogan +v2k           "D:/cinnabon_fpga/cores/nco/simulation/nco.v"                                                                                                                                               

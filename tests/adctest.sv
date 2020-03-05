@@ -20,6 +20,10 @@ parameter SECOND_SAMPLE = 3'b010;
 parameter THIRD_SAMPLE = 3'b011;
 parameter FOURTH_SAMPLE = 3'b100;
 
+reg[13:0] fakeadcdata = 0;
+
+reg[31:0] clkctr = 0;
+
 reg is_first_sample = 1;
 
 always @(posedge i_62clk or negedge i_nreset)
@@ -43,34 +47,47 @@ begin
 	
 	  FIRST_SAMPLE:
 	  begin
-	    //r_data1 <= $urandom_range(16384, 0);
-		r_odata[13:0] <= $urandom_range(16384, 0);
+		r_odata[13:0] <= fakeadcdata;
 		current_state <= SECOND_SAMPLE;
 		
-        if (!is_first_sample)
+      if (!is_first_sample)
 		  o_data <= r_odata;
 		
       end
 	  
 	  SECOND_SAMPLE:
 	  begin
-	    //r_data2 <= $urandom_range(16384, 0);
-		r_odata[29:16] <= $urandom_range(16384, 0);
+		r_odata[29:16] <= fakeadcdata;
 		current_state <= THIRD_SAMPLE;
 	  end
 	  
 	  THIRD_SAMPLE:
 	  begin
-	    //r_data3 <= $urandom_range(16384, 0);
-		r_odata[45:32] <= $urandom_range(16384, 0);
+		r_odata[45:32] <= fakeadcdata;
 		current_state <= FOURTH_SAMPLE;
 	  end
 	  
 	  FOURTH_SAMPLE:
 	  begin
-	    //r_data4 <= $urandom_range(16384, 0);
 		current_state <= FIRST_SAMPLE;
-		r_odata[61:48] <= $urandom_range(16384, 0);
+		r_odata[61:48] <= fakeadcdata;
+		
+		
+		
+		if (clkctr >= 14)
+		begin
+		  fakeadcdata <= 1000;
+		  if (clkctr >= 16)
+		  begin
+		    fakeadcdata <= 1;
+		    clkctr <= 1;
+		  end
+		end
+		else
+		  fakeadcdata <= 1;
+		
+		clkctr <= clkctr + 1;
+		
 		is_first_sample = 0;
 	  end
 	  

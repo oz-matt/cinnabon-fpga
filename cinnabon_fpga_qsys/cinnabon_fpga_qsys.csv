@@ -1,12 +1,12 @@
-# system info cinnabon_fpga_qsys on 2020.03.03.15:20:51
+# system info cinnabon_fpga_qsys on 2020.03.04.20:43:59
 system_info:
 name,value
 DEVICE,EP4CGX150DF31C7
 DEVICE_FAMILY,Cyclone IV GX
-GENERATION_ID,1583266812
+GENERATION_ID,1583372600
 #
 #
-# Files generated for cinnabon_fpga_qsys on 2020.03.03.15:20:51
+# Files generated for cinnabon_fpga_qsys on 2020.03.04.20:43:59
 files:
 filepath,kind,attributes,module,is_top
 simulation/cinnabon_fpga_qsys.v,VERILOG,,cinnabon_fpga_qsys,true

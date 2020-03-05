@@ -10,7 +10,7 @@ cModel Technology
 Z0 dD:/cinnabon_fpga/sim/modelsim
 valtera_reset_controller
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1583201987
+Z2 !s110 1583375786
 !i10b 1
 !s100 BY0`7TD<QPSCOO[`H0GM11
 I<XnBlmc@Q=A2c3zeehT<00
@@ -18,7 +18,7 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 altera_reset_controller_v_unit
 S1
 R0
-Z4 w1582990898
+Z4 w1583372623
 8D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v
 FD:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v
 L0 42
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1583201987.000000
+Z6 !s108 1583375786.000000
 !s107 D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
 !i113 1
