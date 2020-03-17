@@ -34,8 +34,8 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "onchip_memory_s2_address[13..0]" (rect 0 0 142 12)(font "Arial" (font_size 8)))
-		(text "onchip_memory_s2_address[13..0]" (rect 4 101 190 112)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_address[14..0]" (rect 0 0 143 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_address[14..0]" (rect 4 101 190 112)(font "Arial" (font_size 8)))
 		(line (pt 0 112)(pt 208 112)(line_width 3))
 	)
 	(port

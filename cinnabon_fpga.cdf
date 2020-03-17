@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCS64) Path("D:/cinnabon_fpga/") File("output_file.pof") MfrSpec(OpMask(1) Child_OpMask(1 1));
+		Device PartName(EP4CGX150DF31) Path("D:/cinnabon_fpga/") File("cinnabon_fpga.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(asc);
+	ChainType(JTAG);
 AlteraEnd;

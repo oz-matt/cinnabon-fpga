@@ -134,7 +134,7 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_001
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h40000 - 64'h20000); 
+    localparam PAD0 = log2ceil(64'h140000 - 64'h100000); 
     localparam PAD1 = log2ceil(64'h100000000 - 64'h80000000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
@@ -189,8 +189,8 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router_001
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x20000 .. 0x40000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 32'h20000   ) begin
+    // ( 0x100000 .. 0x140000 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 32'h100000   ) begin
             src_channel = 5'b01;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end

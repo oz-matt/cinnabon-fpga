@@ -56,3 +56,122 @@ R5
 !i113 1
 o-sv
 R6
+Eclkdivtb
+Z7 w1583991463
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z10 8D:/cinnabon_fpga/tests/is42tb.vhd
+Z11 FD:/cinnabon_fpga/tests/is42tb.vhd
+l0
+L5
+VR2XH9`mho<FG`@zYS7eao2
+!s100 2APj<6Xc]iSSZLIdY>Zk80
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1584005021
+!i10b 1
+Z14 !s108 1584005020.000000
+Z15 !s90 -reportprogress|300|-work|cinnatests|-2002|-explicit|-stats=none|D:/cinnabon_fpga/tests/is42tb.vhd|
+Z16 !s107 D:/cinnabon_fpga/tests/is42tb.vhd|
+!i113 1
+Z17 o-work cinnatests -2002 -explicit
+Z18 tExplicit 1 NoCoverage 1 CvgOpt 0
+Abehave
+Z19 DEx4 work 10 is42driver 0 22 ]<bGRDanYWEgM]1R`i@dT1
+R8
+R9
+DEx4 work 8 clkdivtb 0 22 R2XH9`mho<FG`@zYS7eao2
+l15
+L8
+V_VAjRchk[8Tf0J^0`BVC02
+!s100 Yc8hSVUe:6WKQ;=idRa1]0
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Eis42driver
+Z20 w1583991366
+R8
+R9
+R0
+Z21 8D:/cinnabon_fpga/tests/is42driver.vhd
+Z22 FD:/cinnabon_fpga/tests/is42driver.vhd
+l0
+L5
+V]<bGRDanYWEgM]1R`i@dT1
+!s100 6II4AkOF46RSjTkBK_UkD2
+R12
+32
+Z23 !s110 1584005016
+!i10b 1
+Z24 !s108 1584005016.000000
+Z25 !s90 -reportprogress|300|-work|cinnatests|-2002|-explicit|-stats=none|D:/cinnabon_fpga/tests/is42driver.vhd|
+Z26 !s107 D:/cinnabon_fpga/tests/is42driver.vhd|
+!i113 1
+R17
+R18
+Artl
+R8
+R9
+R19
+l42
+L27
+V9I9=V65XJjf]Z5@UTd`Pf0
+!s100 ?]Wg8AV]6I?ICAZgS3Z;B3
+R12
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R17
+R18
+Eis42tb
+Z27 w1584005205
+R8
+R9
+R0
+R10
+R11
+l0
+L5
+V4_DVZCJSCiASG@MQKk5FL0
+!s100 EL9a_?CF2Na3jCU3zcaCb0
+R12
+32
+Z28 !s110 1584005210
+!i10b 1
+Z29 !s108 1584005210.000000
+R15
+R16
+!i113 1
+R17
+R18
+Abehave
+R19
+R8
+R9
+DEx4 work 6 is42tb 0 22 4_DVZCJSCiASG@MQKk5FL0
+l15
+L8
+VC>PInl25JcMFW]ljkGL>a3
+!s100 I^8W55n:<iPU7lLNl^l>c2
+R12
+32
+R28
+!i10b 1
+R29
+R15
+R16
+!i113 1
+R17
+R18

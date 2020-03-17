@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 16.1 196 win32 2020.02.24.15:33:41
+# ACDS 16.1 196 win32 2020.03.10.16:08:31
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -20,7 +20,6 @@
 # ----------------------------------------
 # This script provides commands to simulate the following IP detected in
 # your Quartus project:
-#     cinnabon_fpga_qsys
 #     cinnabon_fpga_qsys
 #     add
 #     pll
@@ -89,7 +88,7 @@
 # 
 # IP SIMULATION SCRIPT
 # ----------------------------------------
-# ACDS 16.1 196 win32 2020.02.24.15:33:41
+# ACDS 16.1 196 win32 2020.03.10.16:08:31
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="pll"
@@ -126,9 +125,10 @@ fi
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
   cp -f D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_onchip_memory.hex ./
-  cp -f D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/submodules/cinnabon_fpga_qsys_onchip_memory.hex ./
-  cp -f D:/cinnabon_fpga/cores/nco/nco/simulation/submodules/nco_nco_ii_0_sin.hex ./
-  cp -f D:/cinnabon_fpga/cores/nco/nco/simulation/submodules/nco_nco_ii_0_cos.hex ./
+  cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_sin_c.hex ./
+  cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_cos_c.hex ./
+  cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_sin_f.hex ./
+  cp -f D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0_cos_f.hex ./
 fi
 
 vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS \
@@ -214,8 +214,8 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   D:/cinnabon_fpga/cinnabon_fpga_qsys/simulation/cinnabon_fpga_qsys.v \
   D:/cinnabon_fpga/cores/add/add.v \
   D:/cinnabon_fpga/cores/pll/pll_sim/pll.vo \
-  D:/cinnabon_fpga/cores/nco/nco/simulation/submodules/nco_nco_ii_0.v \
-  D:/cinnabon_fpga/cores/nco/nco/simulation/nco.v \
+  D:/cinnabon_fpga/cores/nco/simulation/submodules/nco_nco_ii_0.v \
+  D:/cinnabon_fpga/cores/nco/simulation/nco.v \
   -top $TOP_LEVEL_NAME
 # ----------------------------------------
 # simulate

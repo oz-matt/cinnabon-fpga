@@ -38,7 +38,7 @@ module cinnabon_fpga_qsys (
 	reset_reset_n);	
 
 	input		clk_clk;
-	input	[13:0]	onchip_memory_s2_address;
+	input	[14:0]	onchip_memory_s2_address;
 	input		onchip_memory_s2_chipselect;
 	input		onchip_memory_s2_clken;
 	input		onchip_memory_s2_write;

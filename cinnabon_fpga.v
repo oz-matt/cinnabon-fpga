@@ -86,8 +86,8 @@ module cinnabon_fpga(
 	//////////// PCIe //////////
 	input 		          		PCIE_PERST_N,
 	input 		          		PCIE_REFCLK_P,
-	input 		     [0:0]		PCIE_RX_P,
-	output		     [0:0]		PCIE_TX_P,
+	//input 		     [0:0]		PCIE_RX_P,
+	//output		     [0:0]		PCIE_TX_P,
 	output		          		PCIE_WAKE_N,
 
 	//////////// GPIO, GPIO connect to GPIO Default //////////
@@ -221,7 +221,7 @@ adcproc adcproc_inst(
   .i_nreset(reset_n),
   .ow_data(clked31_adcdata)
 );
-*/
+
 wire reset_n;
 
 assign reset_n = 1'b1;
@@ -250,8 +250,8 @@ assign  phasinc1 = {g,g,g,g,g,g,v,g,g,g,g,g,v,v,g,g,g,v,g,g,v,g,g,v,v,g,v,v,v,g,
 assign  phasinc2 = {g,v,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g,g};
 				
 wire[63:0] clk50d_adcdata;
-wire[13:0] rw_address;
-wire[13:0] pio_address;
+wire[14:0] rw_address;
+wire[14:0] pio_address;
 wire[7:0] rw_byteen;
 wire rw_wbit;
 
@@ -259,7 +259,7 @@ wire rw_wbit;
 
 wire[15:0] ppw;
 
-assign ppw = {2'b0, pio_address[13:0]};
+assign ppw = {1'b0,pio_address[14:0]};
 //assign LEDG[3:0] = pp[3:0];
 assign  HSMC_DAC_WRT_B = CLK_62;      //Input write signal for PORT B
 assign  HSMC_DAC_WRT_A = CLK_62;      //Input write signal for PORT A
@@ -295,7 +295,7 @@ assign  HSMC_ADC_OEB_B = 0; 			    //ADC_OEB
 assign  HSMC_DAC_DB = sin_out; //B
 	
 assign  HSMC_DAC_DA = sin_out; //B
-	/*
+	
 	nco u1k (
 		.clk         (CLK_62),         // clk.clk
 		.reset_n     (1),     // rst.reset_n
@@ -313,7 +313,7 @@ add	add_inst (
 	.datab ( {g,~sin10_out[12],sin10_out[11:0]} ),
 	.result ( comb )
 	);
-*/
+
 pll  pll_100   (
 				 .inclk0(CLOCK_50),
                  .locked(locked),
@@ -383,6 +383,123 @@ adcqreader aqr (
   .oled(LEDR[17:4])
 );
 
+
+//`include "fft256_config.INC"
+
+reg CLK;
+	reg RST;
+	reg ED;
+	reg START;
+	reg [3:0]SHIFT;
+	wire [10-1:0]DR;
+	wire [10-1:0]DI;
+	wire RDY;
+	wire OVF1;
+	wire OVF2;
+	wire [7:0]ADDR;
+	wire signed [10+3:0]DOR;
+	wire signed [10+3:0]DOI;		 
+	
+	// Unit Under Test 
+	FFT256 UUT (
+		.CLK(CLK),
+		.RST(RST),
+		.ED(ED),
+		.START(START),
+		.SHIFT(SHIFT),
+		.DR(DR),
+		.DI(DI),
+		.RDY(RDY),
+		.OVF1(OVF1),
+		.OVF2(OVF2),
+		.ADDR(ADDR),
+		.DOR(DOR),
+		.DOI(DOI));
+
+	
+wire[31:0] mydata;
+wire rdy;
+
+
+pll  pll_100   (
+				 .inclk0(CLOCK_50),
+                 .locked(locked),
+                 .areset(0),
+                 .c0    (CLK_1),
+                 .c1	(CLK_250),
+                 .c2	(CLK_62)
+			   );assign GPIO[0] = CLOCK_50;
+	 
+	 assign GPIO[2] = CLK_250;
+	 assign GPIO[3] = rdy;
+	assign GPIO[7:4] = mydata[3:0];
+is42proc uu8
+(
+  .iclk(CLOCK_50),
+  
+  .data_miso(mydata),
+  .rdy(rdy),
+  
+  .dram_dqm(DRAM_DQM),
+  .dram_ba(DRAM_BA),
+  .dram_addr(DRAM_ADDR), 
+  .dram_ncs(DRAM_CS_N),
+  .dram_cke(DRAM_CKE),
+  .dram_ncas(DRAM_CAS_N),
+  .dram_nras(DRAM_RAS_N),
+  .dram_nwe(DRAM_WE_N),
+  .dram_clk(DRAM_CLK),
+  .dram_dataq(DRAM_DQ)
+
+);
+		
+*/
+wire reset_n;
+
+assign reset_n = 1'b1;
+
+  assign PCIE_WAKE_N = 1'b1;	 // pull-high to avoid system reboot after power off
+			  wire locked;
+		  wire CLK_250;
+		  wire CLK_1;
+wire CLK_62;
+
+pll  pll_100   (
+				 .inclk0(CLOCK_50),
+                 .locked(locked),
+                 .areset(0),
+                 .c0    (CLK_1),
+                 .c1	(CLK_250),
+                 .c2	(CLK_62)
+			   );
+
+assign  HSMC_DAC_WRT_B = CLK_62;      //Input write signal for PORT B
+assign  HSMC_DAC_WRT_A = CLK_62;      //Input write signal for PORT A
+
+assign  HSMC_DAC_MODE  = 1; 		       //Mode Select. 1 = dual port, 0 = interleaved.
+
+assign  HSMC_DAC_CLK_B = CLK_62; 	    //PLL Clock to DAC_B
+assign  HSMC_DAC_CLK_A = CLK_62; 	    //PLL Clock to DAC_A
+
+assign  HSMC_ADC_CLK_B = CLK_62;  	    //PLL Clock to ADC_B
+assign  HSMC_ADC_CLK_A = CLK_62;  	    //PLL Clock to ADC_A
+
+assign  HSMC_ADC_OEB_A = 0; 		  	    //ADC_OEA
+assign  HSMC_ADC_OEB_B = 0; 			    //
+
+wire[13:0] sin1;
+
+tmod u6
+(
+  .clk(CLK_62),
+  .reset(0),
+  .clk_enable(1),
+  .sinout(sin1)
+);
+		
+assign  HSMC_DAC_DB = sin1; //B
+	
+assign  HSMC_DAC_DA = sin1; //B
 
 
 endmodule

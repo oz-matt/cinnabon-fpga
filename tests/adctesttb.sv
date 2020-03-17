@@ -22,25 +22,47 @@ assign rw_q_sig = (frst & wbit) ? q_sig : 0;
 assign rw_buffed_address = wbit ? pio_full_address_ptr : 0;
 assign rw_byteen = wbit ? 8'hFF : 8'h00;
 
+reg[1:0] data_throttle_state = 0;
+reg[4:0] clkctr = 0;
+
+parameter SET_STATE = 2'b00;
+parameter WAIT_STATE = 2'b01;
 always @(posedge r_fakeclock)
 begin
-
-    if(frst)
+if(frst)
     begin
-      wbit <= 1;
+	
+	  case(data_throttle_state)
+	    
+		SET_STATE:
+		begin
+          wbit <= 1;
+	      pio_full_address_ptr <= pio_full_address_ptr + 1;
+		  data_throttle_state <= WAIT_STATE;
+		end
 	  
-    if(wbit) 
-	  wbit <= 0;
-	else
-	  pio_full_address_ptr <= pio_full_address_ptr + 1;
-    end
+	  WAIT_STATE:
+		begin
+          wbit <= 0;
+		  if(clkctr>9)
+		  begin
+		    clkctr<=0;
+			data_throttle_state <= SET_STATE;
+		  end
+		  else
+            clkctr <= clkctr + 1;
+    	  end
+	  
+	  
+	  endcase
+
+	  end
     else
     begin
       wbit <= 0;
 	  pio_full_address_ptr <= 0;
     end
-
-
+  
 end
 
 bram1	bram1_inst (

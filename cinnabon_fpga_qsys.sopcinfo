@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 16.1 196 (Future versions may contain additional information.) -->
- <!-- 2020.03.04.20:44:05 -->
+ <!-- 2020.03.05.19:00:34 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1583372645</value>
+  <value>1583452834</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -476,7 +476,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.SIZE_VALUE</name>
-   <value>131072</value>
+   <value>262144</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.WRITABLE</name>
@@ -608,7 +608,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="memorySize">
    <type>long</type>
-   <value>131072</value>
+   <value>262144</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -747,7 +747,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_set_addr_width">
    <type>int</type>
-   <value>14</value>
+   <value>15</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -755,7 +755,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_set_addr_width2">
    <type>int</type>
-   <value>14</value>
+   <value>15</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -892,7 +892,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>131072</value>
+    <value>262144</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -980,7 +980,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="explicitAddressSpan">
     <type>java.math.BigInteger</type>
-    <value>131072</value>
+    <value>262144</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -1191,7 +1191,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>address</name>
     <direction>Input</direction>
-    <width>14</width>
+    <width>15</width>
     <role>address</role>
    </port>
    <port>
@@ -1320,7 +1320,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="addressSpan">
     <type>java.math.BigInteger</type>
-    <value>131072</value>
+    <value>262144</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -1408,7 +1408,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="explicitAddressSpan">
     <type>java.math.BigInteger</type>
-    <value>131072</value>
+    <value>262144</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -1619,7 +1619,7 @@ parameters are a RESULT of the module parameters. -->
    <port>
     <name>address2</name>
     <direction>Input</direction>
-    <width>14</width>
+    <width>15</width>
     <role>address</role>
    </port>
    <port>
@@ -1982,7 +1982,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="bar0_size_mask">
    <type>int</type>
-   <value>18</value>
+   <value>21</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2286,7 +2286,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="BAR Size">
    <type>[Ljava.lang.Integer;</type>
-   <value>18,0,15,0,0,0</value>
+   <value>21,0,15,0,0,0</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -3322,7 +3322,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="SLAVE_ADDRESS_MAP_1_0">
    <type>int</type>
-   <value>18</value>
+   <value>21</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -4791,8 +4791,8 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>onchip_memory</moduleName>
     <slaveName>s1</slaveName>
     <name>onchip_memory.s1</name>
-    <baseAddress>131072</baseAddress>
-    <span>131072</span>
+    <baseAddress>1048576</baseAddress>
+    <span>262144</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -8564,8 +8564,8 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>onchip_memory</moduleName>
     <slaveName>s1</slaveName>
     <name>onchip_memory.s1</name>
-    <baseAddress>131072</baseAddress>
-    <span>131072</span>
+    <baseAddress>1048576</baseAddress>
+    <span>262144</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -8873,8 +8873,8 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>onchip_memory</moduleName>
     <slaveName>s1</slaveName>
     <name>onchip_memory.s1</name>
-    <baseAddress>131072</baseAddress>
-    <span>131072</span>
+    <baseAddress>1048576</baseAddress>
+    <span>262144</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -8902,7 +8902,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00020000</value>
+   <value>0x00100000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -9208,7 +9208,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00020000</value>
+   <value>0x00100000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -9310,7 +9310,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00020000</value>
+   <value>0x00100000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

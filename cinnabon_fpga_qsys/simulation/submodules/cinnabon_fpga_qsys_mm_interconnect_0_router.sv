@@ -135,13 +135,13 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(64'h30 - 64'h20); 
-    localparam PAD1 = log2ceil(64'h40000 - 64'h20000); 
+    localparam PAD1 = log2ceil(64'h140000 - 64'h100000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h40000;
+    localparam ADDR_RANGE = 64'h140000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -190,13 +190,13 @@ module cinnabon_fpga_qsys_mm_interconnect_0_router
         // --------------------------------------------------
 
     // ( 0x20 .. 0x30 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 18'h20   ) begin
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 21'h20   ) begin
             src_channel = 5'b10;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
-    // ( 0x20000 .. 0x40000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 18'h20000   ) begin
+    // ( 0x100000 .. 0x140000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 21'h100000   ) begin
             src_channel = 5'b01;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end

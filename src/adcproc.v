@@ -3,8 +3,8 @@ module adcproc(
   input i_50clk,
   input i_nreset,
   output wire[63:0] rw_q_sig,
-  output wire[13:0] rw_buffed_address,
-  output reg[13:0] pio_full_address_ptr = 0,
+  output wire[14:0] rw_buffed_address,
+  output reg[14:0] pio_full_address_ptr = 0,
   output wire[7:0] rw_byteen,
   output reg wbit = 0
 );
@@ -28,18 +28,43 @@ assign rw_q_sig = (i_nreset & wbit) ? q_sig : 0;
 assign rw_buffed_address = wbit ? pio_full_address_ptr : 0;
 assign rw_byteen = wbit ? 8'hFF : 8'h00;
 
+reg[1:0] data_throttle_state = 0;
+reg[16:0] clkctr = 0;
+
+parameter SET_STATE = 2'b00;
+parameter WAIT_STATE = 2'b01;
+
 always @(posedge i_50clk)
 begin
 
   if(i_nreset)
-    begin
-      wbit <= 1;
+   begin
+	
+	  case(data_throttle_state)
+	    
+		SET_STATE:
+		begin
+          wbit <= 1;
+	      pio_full_address_ptr <= pio_full_address_ptr + 1;
+		  data_throttle_state <= WAIT_STATE;
+		end
 	  
-    if(wbit) 
-	  wbit <= 0;
-	else
-	  pio_full_address_ptr <= pio_full_address_ptr + 1;
-    end
+	  WAIT_STATE:
+		begin
+          wbit <= 0;
+		  if(clkctr>999)
+		  begin
+		    clkctr<=0;
+			data_throttle_state <= SET_STATE;
+		  end
+		  else
+            clkctr <= clkctr + 1;
+    	  end
+	  
+	  
+	  endcase
+
+	  end
     else
     begin
       wbit <= 0;
@@ -47,6 +72,7 @@ begin
     end
   
 end
+
 
 adcraw adcraw_inst
   (

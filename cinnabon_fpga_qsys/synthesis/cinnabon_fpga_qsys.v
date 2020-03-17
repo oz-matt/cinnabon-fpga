@@ -5,7 +5,7 @@
 `timescale 1 ps / 1 ps
 module cinnabon_fpga_qsys (
 		input  wire        clk_clk,                                    //                        clk.clk
-		input  wire [13:0] onchip_memory_s2_address,                   //           onchip_memory_s2.address
+		input  wire [14:0] onchip_memory_s2_address,                   //           onchip_memory_s2.address
 		input  wire        onchip_memory_s2_chipselect,                //                           .chipselect
 		input  wire        onchip_memory_s2_clken,                     //                           .clken
 		input  wire        onchip_memory_s2_write,                     //                           .write
@@ -73,7 +73,7 @@ module cinnabon_fpga_qsys (
 	wire  [31:0] sgdma_descriptor_write_writedata;              // sgdma:descriptor_write_writedata -> mm_interconnect_0:sgdma_descriptor_write_writedata
 	wire         mm_interconnect_0_onchip_memory_s1_chipselect; // mm_interconnect_0:onchip_memory_s1_chipselect -> onchip_memory:chipselect
 	wire  [63:0] mm_interconnect_0_onchip_memory_s1_readdata;   // onchip_memory:readdata -> mm_interconnect_0:onchip_memory_s1_readdata
-	wire  [13:0] mm_interconnect_0_onchip_memory_s1_address;    // mm_interconnect_0:onchip_memory_s1_address -> onchip_memory:address
+	wire  [14:0] mm_interconnect_0_onchip_memory_s1_address;    // mm_interconnect_0:onchip_memory_s1_address -> onchip_memory:address
 	wire   [7:0] mm_interconnect_0_onchip_memory_s1_byteenable; // mm_interconnect_0:onchip_memory_s1_byteenable -> onchip_memory:byteenable
 	wire         mm_interconnect_0_onchip_memory_s1_write;      // mm_interconnect_0:onchip_memory_s1_write -> onchip_memory:write
 	wire  [63:0] mm_interconnect_0_onchip_memory_s1_writedata;  // mm_interconnect_0:onchip_memory_s1_writedata -> onchip_memory:writedata
@@ -162,7 +162,7 @@ module cinnabon_fpga_qsys (
 		.enable_ch0_pclk_out                 ("true"),
 		.core_clk_source                     ("pclk"),
 		.CB_P2A_AVALON_ADDR_B0               (0),
-		.bar0_size_mask                      (18),
+		.bar0_size_mask                      (21),
 		.bar0_io_space                       ("false"),
 		.bar0_64bit_mem_space                ("true"),
 		.bar0_prefetchable                   ("true"),

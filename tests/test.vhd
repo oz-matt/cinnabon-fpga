@@ -1,0 +1,37 @@
+-- Code your design here
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity clkdiv is
+  port (
+    iclk : in std_logic;
+    osig : out std_logic
+  );
+end clkdiv;
+
+architecture RTL of clkdiv is
+  signal clkctr : integer range 0 to 5;
+  
+  signal toggle : std_logic := '0';
+  
+begin
+
+  divit : process (iclk) is
+  begin
+    if rising_edge(iclk) then
+      if clkctr = 4 then
+        toggle <= not toggle;
+        clkctr <= 0;
+      else
+        clkctr <= clkctr + 1;
+      end if;
+      
+      
+    end if;
+  end process divit;
+  
+
+  osig <= toggle;
+
+end RTL;

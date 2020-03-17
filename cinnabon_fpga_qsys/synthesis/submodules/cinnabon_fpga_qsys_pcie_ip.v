@@ -18,7 +18,7 @@ module cinnabon_fpga_qsys_pcie_ip #(
 		parameter       enable_ch0_pclk_out                 = "true",
 		parameter       core_clk_source                     = "pclk",
 		parameter       CB_P2A_AVALON_ADDR_B0               = 0,
-		parameter       bar0_size_mask                      = 18,
+		parameter       bar0_size_mask                      = 21,
 		parameter       bar0_io_space                       = "false",
 		parameter       bar0_64bit_mem_space                = "true",
 		parameter       bar0_prefetchable                   = "true",
@@ -399,7 +399,7 @@ module cinnabon_fpga_qsys_pcie_ip #(
 			instantiated_with_wrong_parameters_error_see_comment_above
 					cb_p2a_avalon_addr_b0_check ( .error(1'b1) );
 		end
-		if (bar0_size_mask != 18)
+		if (bar0_size_mask != 21)
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
@@ -1692,7 +1692,7 @@ module cinnabon_fpga_qsys_pcie_ip #(
 		.enable_ch0_pclk_out                 ("true"),
 		.core_clk_source                     ("pclk"),
 		.CB_P2A_AVALON_ADDR_B0               (0),
-		.bar0_size_mask                      (18),
+		.bar0_size_mask                      (21),
 		.bar0_io_space                       ("false"),
 		.bar0_64bit_mem_space                ("true"),
 		.bar0_prefetchable                   ("true"),

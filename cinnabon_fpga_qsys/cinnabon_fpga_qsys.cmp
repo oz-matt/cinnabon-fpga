@@ -1,7 +1,7 @@
 	component cinnabon_fpga_qsys is
 		port (
 			clk_clk                                    : in  std_logic                     := 'X';             -- clk
-			onchip_memory_s2_address                   : in  std_logic_vector(13 downto 0) := (others => 'X'); -- address
+			onchip_memory_s2_address                   : in  std_logic_vector(14 downto 0) := (others => 'X'); -- address
 			onchip_memory_s2_chipselect                : in  std_logic                     := 'X';             -- chipselect
 			onchip_memory_s2_clken                     : in  std_logic                     := 'X';             -- clken
 			onchip_memory_s2_write                     : in  std_logic                     := 'X';             -- write

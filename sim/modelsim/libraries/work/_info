@@ -1,0 +1,2029 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/cinnabon_fpga/sim/modelsim
+valtera_avalon_clock_source
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 DXx4 work 13 verbosity_pkg 0 22 KWaUzd0>bIS]kL>`9Q7;m2
+Z3 !s110 1583821962
+!i10b 1
+!s100 h?397^eX268_:>6h>j?z]2
+Im4nIkE@FczJ<dS;C6c@T`2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 altera_avalon_clock_source_sv_unit
+S1
+R0
+Z5 w1583819602
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_clock_source.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_clock_source.sv
+Z6 L0 23
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1583821962.000000
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_clock_source.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_clock_source.sv|-work|work|
+!i113 1
+Z9 o-sv -work work
+Z10 tSvlog 1 CvgOpt 0
+valtera_avalon_reset_source
+R1
+R2
+R3
+!i10b 1
+!s100 e`V7=^0QQClC_FAdiY]3Y3
+I3di?1nNYz:jjE6>DPY5c91
+R4
+!s105 altera_avalon_reset_source_sv_unit
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_reset_source.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_reset_source.sv
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_reset_source.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_reset_source.sv|-work|work|
+!i113 1
+R9
+R10
+valtera_avalon_st_sink_bfm
+R1
+R2
+R3
+!i10b 1
+!s100 HU29gR[UGD>A7Tb1MAcU]2
+Io22^K[fNbBjOzILbaRYlE2
+R4
+!s105 altera_avalon_st_sink_bfm_sv_unit
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_sink_bfm.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_sink_bfm.sv
+L0 36
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_sink_bfm.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_sink_bfm.sv|-work|work|
+!i113 1
+R9
+R10
+valtera_avalon_st_source_bfm
+R1
+R2
+Z11 DXx4 work 20 avalon_utilities_pkg 0 22 5lHS_H=k7D]:]Xin;zf;C1
+R3
+!i10b 1
+!s100 =5[j8OZnT:YFW;H^Jj]VR0
+INWJj@9]jMSEBjFzL]oJ=n3
+R4
+!s105 altera_avalon_st_source_bfm_sv_unit
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_source_bfm.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_source_bfm.sv
+L0 35
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_source_bfm.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/altera_avalon_st_source_bfm.sv|-work|work|
+!i113 1
+R9
+R10
+Ealtera_fft_dual_port_ram
+R5
+Z12 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3L]34bNSPL@[RD2AeKH]S3
+Z13 DPx9 altera_mf 20 altera_mf_components 0 22 m2K6F5NmQKkFhQa^^]15g3
+Z14 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z15 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z16 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_ram.vhd
+Z17 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_ram.vhd
+l0
+L36
+VZj=AMZn:kKz>m@cij=1a?1
+!s100 BdH<Ejoz0S=ZH<o>;hXEU3
+Z18 OV;C;10.5b;63
+32
+Z19 !s110 1583821953
+!i10b 1
+Z20 !s108 1583821953.000000
+Z21 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_ram.vhd|-work|work|
+Z22 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_ram.vhd|
+!i113 1
+Z23 o-work work
+Z24 tExplicit 1 NoCoverage 1 CvgOpt 0
+Artl
+R12
+R13
+R14
+R15
+DEx4 work 24 altera_fft_dual_port_ram 0 22 Zj=AMZn:kKz>m@cij=1a?1
+l70
+L58
+V=30k6T[K2>@VzfX5@AYN_0
+!s100 JQ6BGU3ZPeFUM6f:jzoT02
+R18
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R23
+R24
+Ealtera_fft_dual_port_rom
+R5
+R12
+R13
+R14
+R15
+R0
+Z25 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_rom.vhd
+Z26 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_rom.vhd
+l0
+L23
+VlAYD[;=Of^cBbn;]U;cCO0
+!s100 H@bfF4k1@3>K]G7b8V1o31
+R18
+32
+Z27 !s110 1583821954
+!i10b 1
+Z28 !s108 1583821954.000000
+Z29 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_rom.vhd|-work|work|
+Z30 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_dual_port_rom.vhd|
+!i113 1
+R23
+R24
+Artl
+R12
+R13
+R14
+R15
+DEx4 work 24 altera_fft_dual_port_rom 0 22 lAYD[;=Of^cBbn;]U;cCO0
+l55
+L43
+VXPnb<>kCdDESSd7i2QA[D2
+!s100 bWBXQO:ZRCU`mV^nSDi5I1
+R18
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R23
+R24
+Ealtera_fft_mult_add
+R5
+Z31 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z32 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+R14
+R15
+R0
+Z33 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_mult_add.vhd
+Z34 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_mult_add.vhd
+l0
+L23
+VQcR3_keOW?ndhElkn^Y0a2
+!s100 H3ijk[GZk;X8zc0o_;TmB2
+R18
+32
+R27
+!i10b 1
+R28
+Z35 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_mult_add.vhd|-work|work|
+Z36 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_mult_add.vhd|
+!i113 1
+R23
+R24
+Artl
+R31
+R32
+R14
+R15
+DEx4 work 19 altera_fft_mult_add 0 22 QcR3_keOW?ndhElkn^Y0a2
+l89
+L42
+V6=^5o=Y`ebXP7;YilZT6Z3
+!s100 SQ9Z>z:EI50l=1j1f`ER53
+R18
+32
+R27
+!i10b 1
+R28
+R35
+R36
+!i113 1
+R23
+R24
+Ealtera_fft_mult_add_new
+R5
+R12
+R31
+R32
+R14
+R15
+R0
+R33
+R34
+l0
+L139
+V>A4fiK1IEHVla=7Mz?VWK2
+!s100 Fl9;oMc3EV7BGL6g>zG_J2
+R18
+32
+R27
+!i10b 1
+R28
+R35
+R36
+!i113 1
+R23
+R24
+Artl
+R12
+R31
+R32
+R14
+R15
+DEx4 work 23 altera_fft_mult_add_new 0 22 >A4fiK1IEHVla=7Mz?VWK2
+l159
+L158
+Vj:;dYfi@UKJAjLOJfVQik0
+!s100 oK1XTGUdc@:DX?]UROI@a3
+R18
+32
+R27
+!i10b 1
+R28
+R35
+R36
+!i113 1
+R23
+R24
+Ealtera_fft_mult_add_old
+R5
+R13
+R31
+R32
+R14
+R15
+R0
+R33
+R34
+l0
+L395
+VUfGzIXfMZ0984XY4IQB]a1
+!s100 cK_T8@;z9V<AGOI`ZZTo40
+R18
+32
+R27
+!i10b 1
+R28
+R35
+R36
+!i113 1
+R23
+R24
+Artl
+R13
+R31
+R32
+R14
+R15
+DEx4 work 23 altera_fft_mult_add_old 0 22 UfGzIXfMZ0984XY4IQB]a1
+l415
+L414
+VgEek8b>8RWEgodRiA97W42
+!s100 6;1N<YodID?gjdT<n?7A82
+R18
+32
+R27
+!i10b 1
+R28
+R35
+R36
+!i113 1
+R23
+R24
+Ealtera_fft_single_port_rom
+R5
+R12
+R13
+R14
+R15
+R0
+Z37 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_single_port_rom.vhd
+Z38 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_single_port_rom.vhd
+l0
+L23
+VR:]5Xo9A<LVXjdE_JI9K_3
+!s100 G6:9o[WFbD2oWH;=8]nNE0
+R18
+32
+Z39 !s110 1583821955
+!i10b 1
+Z40 !s108 1583821955.000000
+Z41 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_single_port_rom.vhd|-work|work|
+Z42 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/altera_fft_single_port_rom.vhd|
+!i113 1
+R23
+R24
+Artl
+R12
+R13
+R14
+R15
+DEx4 work 26 altera_fft_single_port_rom 0 22 R:]5Xo9A<LVXjdE_JI9K_3
+l52
+L40
+V0AMPAb`H@e3WOcno3;`We0
+!s100 h3E4aL8gl9Cn;[zKd1zb>2
+R18
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R23
+R24
+Eapn_fft_mult_can
+R5
+Z43 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R14
+R15
+R0
+Z44 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_can.vhd
+Z45 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_can.vhd
+l0
+L21
+VkaZ94OQSU8mAOM=mLERi51
+!s100 lEcolbV>2PX_DQRI[@?C42
+R18
+32
+Z46 !s110 1583821952
+!i10b 1
+Z47 !s108 1583821952.000000
+Z48 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_can.vhd|-work|work|
+Z49 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_can.vhd|
+!i113 1
+R23
+R24
+Artl
+R43
+R14
+R15
+DEx4 work 16 apn_fft_mult_can 0 22 kaZ94OQSU8mAOM=mLERi51
+l57
+L39
+V^Y7:7TejDHfPXP<b5eENP3
+!s100 [O7jgRH:4l_8HkZSQVEIK2
+R18
+32
+R46
+!i10b 1
+R47
+R48
+R49
+!i113 1
+R23
+R24
+Eapn_fft_mult_cpx
+R5
+R43
+R14
+R15
+R0
+Z50 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx.vhd
+Z51 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx.vhd
+l0
+L21
+VR3<_NPklEWI6`iHARKoVX1
+!s100 PekPO659JaXM;L7Z6KC@M3
+R18
+32
+R19
+!i10b 1
+R20
+Z52 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx.vhd|-work|work|
+Z53 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx.vhd|
+!i113 1
+R23
+R24
+Artl
+R43
+R14
+R15
+DEx4 work 16 apn_fft_mult_cpx 0 22 R3<_NPklEWI6`iHARKoVX1
+l50
+L39
+V0TG@^kM;^lbL`[U]XoKzd3
+!s100 74f@jkKkhZ8@nLZ=>Z1LG1
+R18
+32
+R19
+!i10b 1
+R20
+R52
+R53
+!i113 1
+R23
+R24
+vKNcuWulZT1EblwKMj47mvYWapQPkh90WTyn95Xw6iXU=
+R1
+R19
+!i10b 0
+!s100 oS[80j2Q83QM]:EE6Hjj^3
+Ic5]Yo51OB`4B;XDXOkKGQ2
+R4
+!i8a 693262544
+!s105 apn_fft_mult_cpx_1825_v_unit
+S1
+R0
+w1583821953
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx_1825.v
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx_1825.v
+Z54 L0 38
+R7
+r1
+!s85 0
+31
+R20
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx_1825.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/apn_fft_mult_cpx_1825.v|-work|work|
+!i113 1
+R23
+R10
+n73d7cc5
+Eauk_dspip_avalon_streaming_block_sink
+R5
+Z55 DPx4 work 18 auk_dspip_math_pkg 0 22 6]0VVCFZQ97[_a7IDO?^E1
+R43
+R14
+R15
+R0
+Z56 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_sink.vhd
+Z57 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_sink.vhd
+l0
+L22
+VedA]6cmH2dH>PbCoNl84C1
+!s100 5FkmY2J9_R^OCddRZBZ_i1
+R18
+32
+R46
+!i10b 1
+R47
+Z58 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_sink.vhd|-work|work|
+Z59 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_sink.vhd|
+!i113 1
+R23
+R24
+Artl
+R55
+R43
+R14
+R15
+DEx4 work 37 auk_dspip_avalon_streaming_block_sink 0 22 edA]6cmH2dH>PbCoNl84C1
+l142
+L59
+V43>0aG`aZGc8CDZ[j8FZY1
+!s100 38QZ;1;3801MEH1PhgNl=3
+R18
+32
+R46
+!i10b 1
+R47
+R58
+R59
+!i113 1
+R23
+R24
+Eauk_dspip_avalon_streaming_block_source
+R5
+R13
+R55
+Z60 DPx4 work 17 auk_dspip_lib_pkg 0 22 W5R]@1YIZjdjhR7jU=I973
+R43
+R14
+R15
+R0
+Z61 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_source.vhd
+Z62 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_source.vhd
+l0
+L25
+Vm?I6NglmchUHi^eI:h2jY1
+!s100 PcknmbOT5fM?^3Ua7SJWA0
+R18
+32
+R46
+!i10b 1
+R47
+Z63 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_source.vhd|-work|work|
+Z64 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_avalon_streaming_block_source.vhd|
+!i113 1
+R23
+R24
+Artl
+R13
+R55
+R60
+R43
+R14
+R15
+DEx4 work 39 auk_dspip_avalon_streaming_block_source 0 22 m?I6NglmchUHi^eI:h2jY1
+l119
+L47
+Vd;`3T?PE]EWTmMSC6m`V83
+!s100 :k4nQbJ<X1g=i>`Jeb;XM1
+R18
+32
+R46
+!i10b 1
+R47
+R63
+R64
+!i113 1
+R23
+R24
+Eauk_dspip_bit_reverse_addr_control
+R5
+Z65 DPx4 work 13 hyper_opt_pkg 0 22 6i7iFP7O3>[lGIFGBVJcf1
+Z66 DPx4 work 24 auk_dspip_r22sdf_lib_pkg 0 22 A4aBMfLd0Sm?Z`Gc3CGh83
+R55
+R43
+R14
+R15
+R0
+Z67 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_addr_control.vhd
+Z68 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_addr_control.vhd
+l0
+L49
+VJW?Nc>IKZ7>Ld4AkIa@7>1
+!s100 nl_bc^LXRJc3G5<WU6oRa1
+R18
+32
+Z69 !s110 1583821956
+!i10b 1
+Z70 !s108 1583821956.000000
+Z71 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_addr_control.vhd|-work|work|
+Z72 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_addr_control.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 34 auk_dspip_bit_reverse_addr_control 0 22 JW?Nc>IKZ7>Ld4AkIa@7>1
+l70
+L64
+VG;TX<34oV;[MUGbJBBPgM1
+!s100 PGAE<U7X]6Kk7_XAmDghc0
+R18
+32
+R69
+!i10b 1
+R70
+R71
+R72
+!i113 1
+R23
+R24
+Eauk_dspip_bit_reverse_core
+R5
+R13
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z73 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_core.vhd
+Z74 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_core.vhd
+l0
+L63
+V8oH^<B_<:lSFbUlY8[0_V1
+!s100 1b5gzM>G7gU<48_kcCXl70
+R18
+32
+R69
+!i10b 1
+R70
+Z75 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_core.vhd|-work|work|
+Z76 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_core.vhd|
+!i113 1
+R23
+R24
+Artl
+R13
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 26 auk_dspip_bit_reverse_core 0 22 8oH^<B_<:lSFbUlY8[0_V1
+l106
+L85
+VaQLe4I2B5hQF:]B0<j?z70
+!s100 Ud[koa7mdYGDSGRnEmV3;3
+R18
+32
+Z77 !s110 1583821957
+!i10b 1
+R70
+R75
+R76
+!i113 1
+R23
+R24
+Eauk_dspip_bit_reverse_reverse_carry_adder
+R5
+R43
+R14
+R15
+R0
+Z78 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd
+Z79 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd
+l0
+L77
+V7[^ZI;_ho`=JlHCgbGhVk3
+!s100 C=D<3=XEQ9Q[[d][0Rzna3
+R18
+32
+R77
+!i10b 1
+Z80 !s108 1583821957.000000
+Z81 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd|-work|work|
+Z82 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd|
+!i113 1
+R23
+R24
+Artl
+R43
+R14
+R15
+DEx4 work 41 auk_dspip_bit_reverse_reverse_carry_adder 0 22 7[^ZI;_ho`=JlHCgbGhVk3
+l92
+L89
+V7<YhE1jI1LmMeMjVbn<YE0
+!s100 HE4l1ankVlFQCB08jj`Sc1
+R18
+32
+R77
+!i10b 1
+R80
+R81
+R82
+!i113 1
+R23
+R24
+Pauk_dspip_lib_pkg
+R55
+R43
+R14
+R15
+R5
+R0
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_lib_pkg.vhd
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_lib_pkg.vhd
+l0
+L28
+VW5R]@1YIZjdjhR7jU=I973
+!s100 KcRlL:CTnlUz=1CF=kC_S0
+R18
+32
+Z83 !s110 1583821951
+!i10b 1
+Z84 !s108 1583821951.000000
+!s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_lib_pkg.vhd|-work|work|
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_lib_pkg.vhd|
+!i113 1
+R23
+R24
+Pauk_dspip_math_pkg
+R43
+R14
+R15
+R5
+R0
+Z85 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_math_pkg.vhd
+Z86 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_math_pkg.vhd
+l0
+L51
+V6]0VVCFZQ97[_a7IDO?^E1
+!s100 [z_3ODE8b:W7XDJ[_]HTW0
+R18
+32
+b1
+R83
+!i10b 1
+R84
+Z87 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_math_pkg.vhd|-work|work|
+Z88 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_math_pkg.vhd|
+!i113 1
+R23
+R24
+Bbody
+R55
+R43
+R14
+R15
+l0
+L128
+VUEhQHHZj81k>WShd8SDb:0
+!s100 `941_Ff6o7=GBNnXYB1eU3
+R18
+32
+R83
+!i10b 1
+R84
+R87
+R88
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_adder_fp
+R5
+R55
+R43
+R60
+R31
+R32
+R14
+R15
+R0
+Z89 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_adder_fp.vhd
+Z90 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_adder_fp.vhd
+l0
+L55
+VOC9TgROYcH]cN[g26KZ[h0
+!s100 Yo3Q__0aPh7U6fFQcB@>?3
+R18
+32
+R77
+!i10b 1
+R80
+Z91 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_adder_fp.vhd|-work|work|
+Z92 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_adder_fp.vhd|
+!i113 1
+R23
+R24
+Artl
+R55
+R43
+R60
+R31
+R32
+R14
+R15
+DEx4 work 25 auk_dspip_r22sdf_adder_fp 0 22 OC9TgROYcH]cN[g26KZ[h0
+l153
+L74
+V2[DGCZ:dWN:e11GQ3YUcM3
+!s100 _ibA>^B7;FB43H707L_`a2
+R18
+32
+R77
+!i10b 1
+R80
+R91
+R92
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_addsub
+R5
+R65
+R55
+R66
+R13
+Z93 DPx3 lpm 14 lpm_components 0 22 0DgdZ0FA1O:[J5aQOXi891
+R43
+R14
+R15
+R0
+Z94 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_addsub.vhd
+Z95 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_addsub.vhd
+l0
+L63
+VHGfgR;O82T^GFOZ^4QEKn1
+!s100 Wa@b2dTl3XCjCR>ieDLYX3
+R18
+32
+R77
+!i10b 1
+R80
+Z96 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_addsub.vhd|-work|work|
+Z97 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_addsub.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R55
+R66
+R13
+R93
+R43
+R14
+R15
+DEx4 work 23 auk_dspip_r22sdf_addsub 0 22 HGfgR;O82T^GFOZ^4QEKn1
+l139
+L84
+VXTfMXBnzkd:HSf0e=7E1]3
+!s100 4gAZVHed[_:Pm6CMIKNa@3
+R18
+32
+R77
+!i10b 1
+R80
+R96
+R97
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_bf_control
+R5
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z98 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bf_control.vhd
+Z99 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bf_control.vhd
+l0
+L64
+VkOR3i^Njg:2f3jF50WXeA0
+!s100 _e=WKHIQiI`MA4PP@o5ce2
+R18
+32
+Z100 !s110 1583821958
+!i10b 1
+Z101 !s108 1583821958.000000
+Z102 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bf_control.vhd|-work|work|
+Z103 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bf_control.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 27 auk_dspip_r22sdf_bf_control 0 22 kOR3i^Njg:2f3jF50WXeA0
+l109
+L93
+V9lLiebXGQg6fdQ^GHC70@3
+!s100 VgR^8iLhBHf<iWdMe;>J]0
+R18
+32
+R100
+!i10b 1
+R101
+R102
+R103
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_bfi
+R5
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z104 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfi.vhd
+Z105 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfi.vhd
+l0
+L97
+Vc@G;AM6`;l6O:7=iA>L`E1
+!s100 n@MIcm>W:Vm8MekgOOOK[0
+R18
+32
+R77
+!i10b 1
+R80
+Z106 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfi.vhd|-work|work|
+Z107 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfi.vhd|
+!i113 1
+R23
+R24
+Artl2
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 20 auk_dspip_r22sdf_bfi 0 22 c@G;AM6`;l6O:7=iA>L`E1
+l188
+L149
+Vjz:@<HZjbG;g[OQ950NYP0
+!s100 CczYUGK6<hJV10P3BNXQ^2
+R18
+32
+R77
+!i10b 1
+R80
+R106
+R107
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_bfii
+R5
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z108 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfii.vhd
+Z109 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfii.vhd
+l0
+L69
+V6z8O15:?i1N2SaBLR]bY^3
+!s100 f_ZCofA5^h:`Yao[1e6W60
+R18
+32
+R77
+!i10b 1
+R80
+Z110 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfii.vhd|-work|work|
+Z111 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_bfii.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 21 auk_dspip_r22sdf_bfii 0 22 6z8O15:?i1N2SaBLR]bY^3
+l170
+L120
+VINWoPI@kC_nZe5?<3^C881
+!s100 kaVbj02XNC6eCM1<Ej@Xz3
+R18
+32
+R77
+!i10b 1
+R80
+R110
+R111
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_cma
+R5
+R65
+R66
+R60
+R55
+R12
+R43
+R14
+R15
+R0
+Z112 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma.vhd
+Z113 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma.vhd
+l0
+L100
+VlKc^3ZG^fD`c=^dkJ`hGm0
+!s100 >ToO>`]8PGMoBeGdl;GLi3
+R18
+32
+R100
+!i10b 1
+R101
+Z114 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma.vhd|-work|work|
+Z115 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R60
+R55
+R12
+R43
+R14
+R15
+DEx4 work 20 auk_dspip_r22sdf_cma 0 22 lKc^3ZG^fD`c=^dkJ`hGm0
+l175
+L145
+VZ0aalj4I`[`9g=o19j^UC0
+!s100 Gc?K]_bfnH>REFBOIXi]_3
+R18
+32
+R100
+!i10b 1
+R101
+R114
+R115
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_cma_adder_fp
+R5
+R55
+R43
+R60
+R31
+R32
+R14
+R15
+R0
+Z116 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd
+Z117 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd
+l0
+L66
+V_cQT3`I]DWB@U`Lz4Fe4M3
+!s100 O4S]CCg2MdLDF_OdP7ini2
+R18
+32
+R100
+!i10b 1
+R101
+Z118 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd|-work|work|
+Z119 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd|
+!i113 1
+R23
+R24
+Artl
+R55
+R43
+R60
+R31
+R32
+R14
+R15
+DEx4 work 29 auk_dspip_r22sdf_cma_adder_fp 0 22 _cQT3`I]DWB@U`Lz4Fe4M3
+l239
+L90
+VWABLSn;=GToh79h2c7Ob>0
+!s100 >jTGF:71QI3jgVLZK[Pf42
+R18
+32
+R100
+!i10b 1
+R101
+R118
+R119
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_cma_bfi_fp
+R5
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z120 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd
+Z121 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd
+l0
+L72
+VYhI7QSQJ<Pf7222g1WcR02
+!s100 V_AF>B6QAL8O_FNS[l60H0
+R18
+32
+Z122 !s110 1583821959
+!i10b 1
+Z123 !s108 1583821959.000000
+Z124 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd|-work|work|
+Z125 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 27 auk_dspip_r22sdf_cma_bfi_fp 0 22 YhI7QSQJ<Pf7222g1WcR02
+l178
+L128
+V9^Q:]:lLQRP0jl70aCREb2
+!s100 <UhW<GMUQQZPF<dmYj1hE0
+R18
+32
+R122
+!i10b 1
+R123
+R124
+R125
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_cma_fp
+R5
+R65
+R66
+R60
+R55
+R12
+R43
+R14
+R15
+R0
+Z126 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_fp.vhd
+Z127 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_fp.vhd
+l0
+L27
+VXKDoI7fIP==X=iF78N1:N3
+!s100 13;0QBnlEMS]i^g?k[bok3
+R18
+32
+R122
+!i10b 1
+R123
+Z128 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_fp.vhd|-work|work|
+Z129 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_cma_fp.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R60
+R55
+R12
+R43
+R14
+R15
+DEx4 work 23 auk_dspip_r22sdf_cma_fp 0 22 XKDoI7fIP==X=iF78N1:N3
+l147
+L64
+V4kgY880A31D6>?20G@RDT0
+!s100 ZE1MmNJZZ41z91U7gNbDT3
+R18
+32
+R122
+!i10b 1
+R123
+R128
+R129
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_core
+R5
+R65
+R66
+Z130 DPx4 work 18 auk_dspip_text_pkg 0 22 e=1EcTaQKlS3A7<6UT5XV3
+R55
+Z131 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R43
+R14
+R15
+R0
+Z132 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_core.vhd
+Z133 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_core.vhd
+l0
+L116
+VFCZAbO4_Z5^eibaMO9QKG1
+!s100 9Y>HA_TT^C7@X`h]YzUzI3
+R18
+32
+R122
+!i10b 1
+R123
+Z134 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_core.vhd|-work|work|
+Z135 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_core.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R130
+R55
+R131
+R43
+R14
+R15
+DEx4 work 21 auk_dspip_r22sdf_core 0 22 FCZAbO4_Z5^eibaMO9QKG1
+l326
+L160
+V0bXS@3^<BdPhn:AU6Am9Y2
+!s100 KcW3`HOb]=JliOJnfHnLi2
+R18
+32
+R122
+!i10b 1
+R123
+R134
+R135
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_counter
+R5
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z136 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_counter.vhd
+Z137 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_counter.vhd
+l0
+L68
+Vdn^C32Di9:C0hT3X6UAFz3
+!s100 6VkmPB;A5T5O1fZgo8WB`3
+R18
+32
+R122
+!i10b 1
+R123
+Z138 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_counter.vhd|-work|work|
+Z139 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_counter.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 24 auk_dspip_r22sdf_counter 0 22 dn^C32Di9:C0hT3X6UAFz3
+l109
+L93
+Vm4ESTad6E4=6kj[ACZjLm3
+!s100 EaPmE09;1AIOHLUELZ3oj2
+R18
+32
+R122
+!i10b 1
+R123
+R138
+R139
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_delay
+R5
+R13
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z140 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_delay.vhd
+Z141 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_delay.vhd
+l0
+L71
+V[?m?VbDIj[PYGROW_nU`j0
+!s100 HLbRh7;nN?YO2a9a??a782
+R18
+32
+Z142 !s110 1583821960
+!i10b 1
+Z143 !s108 1583821960.000000
+Z144 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_delay.vhd|-work|work|
+Z145 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_delay.vhd|
+!i113 1
+R23
+R24
+Artl
+R13
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 22 auk_dspip_r22sdf_delay 0 22 [?m?VbDIj[PYGROW_nU`j0
+l98
+L92
+V1;3b0ZLcoMnMF6fTLaTFS1
+!s100 Cb3]N:H1@0TAUTHVShPei3
+R18
+32
+R142
+!i10b 1
+R143
+R144
+R145
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_enable_control
+R5
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z146 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_enable_control.vhd
+Z147 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_enable_control.vhd
+l0
+L65
+VXjFGQ=zCoJk[2RBiYLZII2
+!s100 SaQ>9QE1N@zD@C2NTzab@0
+R18
+32
+R142
+!i10b 1
+R143
+Z148 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_enable_control.vhd|-work|work|
+Z149 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_enable_control.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 31 auk_dspip_r22sdf_enable_control 0 22 XjFGQ=zCoJk[2RBiYLZII2
+l100
+L90
+V1]kA@aoLzDgTm2mb;8Fo_3
+!s100 <0cRjDMb]N9j<k;E:ZbRO0
+R18
+32
+R142
+!i10b 1
+R143
+R148
+R149
+!i113 1
+R23
+R24
+Pauk_dspip_r22sdf_lib_pkg
+R65
+R55
+R43
+R14
+R15
+R5
+R0
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_lib_pkg.vhd
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_lib_pkg.vhd
+l0
+L22
+VA4aBMfLd0Sm?Z`Gc3CGh83
+!s100 kLjYP`f_N9BV>EDTIOkFB0
+R18
+32
+R69
+!i10b 1
+R70
+!s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_lib_pkg.vhd|-work|work|
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_lib_pkg.vhd|
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_stage
+R5
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z150 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stage.vhd
+Z151 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stage.vhd
+l0
+L131
+VC7:>i<Z@cmcijPO=kSEU42
+!s100 TQDFN=Q1Q7VTUl@ndCVHl2
+R18
+32
+R142
+!i10b 1
+R143
+Z152 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stage.vhd|-work|work|
+Z153 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stage.vhd|
+!i113 1
+R23
+R24
+Artl
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 22 auk_dspip_r22sdf_stage 0 22 C7:>i<Z@cmcijPO=kSEU42
+l500
+L182
+VBRd`B96Bi0PHL>WaW9<KO1
+!s100 h>CikCS5bHzc^VnV6YQFb1
+R18
+32
+R142
+!i10b 1
+R143
+R152
+R153
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_stg_out_pipe
+R5
+R43
+R55
+R14
+R15
+R0
+Z154 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd
+Z155 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd
+l0
+L62
+VkCnBW32HXlH3N9G?;Hi972
+!s100 G8>n@Lmd7EQgZS05QDidb3
+R18
+32
+R142
+!i10b 1
+R143
+Z156 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd|-work|work|
+Z157 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd|
+!i113 1
+R23
+R24
+Artl
+R43
+R55
+R14
+R15
+DEx4 work 29 auk_dspip_r22sdf_stg_out_pipe 0 22 kCnBW32HXlH3N9G?;Hi972
+l99
+L97
+VhVJPEiKSWFM`d2D1]QK[B0
+!s100 oBGCfLLi36LM:B]];S?[P2
+R18
+32
+R142
+!i10b 1
+R143
+R156
+R157
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_stg_pipe
+R5
+R43
+R55
+R14
+R15
+R0
+Z158 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_pipe.vhd
+Z159 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_pipe.vhd
+l0
+L59
+V2c2Td>h6BJN_WgY4X1R]X3
+!s100 aJmoI8HK9N`?H6b8OLS0D0
+R18
+32
+Z160 !s110 1583821961
+!i10b 1
+Z161 !s108 1583821961.000000
+Z162 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_pipe.vhd|-work|work|
+Z163 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_stg_pipe.vhd|
+!i113 1
+R23
+R24
+Artl
+R43
+R55
+R14
+R15
+DEx4 work 25 auk_dspip_r22sdf_stg_pipe 0 22 2c2Td>h6BJN_WgY4X1R]X3
+l105
+L103
+VC;GSlEk@2>=Yii>h<ehXM3
+!s100 =Hd2^J7QH@;YBmGjXH2`f0
+R18
+32
+R160
+!i10b 1
+R161
+R162
+R163
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_top
+R5
+R65
+R66
+R60
+R55
+R43
+R14
+R15
+R0
+Z164 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_top.vhd
+Z165 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_top.vhd
+l0
+L117
+VZ;>?HCe:]:aXSCeF0c4o`0
+!s100 >nJhck?4`?]6c=MTCgT<R2
+R18
+32
+R160
+!i10b 1
+R161
+Z166 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_top.vhd|-work|work|
+Z167 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_top.vhd|
+!i113 1
+R23
+R24
+Astr
+R65
+R66
+R60
+R55
+R43
+R14
+R15
+DEx4 work 20 auk_dspip_r22sdf_top 0 22 Z;>?HCe:]:aXSCeF0c4o`0
+l218
+L161
+VBT>Em5@>RW6MQnfHE0^Wi1
+!s100 _68`fJ`aY9aEa8P_dA_=b3
+R18
+32
+R160
+!i10b 1
+R161
+R166
+R167
+!i113 1
+R23
+R24
+Eauk_dspip_r22sdf_twrom
+R5
+R13
+R65
+R66
+R55
+R43
+R14
+R15
+R0
+Z168 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_twrom.vhd
+Z169 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_twrom.vhd
+l0
+L75
+V8DB3AElPQ`4L[`_Qof`nY2
+!s100 amR1h6BIEjd4i=Feln6T40
+R18
+32
+R160
+!i10b 1
+R161
+Z170 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_twrom.vhd|-work|work|
+Z171 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_dspip_r22sdf_twrom.vhd|
+!i113 1
+R23
+R24
+Artl
+R13
+R65
+R66
+R55
+R43
+R14
+R15
+DEx4 work 22 auk_dspip_r22sdf_twrom 0 22 8DB3AElPQ`4L[`_Qof`nY2
+l103
+L99
+Vajzzf0PL>C9HN18[k92FD2
+!s100 D_E88Ti<`YD215R3O[cSL2
+R18
+32
+R160
+!i10b 1
+R161
+R170
+R171
+!i113 1
+R23
+R24
+Eauk_dspip_roundsat
+R5
+R43
+R14
+R15
+R0
+Z172 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_roundsat.vhd
+Z173 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_roundsat.vhd
+l0
+L45
+V[S477?0?ad:@WmEo]_o820
+!s100 :Ro[aE[BH^N6eIGEG[O?N3
+R18
+32
+R46
+!i10b 1
+R47
+Z174 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_roundsat.vhd|-work|work|
+Z175 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_roundsat.vhd|
+!i113 1
+R23
+R24
+Abeh
+R43
+R14
+R15
+DEx4 work 18 auk_dspip_roundsat 0 22 [S477?0?ad:@WmEo]_o820
+l63
+L61
+VUUd>Anf<;SVh3:CDiab`S1
+!s100 ]_3I0;m7RDoiJeFA6M^`A1
+R18
+32
+R46
+!i10b 1
+R47
+R174
+R175
+!i113 1
+R23
+R24
+Pauk_dspip_text_pkg
+R43
+R14
+R15
+R5
+R0
+Z176 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_text_pkg.vhd
+Z177 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_text_pkg.vhd
+l0
+L60
+Ve=1EcTaQKlS3A7<6UT5XV3
+!s100 D132L>H75ieXQdW840k7O0
+R18
+32
+b1
+R83
+!i10b 1
+R84
+Z178 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_text_pkg.vhd|-work|work|
+Z179 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/auk_dspip_text_pkg.vhd|
+!i113 1
+R23
+R24
+Bbody
+R130
+R43
+R14
+R15
+l0
+L76
+V4JJVj;G`^PORM?_`9JiQ^2
+!s100 8<?]li33IkB>fMMF[SR`S2
+R18
+32
+R83
+!i10b 1
+R84
+R178
+R179
+!i113 1
+R23
+R24
+Pauk_fft_pkg
+R43
+R14
+R15
+R5
+R0
+Z180 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_fft_pkg.vhd
+Z181 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_fft_pkg.vhd
+l0
+L18
+Vnk=aee3=b4BF6^2T6FMCL2
+!s100 KO4z40;KgGV8e8Ta2T@QA0
+R18
+32
+b1
+R39
+!i10b 1
+R40
+Z182 !s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_fft_pkg.vhd|-work|work|
+Z183 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/auk_fft_pkg.vhd|
+!i113 1
+R23
+R24
+Bbody
+DPx4 work 11 auk_fft_pkg 0 22 nk=aee3=b4BF6^2T6FMCL2
+R43
+R14
+R15
+l0
+L27
+VFinlm9Wn:LW?b=4i;CVzg3
+!s100 PON1X2]W1W82nXe?d6j<h2
+R18
+32
+R39
+!i10b 1
+R40
+R182
+R183
+!i113 1
+R23
+R24
+Xavalon_utilities_pkg
+R1
+R160
+!i10b 1
+!s100 7Z6I@>cG<^^zXcl1Q`88O0
+I5lHS_H=k7D]:]Xin;zf;C1
+V5lHS_H=k7D]:]Xin;zf;C1
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/avalon_utilities_pkg.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/avalon_utilities_pkg.sv
+L0 40
+R7
+r1
+!s85 0
+31
+R161
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/avalon_utilities_pkg.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/avalon_utilities_pkg.sv|-work|work|
+!i113 1
+R9
+R10
+vWtxvA1QAv6e5bl2c9/0qZQ==
+R1
+R69
+!i10b 0
+!s100 QdHzZ<>7ZdJ4XRAz9oZQA0
+IRT0i6HAW5iYz?cieES_mQ2
+R4
+!i8a 1747236064
+!s105 counter_module_sv_unit
+S1
+R0
+w1583821956
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/counter_module.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/counter_module.sv
+R54
+R7
+r1
+!s85 0
+31
+R70
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/counter_module.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/counter_module.sv|-work|work|
+!i113 1
+R9
+R10
+n50012c5
+vfft_ii_0_example_design
+R1
+R3
+!i10b 1
+!s100 j1Bl6PSRc1^2ncLVW4?CR1
+Ifl;hKXY78cP5bH?;I1beQ2
+R4
+!s105 fft_ii_0_example_design_v_unit
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design.v
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design.v
+L0 6
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design.v|-work|work|
+!i113 1
+R23
+R10
+vfft_ii_0_example_design_core
+R1
+R3
+!i10b 1
+!s100 46:d?CQJA9Q2Y^IeWNnB31
+IOnBS7aRz=oI0mP[^7Q;4@0
+R4
+!s105 fft_ii_0_example_design_core_sv_unit
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_core.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_core.sv
+L0 15
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_core.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_core.sv|-work|work|
+!i113 1
+R9
+R10
+vfft_ii_0_example_design_tb
+R1
+!s110 1583821963
+!i10b 1
+!s100 akBffaeLjIELo_mm]bFkS3
+InENgH=?1ib8C9X=I6DP?11
+R4
+!s105 fft_ii_0_example_design_tb_v_unit
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_tb.v
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_tb.v
+L0 6
+R7
+r1
+!s85 0
+31
+Z184 !s108 1583821963.000000
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_tb.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_tb.v|-work|work|
+!i113 1
+R23
+R10
+Xfft_ii_0_example_design_test_program_sv_unit
+R1
+R11
+R2
+V9^b0R2H@EJ;0fZBR5z:@T1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ^fb4dQm[3D^zS=>OKV7cB3
+I9^b0R2H@EJ;0fZBR5z:@T1
+!i103 1
+S1
+R0
+Z185 w1583819572
+Z186 8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_test_program.sv
+Z187 FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_test_program.sv
+L0 21
+R7
+R184
+Z188 !s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_test_program.sv|
+Z189 !s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/fft_ii_0_example_design_test_program.sv|-work|work|
+!i113 1
+R9
+R10
+Phyper_opt_pkg
+R43
+R14
+R15
+R5
+R0
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_opt_OFF_pkg.vhd
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_opt_OFF_pkg.vhd
+l0
+L20
+V6i7iFP7O3>[lGIFGBVJcf1
+!s100 oP`H]Kc3EdoO3AG?g;i3L1
+R18
+32
+R19
+!i10b 1
+R20
+!s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_opt_OFF_pkg.vhd|-work|work|
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_opt_OFF_pkg.vhd|
+!i113 1
+R23
+R24
+vl/xR6Ur17f6z8EF3QaBJ8Uh5UX0qaIGSmwBmvTRZmL0=
+R1
+R39
+!i10b 0
+!s100 6?bMVLz7l5Jd?`K^5M=?N0
+I<IXkFhWA4o06F4ElI^EGa1
+R4
+!i8a 258029280
+!s105 hyper_pipeline_interface_v_unit
+S1
+R0
+w1583821955
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_pipeline_interface.v
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_pipeline_interface.v
+R54
+R7
+r1
+!s85 0
+31
+R40
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_pipeline_interface.v|
+!s90 -reportprogress|300|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/mentor/hyper_pipeline_interface.v|-work|work|
+!i113 1
+R23
+R10
+n5f39f65
+vtest_program
+R1
+R11
+R2
+DXx4 work 44 fft_ii_0_example_design_test_program_sv_unit 0 22 9^b0R2H@EJ;0fZBR5z:@T1
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 G<W7dIEl8aThZIfIRna5^3
+III^:3]I8]PB>;Hz8`J9R81
+!s105 fft_ii_0_example_design_test_program_sv_unit
+S1
+R0
+R185
+R186
+R187
+L0 56
+R7
+R184
+R188
+R189
+!i113 1
+R9
+R10
+Xverbosity_pkg
+R1
+R160
+!i10b 1
+!s100 1LKXk98oFzia^4f:_THR]1
+IKWaUzd0>bIS]kL>`9Q7;m2
+VKWaUzd0>bIS]kL>`9Q7;m2
+S1
+R0
+R5
+8D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/verbosity_pkg.sv
+FD:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/verbosity_pkg.sv
+L0 61
+R7
+r1
+!s85 0
+31
+R161
+!s107 D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/verbosity_pkg.sv|
+!s90 -reportprogress|300|-sv|D:/cinnabon_fpga2/cinnabon_dsp/fft/fft_ii_0_example_design/src/verbosity_pkg.sv|-work|work|
+!i113 1
+R9
+R10
